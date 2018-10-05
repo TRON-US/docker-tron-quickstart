@@ -3,7 +3,6 @@
 FROM ubuntu
 MAINTAINER sullof
 
-
 # Install JDK8
 # thanks to mlaccetti/docker-oracle-java8-ubuntu-16.04
 
@@ -94,6 +93,5 @@ RUN cd lib && \
 
 EXPOSE 8090 8091 8092
 
-#CMD ["bash"]
 CMD ["./start.sh"]
 
