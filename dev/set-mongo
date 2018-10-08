@@ -1,0 +1,22 @@
+
+use events;
+db.events.insert({init: 1});
+
+db.createUser({
+  user: "trondev",
+  pwd: "vednort",
+  "roles" : [
+    {
+      "role" : "clusterAdmin",
+      "db" : "admin"
+    },
+    {
+      "role" : "readAnyDatabase",
+      "db" : "admin"
+    },
+    {
+      "role" : "readWrite",
+      "db" : "events"
+    }
+  ],
+});

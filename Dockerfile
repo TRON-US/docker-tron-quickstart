@@ -1,7 +1,8 @@
-# trondev@0.0.1
+# trondev@0.0.2
 
-FROM ubuntu
+FROM ubuntu:18.04
 MAINTAINER sullof
+
 
 # Install JDK8
 # thanks to mlaccetti/docker-oracle-java8-ubuntu-16.04
@@ -47,7 +48,6 @@ RUN apt-get install -y wget && \
 RUN mkdir tron
 WORKDIR /tron
 
-
 # Clone and build java-tron
 
 RUN apt-get install git -y && \
@@ -59,21 +59,7 @@ RUN apt-get install git -y && \
   cd ..
 
 
-# Configures full and solidity node
-
-ADD lib /tron/lib
-
-RUN mkdir FullNode && \
-  cp java-tron/build/libs/FullNode.jar FullNode/. && \
-  mv lib/fullnode-config.conf FullNode/config.conf && \
-  mkdir SolidityNode && \
-  cp java-tron/build/libs/SolidityNode.jar SolidityNode/. && \
-  mv lib/soliditynode-config.conf SolidityNode/config.conf
-
-
 # Clone and build trongrid
-
-RUN nohup mongod >> mongod.log 2>&1 &
 
 RUN git clone https://github.com/sullof/tron-grid.git && \
   cd tron-grid && \
@@ -81,17 +67,29 @@ RUN git clone https://github.com/sullof/tron-grid.git && \
   git checkout trondev && \
   apt-get install -y maven && \
   mvn package && \
+  mv target/infura-0.0.1-SNAPSHOT.jar target/EventServer.jar && \
   cd ..
+
+
+# Configures full and solidity node
+
+ADD dev /tron/dev
+
+RUN mkdir FullNode && \
+  cp java-tron/build/libs/FullNode.jar FullNode/. && \
+  mv dev/fullnode.conf FullNode/config.conf
+
+RUN mkdir SolidityNode && \
+  cp java-tron/build/libs/SolidityNode.jar SolidityNode/. && \
+  mv dev/soliditynode.conf SolidityNode/config.conf
 
 
 # Install proxy dependencies
 
-RUN cd lib && \
+RUN cd dev && \
   npm install && \
   chmod +x start.sh && \
   mv start.sh ..
 
-EXPOSE 8090 8091 8092
 
 CMD ["./start.sh"]
-
