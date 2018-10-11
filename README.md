@@ -1,11 +1,17 @@
-# Trondev (Docker)
+# Tron Quickstart (Docker)
 
 __A docker image exposing a full node, a solidity node and an event server, i.e., a complete private network for Tron developers.__
 
 
 Run it with:
 ```
-docker run -it -p 8091:8091 -p 8092:8092 -p 8090:8090 --rm --name trondev0 sullof/trondev
+docker run -it \
+  -p 8091:8091 \
+  -p 8092:8092 \
+  -p 8090:8090 \
+  --rm \
+  --name tron \
+  sullof/tron-quickstart
 ```
 
 Notice the `--rm` option which will delete the container when you stop it.
@@ -34,12 +40,18 @@ module.exports = {
 
 If you need to expose different ports, you can set them running the container. For example:
 ```
-docker run -it -p 3000:8090 -p 3001:8091 -p 3002:8092 --rm sullof/trondev
+docker run -it \
+  -p 3000:8090 \
+  -p 4001:8091 \
+  -p 5001:8092 \
+  --rm \
+  --name tron \
+  sullof/tron-quickstart
 ```
 
-To verify that the docker is running correctly, execute
+To verify that the image is running correctly, execute
 ```
-docker exec -it trondev0 ps aux
+docker exec -it tron ps aux
 ```
 You should see something like this:
 ```
@@ -58,17 +70,17 @@ root       336  0.0  0.1  36068  3184 pts/1    R+   12:22   0:00 ps aux
 ```
 If mongod, some of the nodes or the event server are not running, restart the container:
 ```
-docker restart trondev0
+docker restart tron
 ```
 Be careful, since we used the `--rm` option, restarting the container you will reset the data, similarly to what happens when you stop and run `ganache-cli` again in Truffle.
 
 To see the logs of the full node you can execute
 ```
-docker exec -it trondev0 tail -f /tron/FullNode/logs/tron.log
+docker exec -it tron tail -f /tron/FullNode/logs/tron.log
 ```
 and you can do the same for the solidity node
 ```
-docker exec -it trondev0 tail -f /tron/SolidityNode/logs/tron.log
+docker exec -it tron tail -f /tron/SolidityNode/logs/tron.log
 ```
 
 If you prefer to have a stable private network, you can run the image avoiding using the self removing option (`--rm`). Even better, you can set local volumes and run the container telling it to use them:
@@ -79,13 +91,13 @@ mkdir soliditynode-logs
 mkdir soliditynode-output-directory
 mkdir mongo-data
 docker run -d -p 8091:8091 -p 8092:8092 -p 8090:8090 \
-  --name trondev0 \
+  --name tron \
   -v $PWD/mongo-data:/data/db \
   -v $PWD/fullnode-logs:/tron/FullNode/logs \
   -v $PWD/fullnode-output-directory:/tron/FullNode/output-directory \
   -v $PWD/soliditynode-logs:/tron/SolidityNode/logs \
   -v $PWD/soliditynode-output-directory:/tron/SolidityNode/output-directory \
-  sullof/trondev
+  sullof/tron-quickstart
 ```
 
 If you like to check the event database, connect to mongo like:
