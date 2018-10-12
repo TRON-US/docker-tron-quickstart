@@ -2,6 +2,7 @@ var express = require('express');
 var proxy = require('http-proxy-middleware');
 var morgan = require('morgan');
 var chalk = require('chalk')
+const generate = require('./src/generateTestingAccounts')
 
 process.on('uncaughtException', function (error) {
   console.error(error.message)
@@ -11,8 +12,7 @@ var only = who => {
   return function (tokens, req, res) {
     return chalk.bold([
       tokens.method(req, res),
-      who,
-      tokens.url(req, res),
+      `[${who}]${tokens.url(req, res)}`,
       tokens.status(req, res),
       tokens.res(req, res, 'content-length'), '-',
       tokens['response-time'](req, res), 'ms'
@@ -75,6 +75,8 @@ const setApp = (name, port0, port, activeLog) => {
 
 }
 
-setApp('fullNode', 8190, 8090, true);
-setApp('solidityNode', 8191, 8091, true);
-setApp('eventServer', 18891, 8092, true);
+const verbose = !process.env.quiet || process.env.verbose === 'verbose'
+
+setApp('full-node', 18190, 8090, verbose);
+setApp('solidity-node', 18191, 8091, verbose);
+setApp('event-server', 18891, 8092, verbose);

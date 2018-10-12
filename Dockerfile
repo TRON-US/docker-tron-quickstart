@@ -1,4 +1,4 @@
-# trondev@0.0.2
+# Tron Quickstart @0.0.4
 
 FROM ubuntu:18.04
 LABEL maintainer="Francesco Sullo <francesco@sullo.co>"
@@ -48,32 +48,33 @@ RUN apt-get install -y wget && \
 RUN mkdir tron
 WORKDIR /tron
 
+ADD conf /tron/conf
+
 # Clone and build java-tron
 
 RUN apt-get install git -y && \
-  git clone https://github.com/sullof/java-tron.git && \
+  git clone https://github.com/tronprotocol/java-tron.git && \
   cd java-tron && \
   git fetch && \
-  git checkout trondev && \
+  git checkout test_ev2 && \
+  cp ../conf/mongodb.properties src/main/resources/. && \
   ./gradlew build -x test && \
   cd ..
 
 
 # Clone and build trongrid
 
-RUN git clone https://github.com/sullof/tron-grid.git && \
+RUN git clone https://github.com/tronprotocol/tron-grid.git && \
   cd tron-grid && \
-  git fetch && \
-  git checkout trondev && \
+  cp ../conf/application.properties src/main/resources/. && \
   apt-get install -y maven && \
   mvn package && \
-  mv target/infura-0.0.1-SNAPSHOT.jar target/EventServer.jar && \
+  mv target/trongrid-0.0.1-SNAPSHOT.jar target/EventServer.jar && \
   cd ..
 
 
 # Configures full and solidity node
 
-ADD conf /tron/conf
 ADD app /tron/app
 ADD start.sh /tron/start.sh
 
@@ -92,4 +93,4 @@ RUN (cd app && npm install) && \
   chmod +x start.sh
 
 
-CMD ["./start.sh"]
+CMD ["./start.sh", "$@"]

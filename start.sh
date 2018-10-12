@@ -1,30 +1,31 @@
 #!/usr/bin/env bash
 
-echo "
-Run mongodb"
+echo "Tron Quickstart v0.0.4
+"
+
+echo "Run mongodb"
 nohup mongod >> mongod.log 2>&1 &
 
-echo "
-Wait 3 seconds and set the events db"
+echo "Wait 3 seconds and set the events db"
 sleep 3
 mongo < conf/set-mongo
 rm -rf /tron/conf
 
-echo "
-Shut down mongo"
+echo "Shut down mongo"
 pid=`ps -ef |grep mongod |grep -v grep |awk '{print $2}'`
 if [ -n "$pid" ]; then
   kill $pid
 fi
 
-echo "
-Wait 3 seconds and start mongo with --auth"
+echo "Wait 3 seconds and start mongo with --auth"
 sleep 3
 nohup mongod --auth >> mongod.log 2>&1 &
 
-echo "
-Wait 3 seconds and start nodes and event server"
+echo "Wait 3 seconds and start nodes and event server"
 sleep 3
+
+node /tron/app/generateTestingAccounts
+
 
 (cd /tron/tron-grid/target && nohup java -jar EventServer.jar >> start.log 2>&1 &)
 
@@ -32,5 +33,8 @@ sleep 3
 
 (cd /tron/SolidityNode && nohup java -jar SolidityNode.jar -c config.conf >> start.log 2>&1 &)
 
-node /tron/app "$@"
+echo "Wait 3 seconds and start the http proxy for dApps"
+sleep 3
+
+node /tron/app
 
