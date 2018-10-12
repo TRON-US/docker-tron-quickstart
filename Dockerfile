@@ -1,7 +1,7 @@
 # trondev@0.0.2
 
 FROM ubuntu:18.04
-MAINTAINER sullof
+LABEL maintainer="Francesco Sullo <francesco@sullo.co>"
 
 
 # Install JDK8
@@ -73,23 +73,23 @@ RUN git clone https://github.com/sullof/tron-grid.git && \
 
 # Configures full and solidity node
 
-ADD dev /tron/dev
+ADD conf /tron/conf
+ADD app /tron/app
+ADD start.sh /tron/start.sh
 
 RUN mkdir FullNode && \
   cp java-tron/build/libs/FullNode.jar FullNode/. && \
-  mv dev/fullnode.conf FullNode/config.conf
+  mv conf/fullnode.conf FullNode/config.conf
 
 RUN mkdir SolidityNode && \
   cp java-tron/build/libs/SolidityNode.jar SolidityNode/. && \
-  mv dev/soliditynode.conf SolidityNode/config.conf
+  mv conf/soliditynode.conf SolidityNode/config.conf
 
 
 # Install proxy dependencies
 
-RUN cd dev && \
-  npm install && \
-  chmod +x start.sh && \
-  mv start.sh ..
+RUN (cd app && npm install) && \
+  chmod +x start.sh
 
 
 CMD ["./start.sh"]

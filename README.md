@@ -11,7 +11,7 @@ docker run -it \
   -p 8090:8090 \
   --rm \
   --name tron \
-  sullof/tron-quickstart
+  trontools/quickstart
 ```
 
 Notice the `--rm` option which will delete the container when you stop it.
@@ -46,7 +46,7 @@ docker run -it \
   -p 5001:8092 \
   --rm \
   --name tron \
-  sullof/tron-quickstart
+  trontools/quickstart
 ```
 
 To verify that the image is running correctly, execute
@@ -97,7 +97,7 @@ docker run -d -p 8091:8091 -p 8092:8092 -p 8090:8090 \
   -v $PWD/fullnode-output-directory:/tron/FullNode/output-directory \
   -v $PWD/soliditynode-logs:/tron/SolidityNode/logs \
   -v $PWD/soliditynode-output-directory:/tron/SolidityNode/output-directory \
-  sullof/tron-quickstart
+  trontools/quickstart
 ```
 
 If you like to check the event database, connect to mongo like:

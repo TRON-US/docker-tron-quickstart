@@ -7,7 +7,8 @@ nohup mongod >> mongod.log 2>&1 &
 echo "
 Wait 3 seconds and set the events db"
 sleep 3
-mongo < dev/set-mongo
+mongo < conf/set-mongo
+rm -rf /tron/conf
 
 echo "
 Shut down mongo"
@@ -31,5 +32,5 @@ sleep 3
 
 (cd /tron/SolidityNode && nohup java -jar SolidityNode.jar -c config.conf >> start.log 2>&1 &)
 
-node /tron/dev
+node /tron/app "$@"
 

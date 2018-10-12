@@ -1,6 +1,7 @@
 var express = require('express');
 var proxy = require('http-proxy-middleware');
 var morgan = require('morgan');
+var chalk = require('chalk')
 
 process.on('uncaughtException', function (error) {
   console.error(error.message)
@@ -8,14 +9,14 @@ process.on('uncaughtException', function (error) {
 
 var only = who => {
   return function (tokens, req, res) {
-    return [
+    return chalk.bold([
       tokens.method(req, res),
       who,
       tokens.url(req, res),
       tokens.status(req, res),
       tokens.res(req, res, 'content-length'), '-',
       tokens['response-time'](req, res), 'ms'
-    ].join(' ')
+    ].join(' '))
   }
 }
 
