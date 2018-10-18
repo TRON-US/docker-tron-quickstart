@@ -3,8 +3,8 @@ use events;
 db.events.insert({init: 1});
 
 db.createUser({
-  user: "trondev",
-  pwd: "vednort",
+  user: "sullof",
+  pwd: "follus",
   "roles" : [
     {
       "role" : "clusterAdmin",
