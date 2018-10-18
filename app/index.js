@@ -2,7 +2,6 @@ var express = require('express');
 var proxy = require('http-proxy-middleware');
 var morgan = require('morgan');
 var chalk = require('chalk')
-const generate = require('./src/generateTestingAccounts')
 
 process.on('uncaughtException', function (error) {
   console.error(error.message)
