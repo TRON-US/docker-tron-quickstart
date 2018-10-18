@@ -89,8 +89,9 @@ RUN mkdir SolidityNode && \
 
 # Install proxy dependencies
 
-RUN (cd app && npm install) && \
-  chmod +x start.sh
+RUN chmod +x start.sh && \
+  cd app && \
+  npm install
 
 
-CMD ["./start.sh", "$@"]
+CMD ["./start.sh"]
