@@ -1,4 +1,4 @@
-# Tron Quickstart @0.0.4
+# Tron Quickstart @0.1.0
 
 FROM ubuntu:18.04
 LABEL maintainer="Francesco Sullo <francesco@sullo.co>"
@@ -31,8 +31,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75
   echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/4.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.0.list && \
   apt-get update && \
   apt-get install -y libcurl4 && \
-  apt-get install -y mongodb-org && \
-  mkdir -p /data/db
+  apt-get install -y mongodb-org
 
 
 # Install Node
@@ -75,9 +74,6 @@ RUN git clone https://github.com/tronprotocol/tron-grid.git && \
 
 # Configures full and solidity node
 
-ADD app /tron/app
-ADD start.sh /tron/start.sh
-
 RUN mkdir FullNode && \
   cp java-tron/build/libs/FullNode.jar FullNode/. && \
   mv conf/fullnode.conf FullNode/config.conf
@@ -89,9 +85,14 @@ RUN mkdir SolidityNode && \
 
 # Install proxy dependencies
 
-RUN chmod +x start.sh && \
-  cd app && \
-  npm install
+RUN apt-get install build-essential -y
 
+ADD app /tron/app
+RUN cd app && npm install
+
+RUN apt-get remove build-essential -y
+
+ADD start.sh /tron/start.sh
+RUN chmod +x start.sh
 
 CMD ["./start.sh"]

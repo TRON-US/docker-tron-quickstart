@@ -3,6 +3,8 @@ var proxy = require('http-proxy-middleware');
 var morgan = require('morgan');
 var chalk = require('chalk')
 
+const admin = require('./src/routes/admin')
+
 process.on('uncaughtException', function (error) {
   console.error(error.message)
 })
@@ -61,9 +63,12 @@ function onError(err, req, res) {
 const setApp = (name, port0, port, activeLog) => {
   var app = express();
   app.use(morgan(only(name)))
-  app.get('/favicon.ico', function (req, res) {
+  app.use('/favicon.ico', function (req, res) {
     res.send('');
   });
+  if (name === 'full-node') {
+    app.use('/admin', admin);
+  }
   app.use('/', proxy({
     changeOrigin: true,
     onProxyRes: setHeaders(activeLog),
@@ -74,8 +79,17 @@ const setApp = (name, port0, port, activeLog) => {
 
 }
 
+
 const verbose = !process.env.quiet || process.env.verbose === 'verbose'
 
 setApp('full-node', 18190, 8090, verbose);
 setApp('solidity-node', 18191, 8091, verbose);
 setApp('event-server', 18891, 8092, verbose);
+
+console.log()
+console.log(chalk.bold(chalk.blue('Full Node listening on http://127.0.0.1:8090')))
+console.log(chalk.bold(chalk.blue('Solidity Node listening on http://127.0.0.1:8091')))
+console.log(chalk.bold(chalk.blue('Event Server listening on http://127.0.0.1:8092')))
+console.log()
+console.log(chalk.bold(`Waiting for the nodes to sync to generate ${process.env.accounts || 10} accounts...\n`))
+
