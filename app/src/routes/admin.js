@@ -3,8 +3,24 @@ const router = express.Router()
 const accountsGeneration = require('../utils/accountsGeneration')
 // const jsonParser = require('body-parser').json()
 
+const tronWebBuilder = require('../utils/tronWebBuilder')
+
 let testingAccounts;
 let formattedTestingAccounts;
+
+function formatAccounts() {
+  const tronWeb = tronWebBuilder()
+  formattedTestingAccounts = 'Available Accounts\n==================\n\n'
+  for (let i = 0; i < testingAccounts.length; i++) {
+    formattedTestingAccounts += `(${i}) ${tronWeb.address.fromPrivateKey(testingAccounts[i])} (~10000 TRX)\n`
+  }
+  formattedTestingAccounts += '\nPrivate Keys\n==================\n\n'
+  for (let i = 0; i < testingAccounts.length; i++) {
+    formattedTestingAccounts += `(${i}) ${testingAccounts[i]}\n`
+  }
+  console.log('\n', formattedTestingAccounts)
+}
+
 
 router.get('/accounts', function (req, res) {
   res.set('Content-Type', 'text/plain').send(formattedTestingAccounts);
@@ -16,24 +32,14 @@ router.get('/accounts-json', function (req, res) {
 
 router.get('/accounts-generation', async function (req, res) {
 
-  const accounts = await accountsGeneration(
+  testingAccounts = await accountsGeneration(
       process.env.accounts
           ? parseInt(process.env.accounts, 10)
           : 10
   )
 
-  formattedTestingAccounts = 'Available Accounts\n==================\n\n'
-  for (let i = 0; i < accounts.length; i++) {
-    formattedTestingAccounts += `(${i}) ${accounts[i].address.base58} (~10000 TRX)\n`
-  }
-  formattedTestingAccounts += '\nPrivate Keys\n==================\n\n'
-  for (let i = 0; i < accounts.length; i++) {
-    formattedTestingAccounts += `(${i}) ${accounts[i].privateKey}\n`
-  }
+  formatAccounts();
 
-  console.log('\n', formattedTestingAccounts)
-
-  testingAccounts = accounts;
   res.send('');
 });
 

@@ -1,7 +1,8 @@
-const TronWeb = require('tronweb')
 const sleep = require('sleep')
 const fs = require('fs-extra')
 const path = require('path')
+
+const tronWebBuilder = require('../utils/tronWebBuilder')
 
 let count = 1
 let done = false
@@ -18,12 +19,7 @@ async function accountsGeneration(amount) {
 
   setTimeout(waiting, 1000)
 
-  const tronWeb = new TronWeb(
-      "http://127.0.0.1:8090",
-      "http://127.0.0.1:8091",
-      "http://127.0.0.1:8092",
-      'da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0',
-  )
+  const tronWeb = tronWebBuilder()
 
   if (!defSet) {
     tronWeb.setDefaultBlock('latest');
@@ -47,13 +43,13 @@ async function accountsGeneration(amount) {
 
   } else {
 
-    accounts = []
+    accounts = [ tronWeb.defaultPrivateKey ]
 
-    for (let i = 0; i < amount; i++) {
+    for (let i = 0; i < amount - 1; i++) {
 
       const account = await tronWeb.createAccount();
       if (tronWeb.isAddress(account.address.hex)) {
-        accounts.push(account);
+        accounts.push(account.privateKey);
         await tronWeb.transactionBuilder.sendTrx(account.address.base58, 10000);
       } else {
         i--;

@@ -55,8 +55,7 @@ RUN apt-get install git -y && \
   git clone https://github.com/tronprotocol/java-tron.git && \
   cd java-tron && \
   git fetch && \
-  git checkout test_ev2 && \
-  cp ../conf/mongodb.properties src/main/resources/. && \
+  git checkout shasta-dev && \
   ./gradlew build -x test && \
   cd ..
 
@@ -65,12 +64,11 @@ RUN apt-get install git -y && \
 
 RUN git clone https://github.com/tronprotocol/tron-grid.git && \
   cd tron-grid && \
-  cp ../conf/application.properties src/main/resources/. && \
   apt-get install -y maven && \
-  mvn package && \
+  mvn package -Dmaven.test.skip=true && \
   mv target/trongrid-0.0.1-SNAPSHOT.jar target/EventServer.jar && \
   cd ..
-
+# 359769
 
 # Configures full and solidity node
 

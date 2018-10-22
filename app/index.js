@@ -24,6 +24,7 @@ var only = who => {
 const setHeaders = activeLog => {
 
   return function onProxyRes(proxyRes, req, res) {
+
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type,Accept')
     res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS')
@@ -86,10 +87,10 @@ setApp('full-node', 18190, 8090, verbose);
 setApp('solidity-node', 18191, 8091, verbose);
 setApp('event-server', 18891, 8092, verbose);
 
-console.log()
-console.log(chalk.bold(chalk.blue('Full Node listening on http://127.0.0.1:8090')))
-console.log(chalk.bold(chalk.blue('Solidity Node listening on http://127.0.0.1:8091')))
-console.log(chalk.bold(chalk.blue('Event Server listening on http://127.0.0.1:8092')))
-console.log()
-console.log(chalk.bold(`Waiting for the nodes to sync to generate ${process.env.accounts || 10} accounts...\n`))
+const n = "\n"
+
+console.log(n, 'Full Node listening on', chalk.bold('http://127.0.0.1:8090'),
+    n, 'Solidity Node listening on', chalk.bold('http://127.0.0.1:8091'),
+    n, 'Event Server listening on', chalk.bold('http://127.0.0.1:8092'),
+    n, n, chalk.bold(`Waiting for the nodes to sync to generate ${process.env.accounts || 10} accounts...`), n)
 
