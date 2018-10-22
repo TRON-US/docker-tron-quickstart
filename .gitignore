@@ -1,6 +1,5 @@
 node_modules
 scripts/deploy_tron.sh
-/sh
 /ubuntu-jdk8-mongo-node8
 /tmp
 /tron-data
