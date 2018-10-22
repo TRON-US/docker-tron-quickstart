@@ -1,8 +1,11 @@
-# Tron Quickstart @0.1.0
 
-FROM ubuntu:18.04
-LABEL maintainer="Francesco Sullo <francesco@sullo.co>"
+# FROM ubuntu:18.04
 
+FROM partlab/ubuntu
+
+LABEL name="Tron Quickstart @0.1.0"
+LABEL author="Francesco Sullo <francesco@sullo.co>"
+LABEL licence="MIT"
 
 # Install JDK8
 # thanks to mlaccetti/docker-oracle-java8-ubuntu-16.04
@@ -11,6 +14,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV JAVA_HOME       /usr/lib/jvm/java-8-oracle
 ENV LANG            en_US.UTF-8
 ENV LC_ALL          en_US.UTF-8
+ENV INITRD          No
 
 RUN apt-get update && \
   apt-get install -y --no-install-recommends locales && \
@@ -25,15 +29,6 @@ RUN apt-get update && \
   apt-get clean all
 
 
-# Install MongoDB
-
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4 && \
-  echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/4.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.0.list && \
-  apt-get update && \
-  apt-get install -y libcurl4 && \
-  apt-get install -y mongodb-org
-
-
 # Install Node
 
 RUN apt-get install -y wget && \
@@ -42,6 +37,19 @@ RUN apt-get install -y wget && \
   apt-get install -y nodejs
 
 
+# Install MongoDB
+# thanks to partlab/ubuntu-mongodb
+
+RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 && \
+    echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' \
+      | tee /etc/apt/sources.list.d/10gen.list && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends mongodb-org && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+VOLUME ["/data/db"]
+
 # Prepare the work directory
 
 RUN mkdir tron
@@ -49,13 +57,18 @@ WORKDIR /tron
 
 ADD conf /tron/conf
 
+RUN apt-get update && \
+  apt-get install maven -y && \
+  apt-get clean
+
 # Clone and build java-tron
 
-RUN apt-get install git -y && \
-  git clone https://github.com/tronprotocol/java-tron.git && \
+
+RUN git clone https://github.com/tronprotocol/java-tron.git && \
   cd java-tron && \
   git fetch && \
   git checkout shasta-dev && \
+  cp ../conf/mongodb.properties src/main/resources/. && \
   ./gradlew build -x test && \
   cd ..
 
@@ -64,11 +77,10 @@ RUN apt-get install git -y && \
 
 RUN git clone https://github.com/tronprotocol/tron-grid.git && \
   cd tron-grid && \
-  apt-get install -y maven && \
+  cp ../conf/application.properties src/main/resources/. && \
   mvn package -Dmaven.test.skip=true && \
   mv target/trongrid-0.0.1-SNAPSHOT.jar target/EventServer.jar && \
   cd ..
-# 359769
 
 # Configures full and solidity node
 
@@ -88,9 +100,13 @@ RUN apt-get install build-essential -y
 ADD app /tron/app
 RUN cd app && npm install
 
-RUN apt-get remove build-essential -y
+RUN apt-get remove maven git -y && \
+  apt-get clean all && \
+  apt-get autoremove -y
 
 ADD start.sh /tron/start.sh
 RUN chmod +x start.sh
 
 CMD ["./start.sh"]
+#
+#CMD ["bash"]

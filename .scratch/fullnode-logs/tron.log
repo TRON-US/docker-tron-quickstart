@@ -1,0 +1,4263 @@
+08:37:34.677 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:37:34.827 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:37:34.827 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:37:34.828 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:37:34.846 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:37:34.861 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:37:44.828 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:37:44.829 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:37:44.829 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:37:44.829 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:37:44.861 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:37:44.863 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:37:54.829 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:37:54.830 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:37:54.830 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:37:54.830 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:37:54.862 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:37:54.864 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:38:05.134 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:38:05.135 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:38:05.135 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:38:05.135 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:38:05.166 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:38:05.168 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:38:15.135 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:38:15.136 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:38:15.136 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:38:15.136 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:38:15.166 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:38:15.169 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:38:25.141 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:38:25.141 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:38:25.142 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:38:25.142 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:38:25.167 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:38:25.171 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:38:32.553 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:38:32.553 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:38:32.553 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:38:32.553 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:38:32.579 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:38:32.582 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:38:42.553 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:38:42.553 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:38:42.554 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:38:42.554 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:38:42.580 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:38:42.582 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:38:52.554 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:38:52.555 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:38:52.555 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:38:52.555 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:38:52.580 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:38:52.583 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:39:02.522 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:39:02.522 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:39:02.522 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:39:02.522 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:39:02.547 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:39:02.550 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:39:12.523 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:39:12.523 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:39:12.523 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:39:12.523 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:39:12.548 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:39:12.551 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:39:22.524 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:39:22.524 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:39:22.524 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:39:22.524 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:39:22.548 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:39:22.553 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:39:32.483 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:39:32.483 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:39:32.483 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:39:32.483 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:39:32.506 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:39:32.512 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:39:42.484 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:39:42.485 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:39:42.485 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:39:42.485 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:39:42.509 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:39:42.514 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:39:52.486 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:39:52.486 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:39:52.486 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:39:52.486 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:39:52.511 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:39:52.514 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:40:02.455 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:40:02.456 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:40:02.456 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:40:02.456 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:40:02.482 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:40:02.484 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:40:12.457 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:40:12.457 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:40:12.457 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:40:12.457 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:40:12.482 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:40:12.486 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:40:22.458 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:40:22.458 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:40:22.458 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:40:22.458 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:40:22.483 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:40:22.487 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:40:32.423 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:40:32.423 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:40:32.423 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:40:32.423 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:40:32.449 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:40:32.470 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:40:42.424 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:40:42.424 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:40:42.424 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:40:42.424 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:40:42.449 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:40:42.471 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:40:52.425 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:40:52.425 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:40:52.425 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:40:52.425 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:40:52.451 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:40:52.472 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:41:02.393 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:41:02.393 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:41:02.393 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:41:02.393 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:41:02.419 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:41:02.439 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:41:12.395 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:41:12.395 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:41:12.395 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:41:12.396 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:41:12.419 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:41:12.441 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:41:22.397 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:41:22.397 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:41:22.397 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:41:22.397 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:41:22.423 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:41:22.442 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:41:32.363 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:41:32.364 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:41:32.364 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:41:32.364 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:41:32.390 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:41:32.410 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:41:42.364 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:41:42.365 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:41:42.365 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:41:42.365 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:41:42.391 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:41:42.411 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:41:52.365 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:41:52.366 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:41:52.366 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:41:52.366 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:41:52.392 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:41:52.412 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:42:02.331 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:42:02.331 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:42:02.332 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:42:02.332 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:42:02.357 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:42:02.377 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:42:12.332 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:42:12.332 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:42:12.333 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:42:12.333 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:42:12.358 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:42:12.378 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:42:22.335 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:42:22.335 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:42:22.335 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:42:22.335 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:42:22.360 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:42:22.379 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:42:32.300 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:42:32.300 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:42:32.300 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:42:32.300 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:42:32.323 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:42:32.342 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:42:42.301 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:42:42.301 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:42:42.302 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:42:42.302 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:42:42.325 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:42:42.347 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:42:52.303 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:42:52.303 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:42:52.303 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:42:52.303 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:42:52.327 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:42:52.349 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:43:02.272 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:43:02.272 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:43:02.272 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:43:02.272 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:43:02.295 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:43:02.318 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:43:12.274 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:43:12.275 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:43:12.275 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:43:12.275 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:43:12.298 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:43:12.322 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:43:22.276 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:43:22.276 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:43:22.276 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:43:22.277 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:43:22.299 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:43:22.325 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:43:32.238 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:43:32.238 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:43:32.238 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:43:32.238 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:43:32.261 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:43:32.287 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:43:42.239 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:43:42.239 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:43:42.240 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:43:42.240 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:43:42.262 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:43:42.288 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:43:52.240 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:43:52.241 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:43:52.241 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:43:52.241 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:43:52.262 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:43:52.290 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:44:02.206 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:44:02.206 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:44:02.206 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:44:02.206 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:44:02.229 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:44:02.256 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:44:12.208 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:44:12.208 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:44:12.208 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:44:12.208 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:44:12.232 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:44:12.260 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:44:22.210 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:44:22.211 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:44:22.211 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:44:22.211 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:44:22.233 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:44:22.261 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:44:32.174 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:44:32.175 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:44:32.175 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:44:32.175 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:44:32.196 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:44:32.228 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:44:42.176 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:44:42.176 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:44:42.176 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:44:42.176 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:44:42.198 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:44:42.231 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:44:52.177 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:44:52.177 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:44:52.177 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:44:52.177 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:44:52.198 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:44:52.232 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:45:02.147 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:45:02.147 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:45:02.147 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:45:02.147 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:45:02.170 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:45:02.204 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:45:12.149 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:45:12.149 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:45:12.149 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:45:12.149 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:45:12.170 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:45:12.205 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:45:22.151 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:45:22.152 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:45:22.152 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:45:22.152 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:45:22.171 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:45:22.206 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:45:32.113 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:45:32.113 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:45:32.113 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:45:32.113 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:45:32.133 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:45:32.169 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:45:42.114 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:45:42.114 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:45:42.114 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:45:42.114 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:45:42.134 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:45:42.170 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:45:52.116 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:45:52.116 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:45:52.116 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:45:52.117 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:45:52.134 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:45:52.173 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:46:02.082 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:46:02.083 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:46:02.084 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:46:02.084 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:46:02.099 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:46:02.138 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:46:12.085 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:46:12.085 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:46:12.086 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:46:12.086 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:46:12.101 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:46:12.139 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:46:22.086 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:46:22.087 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:46:22.087 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:46:22.087 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:46:22.103 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:46:22.141 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:46:32.052 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:46:32.052 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:46:32.052 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:46:32.052 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:46:32.068 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:46:32.107 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:46:42.053 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:46:42.053 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:46:42.053 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:46:42.053 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:46:42.069 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:46:42.109 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:46:52.054 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:46:52.054 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:46:52.055 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:46:52.055 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:46:52.071 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:46:52.113 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:47:02.020 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:47:02.020 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:47:02.020 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:47:02.020 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:47:02.036 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:47:02.078 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:47:12.021 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:47:12.021 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:47:12.021 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:47:12.021 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:47:12.039 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:47:12.081 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:47:22.023 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:47:22.024 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:47:22.024 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:47:22.024 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:47:22.041 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:47:22.083 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:47:31.991 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:47:31.991 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:47:31.992 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:47:31.992 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:47:32.008 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:47:32.049 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:47:41.993 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:47:41.993 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:47:41.993 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:47:41.993 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:47:42.009 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:47:42.050 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:47:51.994 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:47:51.994 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:47:51.994 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:47:51.994 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:47:52.010 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:47:52.051 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:48:01.968 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:48:01.968 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:48:01.968 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:48:01.968 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:48:01.984 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:48:02.025 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:48:11.969 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:48:11.969 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:48:11.969 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:48:11.969 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:48:11.988 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:48:12.026 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:48:21.972 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:48:21.972 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:48:21.972 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:48:21.972 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:48:21.990 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:48:22.028 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:48:31.927 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:48:31.927 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:48:31.927 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:48:31.927 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:48:31.945 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:48:31.984 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:48:41.928 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:48:41.928 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:48:41.928 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:48:41.928 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:48:41.947 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:48:41.985 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:48:51.928 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:48:51.928 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:48:51.929 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:48:51.929 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:48:51.947 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:48:51.986 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:49:01.894 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:49:01.895 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:49:01.895 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:49:01.895 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:49:01.914 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:49:01.952 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:49:11.896 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:49:11.896 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:49:11.896 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:49:11.896 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:49:11.915 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:49:11.953 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:49:21.898 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:49:21.898 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:49:21.898 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:49:21.898 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:49:21.916 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:49:21.954 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:49:31.863 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:49:31.863 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:49:31.863 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:49:31.863 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:49:31.882 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:49:31.920 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:49:41.866 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:49:41.866 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:49:41.867 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:49:41.867 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:49:41.883 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:49:41.921 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:49:51.867 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:49:51.867 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:49:51.868 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:49:51.868 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:49:51.885 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:49:51.922 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:50:01.832 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:50:01.833 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:50:01.833 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:50:01.833 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:50:01.850 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:50:01.887 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:50:11.834 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:50:11.834 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:50:11.834 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:50:11.834 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:50:11.850 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:50:11.888 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:50:21.839 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:50:21.840 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:50:21.840 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:50:21.840 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:50:21.851 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:50:21.890 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:50:31.804 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:50:31.805 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:50:31.805 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:50:31.805 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:50:31.816 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:50:31.855 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:50:41.805 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:50:41.806 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:50:41.806 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:50:41.806 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:50:41.817 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:50:41.856 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:50:51.807 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:50:51.807 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:50:51.807 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:50:51.807 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:50:51.818 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:50:51.858 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:51:01.772 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:51:01.772 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:51:01.772 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:51:01.772 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:51:01.783 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:51:01.824 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:51:11.773 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:51:11.773 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:51:11.773 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:51:11.773 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:51:11.785 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:51:11.826 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:51:21.775 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:51:21.776 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:51:21.776 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:51:21.776 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:51:21.786 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:51:21.827 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:51:31.740 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:51:31.740 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:51:31.741 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:51:31.741 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:51:31.752 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:51:31.792 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:51:41.742 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:51:41.742 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:51:41.742 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:51:41.742 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:51:41.752 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:51:41.793 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:51:51.743 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:51:51.743 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:51:51.743 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:51:51.743 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:51:51.753 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:51:51.794 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:52:01.708 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:52:01.709 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:52:01.709 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:52:01.709 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:52:01.718 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:52:01.760 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:52:11.709 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:52:11.710 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:52:11.710 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:52:11.710 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:52:11.720 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:52:11.761 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:52:21.711 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:52:21.712 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:52:21.712 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:52:21.712 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:52:21.721 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:52:21.763 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:52:31.676 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:52:31.676 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:52:31.677 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:52:31.677 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:52:31.686 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:52:31.728 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:52:41.677 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:52:41.679 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:52:41.679 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:52:41.679 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:52:41.687 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:52:41.730 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:52:51.682 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:52:51.682 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:52:51.682 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:52:51.682 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:52:51.689 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:52:51.730 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:53:01.647 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:53:01.647 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:53:01.648 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:53:01.648 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:53:01.654 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:53:01.695 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:53:11.649 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:53:11.649 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:53:11.649 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:53:11.649 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:53:11.654 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:53:11.696 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:53:21.651 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:53:21.651 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:53:21.651 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:53:21.651 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:53:21.655 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:53:21.697 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:53:31.616 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:53:31.616 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:53:31.616 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:53:31.616 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:53:31.619 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:53:31.663 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:53:41.617 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:53:41.617 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:53:41.617 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:53:41.617 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:53:41.620 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:53:41.664 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:53:51.619 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:53:51.619 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:53:51.619 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:53:51.621 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:53:51.621 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:53:51.666 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:54:01.583 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:54:01.583 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:54:01.583 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:54:01.584 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:54:01.584 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:54:01.630 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:54:11.584 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:54:11.584 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:54:11.584 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:54:11.584 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:54:11.586 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:54:11.630 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:54:21.586 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:54:21.586 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:54:21.586 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:54:21.586 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:54:21.587 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:54:21.634 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:54:31.543 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:54:31.543 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:54:31.543 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:54:31.543 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:54:31.543 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:54:31.591 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:54:41.544 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:54:41.544 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:54:41.544 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:54:41.544 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:54:41.544 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:54:41.592 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:54:51.546 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:54:51.546 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:54:51.547 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:54:51.547 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:54:51.547 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:54:51.593 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:55:01.511 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:55:01.511 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:55:01.511 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:55:01.512 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:55:01.512 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:55:01.558 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:55:11.513 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:55:11.513 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:55:11.513 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:55:11.513 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:55:11.513 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:55:11.559 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:55:21.513 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:55:21.513 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:55:21.513 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:55:21.513 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:55:21.513 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:55:21.560 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:55:31.478 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:55:31.478 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:55:31.478 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:55:31.478 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:55:31.478 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:55:31.526 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:55:41.479 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:55:41.479 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:55:41.479 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:55:41.479 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:55:41.479 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:55:41.527 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:55:51.480 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:55:51.480 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:55:51.480 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:55:51.480 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:55:51.481 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:55:51.528 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:56:01.446 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:56:01.446 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:56:01.446 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:56:01.446 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:56:01.447 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:56:01.493 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:56:11.448 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:56:11.448 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:56:11.448 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:56:11.448 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:56:11.448 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:56:11.495 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:56:21.450 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:56:21.450 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:56:21.450 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:56:21.450 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:56:21.450 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:56:21.496 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:56:31.415 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:56:31.415 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:56:31.415 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:56:31.415 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:56:31.415 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:56:31.462 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:56:41.416 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:56:41.416 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:56:41.417 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:56:41.417 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:56:41.417 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:56:41.465 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:56:51.417 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:56:51.417 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:56:51.417 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:56:51.417 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:56:51.418 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:56:51.465 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:57:01.381 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:57:01.382 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:57:01.382 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:57:01.383 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:57:01.383 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:57:01.430 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:57:11.382 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:57:11.383 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:57:11.383 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:57:11.383 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:57:11.383 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:57:11.431 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:57:21.383 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:57:21.384 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:57:21.384 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:57:21.384 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:57:21.384 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:57:21.432 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:57:31.348 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:57:31.349 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:57:31.349 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:57:31.349 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:57:31.349 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:57:31.397 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:57:41.350 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:57:41.350 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:57:41.351 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:57:41.351 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:57:41.351 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:57:41.398 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:57:51.352 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:57:51.352 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:57:51.352 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:57:51.352 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:57:51.352 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:57:51.399 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:58:01.317 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:58:01.317 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:58:01.317 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:58:01.317 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:58:01.317 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:58:01.367 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:58:11.318 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:58:11.318 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:58:11.318 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:58:11.318 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:58:11.318 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:58:11.369 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:58:21.318 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:58:21.318 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:58:21.318 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:58:21.319 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:58:21.319 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:58:21.370 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:58:31.283 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:58:31.283 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:58:31.283 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:58:31.283 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:58:31.284 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:58:31.335 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:58:41.284 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:58:41.284 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:58:41.284 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:58:41.284 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:58:41.284 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:58:41.336 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:58:51.287 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:58:51.287 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:58:51.288 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:58:51.288 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:58:51.288 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:58:51.338 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:59:01.253 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:59:01.253 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:59:01.253 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:59:01.254 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:59:01.254 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:59:01.305 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:59:11.254 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:59:11.254 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:59:11.254 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:59:11.254 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:59:11.255 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:59:11.306 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:59:21.255 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:59:21.255 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:59:21.256 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:59:21.256 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:59:21.256 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:59:21.307 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:59:31.221 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:59:31.221 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:59:31.221 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:59:31.221 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:59:31.221 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:59:31.275 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:59:41.221 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:59:41.222 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:59:41.223 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:59:41.223 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:59:41.223 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:59:41.276 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+08:59:51.223 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+08:59:51.223 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+08:59:51.224 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+08:59:51.224 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+08:59:51.224 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+08:59:51.277 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:00:01.188 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:00:01.188 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:00:01.189 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:00:01.189 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:00:01.189 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:00:01.244 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:00:11.189 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:00:11.189 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:00:11.189 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:00:11.189 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:00:11.190 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:00:11.245 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:00:21.189 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:00:21.190 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:00:21.191 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:00:21.191 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:00:21.191 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:00:21.245 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:00:31.154 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:00:31.156 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:00:31.156 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:00:31.156 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:00:31.156 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:00:31.211 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:00:41.155 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:00:41.156 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:00:41.157 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:00:41.157 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:00:41.157 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:00:41.211 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:00:51.155 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:00:51.157 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:00:51.157 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:00:51.157 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:00:51.157 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:00:51.213 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:01:01.120 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:01:01.122 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:01:01.122 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:01:01.123 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:01:01.123 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:01:01.178 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:01:11.122 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:01:11.123 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:01:11.123 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:01:11.123 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:01:11.123 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:01:11.179 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:01:21.123 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:01:21.124 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:01:21.124 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:01:21.124 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:01:21.124 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:01:21.181 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:01:31.088 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:01:31.089 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:01:31.089 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:01:31.089 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:01:31.089 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:01:31.147 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:01:41.089 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:01:41.089 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:01:41.089 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:01:41.090 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:01:41.090 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:01:41.149 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:01:51.089 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:01:51.090 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:01:51.090 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:01:51.090 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:01:51.090 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:01:51.150 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:02:01.054 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:02:01.055 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:02:01.055 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:02:01.055 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:02:01.055 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:02:01.115 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:02:11.055 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:02:11.055 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:02:11.056 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:02:11.056 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:02:11.056 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:02:11.117 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:02:21.056 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:02:21.056 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:02:21.079 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:02:21.079 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:02:21.080 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:02:21.128 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:02:31.044 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:02:31.044 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:02:31.044 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:02:31.045 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:02:31.045 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:02:31.094 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:02:41.045 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:02:41.045 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:02:41.046 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:02:41.046 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:02:41.046 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:02:41.094 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:02:51.045 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:02:51.047 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:02:51.047 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:02:51.048 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:02:51.048 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:02:51.134 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:03:01.013 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:03:01.010 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:03:01.014 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:03:01.028 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:03:01.065 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:03:01.129 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:03:11.028 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:03:11.066 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:03:11.066 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:03:11.069 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:03:11.070 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:03:11.130 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:03:21.029 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:03:21.070 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:03:21.071 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:03:21.495 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:03:21.888 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:03:22.064 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:03:30.994 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:03:31.852 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:03:31.853 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:03:31.854 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:03:31.854 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:03:32.031 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:03:40.998 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:03:41.855 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:03:41.856 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:03:41.856 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:03:41.857 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:03:42.034 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:03:50.998 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:03:51.858 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:03:51.858 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:03:51.858 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:03:51.858 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:03:52.036 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:04:00.963 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:04:01.823 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:04:01.823 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:04:01.825 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:04:01.825 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:04:02.002 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:04:10.964 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:04:11.827 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:04:11.827 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:04:11.827 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:04:11.827 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:04:12.004 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:04:20.965 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:04:21.828 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:04:21.828 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:04:21.830 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:04:21.830 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:04:22.006 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:04:30.930 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:04:31.795 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:04:31.796 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:04:31.796 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:04:31.797 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:04:31.973 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:04:40.932 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:04:41.797 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:04:41.797 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:04:41.800 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:04:41.800 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:04:41.975 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:04:50.933 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:04:51.800 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:04:51.800 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:04:51.800 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:04:51.800 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:04:51.977 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:05:00.898 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:05:01.765 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:05:01.766 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:05:01.767 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:05:01.767 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:05:01.943 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:05:10.900 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:05:11.767 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:05:11.767 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:05:11.768 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:05:11.768 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:05:11.946 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:05:20.902 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:05:21.769 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:05:21.769 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:05:21.770 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:05:21.770 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:05:21.946 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:05:30.875 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:05:31.741 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:05:31.741 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:05:31.742 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:05:31.742 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:05:31.918 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:05:40.875 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:05:41.744 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:05:41.744 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:05:41.745 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:05:41.745 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:05:41.919 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:05:50.881 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:05:51.745 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:05:51.745 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:05:51.746 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:05:51.746 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:05:51.932 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:06:00.839 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:06:01.704 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:06:01.704 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:06:01.705 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:06:01.706 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:06:01.926 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:06:10.841 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:06:11.707 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:06:11.707 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:06:11.707 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:06:11.707 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:06:11.935 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:06:20.841 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:06:21.708 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:06:21.708 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:06:21.709 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:06:21.709 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:06:21.936 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:06:30.806 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:06:31.675 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:06:31.675 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:06:31.675 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:06:31.675 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:06:31.901 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:06:40.808 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:06:41.678 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:06:41.680 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:06:41.681 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:06:41.681 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:06:41.905 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:06:50.811 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:06:51.681 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:06:51.682 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:06:51.682 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:06:51.682 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:06:51.910 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:07:00.777 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:07:01.646 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:07:01.647 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:07:01.647 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:07:01.648 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:07:01.876 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:07:10.778 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:07:11.650 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:07:11.650 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:07:11.650 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:07:11.650 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:07:11.890 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:07:20.781 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:07:21.651 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:07:21.651 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:07:21.651 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:07:21.651 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:07:21.893 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:07:30.745 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:07:31.616 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:07:31.616 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:07:31.616 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:07:31.616 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:07:31.858 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:07:40.746 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:07:41.616 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:07:41.619 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:07:41.619 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:07:41.619 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:07:41.863 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:07:50.749 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:07:51.620 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:07:51.620 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:07:51.620 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:07:51.620 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:07:51.865 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:08:00.715 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:08:01.585 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:08:01.585 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:08:01.586 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:08:01.586 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:08:01.832 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:08:10.716 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:08:11.587 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:08:11.587 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:08:11.587 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:08:11.587 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:08:11.833 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:08:20.719 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:08:21.589 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:08:21.591 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:08:21.591 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:08:21.591 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:08:21.838 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:08:30.684 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:08:31.556 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:08:31.556 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:08:31.557 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:08:31.557 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:08:31.803 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:08:40.684 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:08:41.557 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:08:41.558 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:08:41.558 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:08:41.558 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:08:41.805 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:08:50.686 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:08:51.560 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:08:51.560 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:08:51.560 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:08:51.560 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:08:51.807 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:09:00.682 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:09:01.556 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:09:01.558 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:09:01.558 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:09:01.558 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:09:01.804 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:09:10.683 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:09:11.559 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:09:11.559 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:09:11.559 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:09:11.559 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:09:11.805 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:09:20.684 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:09:21.561 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:09:21.561 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:09:21.561 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:09:21.561 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:09:21.807 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:09:30.656 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:09:31.532 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:09:31.532 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:09:31.532 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:09:31.532 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:09:31.777 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:09:40.657 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:09:41.535 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:09:41.535 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:09:41.535 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:09:41.535 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:09:41.781 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:09:50.658 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:09:51.535 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:09:51.536 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:09:51.536 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:09:51.539 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:09:51.785 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:10:00.625 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:10:01.506 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:10:01.506 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:10:01.506 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:10:01.507 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:10:01.751 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:10:10.626 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:10:11.509 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:10:11.509 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:10:11.509 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:10:11.510 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:10:11.754 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:10:20.626 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:10:21.514 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:10:21.514 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:10:21.514 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:10:21.514 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:10:21.756 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:10:30.591 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:10:31.479 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:10:31.479 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:10:31.479 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:10:31.479 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:10:31.722 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:10:40.593 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:10:41.480 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:10:41.480 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:10:41.480 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:10:41.480 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:10:41.724 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:10:50.595 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:10:51.481 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:10:51.481 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:10:51.481 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:10:51.481 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:10:51.724 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:11:00.563 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:11:01.449 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:11:01.449 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:11:01.451 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:11:01.451 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:11:01.693 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+
+09:11:10.564 INFO  [main] [o.t.c.n.n.NodeImpl](NodeImpl.java:676) other peer is nil, please wait ... 
+09:11:11.453 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:140) -------- active connect channel 0
+09:11:11.454 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:141) -------- passive connect channel 0
+09:11:11.454 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:142) -------- all connect channel 0
+09:11:11.454 INFO  [pool-10-thread-1] [SyncPool](SyncPool.java:163) Peer stats:
+Active peers
+============
+Other connected peers
+============
+
+09:11:11.695 INFO  [pool-2-thread-1] [o.t.c.n.n.NodeImpl](NodeImpl.java:594) LocalNode stats:
+============
+MyHeadBlockNum: 0
+advObjToSpread: 0
+advObjToFetch: 0
+advObjWeRequested: 0
+unSyncNum: 0
+blockWaitToProc: 0
+blockJustReceived: 0
+syncBlockIdWeRequested: 0
+

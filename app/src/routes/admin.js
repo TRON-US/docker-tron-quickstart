@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const chalk = require('chalk')
 const accountsGeneration = require('../utils/accountsGeneration')
 // const jsonParser = require('body-parser').json()
 
@@ -10,9 +11,12 @@ let formattedTestingAccounts;
 
 function formatAccounts() {
   const tronWeb = tronWebBuilder()
+
+  console.log('\n\n', chalk.green('(tools)'), chalk.bold('/admin/accounts-generation'));
+
   formattedTestingAccounts = 'Available Accounts\n==================\n\n'
   for (let i = 0; i < testingAccounts.length; i++) {
-    formattedTestingAccounts += `(${i}) ${tronWeb.address.fromPrivateKey(testingAccounts[i])} (~10000 TRX)\n`
+    formattedTestingAccounts += `(${i}) ${tronWeb.address.fromPrivateKey(testingAccounts[i])} (${i ? '~' : '+'}10000 TRX)\n`
   }
   formattedTestingAccounts += '\nPrivate Keys\n==================\n\n'
   for (let i = 0; i < testingAccounts.length; i++) {

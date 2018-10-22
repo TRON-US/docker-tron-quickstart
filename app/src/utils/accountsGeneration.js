@@ -1,6 +1,7 @@
 const sleep = require('sleep')
 const fs = require('fs-extra')
 const path = require('path')
+const chalk = require('chalk')
 
 const tronWebBuilder = require('../utils/tronWebBuilder')
 
@@ -10,7 +11,7 @@ let defSet = false
 
 function waiting() {
   if (!done) {
-    console.log(`(${count++}) Waiting for sync...`)
+    console.log(chalk.gray(`(${count++}) Waiting for sync...`))
     setTimeout(waiting, 5000)
   }
 }
