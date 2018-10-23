@@ -21,6 +21,7 @@ async function accountsGeneration(amount) {
   setTimeout(waiting, 1000)
 
   const tronWeb = tronWebBuilder()
+  tronWeb.setDefaultBlock('latest')
 
   if (!defSet) {
     tronWeb.setDefaultBlock('latest');
@@ -44,14 +45,14 @@ async function accountsGeneration(amount) {
 
   } else {
 
-    accounts = [ tronWeb.defaultPrivateKey ]
+    accounts = process.env.dontUseDefault ? [] : [ tronWeb.defaultPrivateKey ]
+    amount -= accounts.length
 
-    for (let i = 0; i < amount - 1; i++) {
-
+    for (let i = 0; i < amount; i++) {
       const account = await tronWeb.createAccount();
       if (tronWeb.isAddress(account.address.hex)) {
         accounts.push(account.privateKey);
-        await tronWeb.transactionBuilder.sendTrx(account.address.base58, 10000);
+        await tronWeb.trx.sendTransaction(account.address.base58, tronWeb.toSun(10000));
       } else {
         i--;
       }

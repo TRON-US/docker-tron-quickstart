@@ -15,6 +15,7 @@ var only = () => {
     const color = status < 400 ? 'green' : 'red'
     return chalk[color]([' ',
       tokens.method(req, res),
+      tokens.url(req, res),
       status,
       tokens.res(req, res, 'content-length'), '-',
       tokens['response-time'](req, res), 'ms'
@@ -90,8 +91,8 @@ setApp('event-server', 18891, 8092);
 
 const n = "\n"
 
-console.log(n, chalk.bold('Full Node listening on', chalk.bold('http://127.0.0.1:8090'),
+console.log(n, 'Full Node listening on', chalk.bold('http://127.0.0.1:8090'),
     n, 'Solidity Node listening on', chalk.bold('http://127.0.0.1:8091'),
     n, 'Event Server listening on', chalk.bold('http://127.0.0.1:8092'),
-    n, n), chalk.magenta(`Waiting for the nodes to sync to generate ${process.env.accounts || 10} accounts...`), n)
+    n, n, chalk.magenta(`Waiting for the nodes to sync to generate ${process.env.accounts || 10} accounts...`), n)
 

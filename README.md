@@ -185,6 +185,19 @@ docker run -it -p 8091:8091 -p 8092:8092 -p 8090:8090 \
 ```
 After the first time, running again the container, it will use the file `app-data/accounts.json` for the accounts. If you need specific addresses, you can also edit `accounts.json`, put your own data and run again the container.
 
-### Mainnet and testnet
+### Mainnet nodes
+
+Unfortunately, you cannot use this image to create a node in the main Tron network because it uses a version of java-tron who is not the one required for a standard full node.
+
+### What about RPC?
+
+If you are running [Tron Wallet-cli](https://github.com/tronprotocol/wallet-cli) or any other tool which connects to the private network via RPC, you can just expose the ports . . . and voila!
+
+```
+docker run -it -p 50051:50051 -p 50052:50052 \
+  --name tron \
+  trontools/quickstart
+```
+
 
 

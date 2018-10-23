@@ -42,7 +42,7 @@ echo "Starting nodes and event server..."
 
 (cd /tron/tron-grid/target && nohup java -jar EventServer.jar >> /tron/logs/eventserver-start.log 2>&1 &)
 
-(cd /tron/FullNode && nohup java -jar FullNode.jar -c config.conf --witness >> /tron/logs/fullnode-start.log 2>&1 &)
+(cd /tron/FullNode && nohup java -jar FullNode.jar -c config.conf >> /tron/logs/fullnode-start.log 2>&1 &)
 
 (cd /tron/SolidityNode && nohup java -jar SolidityNode.jar -c config.conf >> /tron/logs/soliditynode-start.log 2>&1 &)
 
