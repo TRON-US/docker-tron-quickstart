@@ -20,6 +20,4 @@ __The following tools are useful during debugging and development__
 
 `sh/verify.sh` verifies the full node, solidity node and eventServer are listening.
 
-`sh/verifyShasta.sh` and `sh/verifyMainnet.sh` runs the same but for testnet and mainnet.
-
 `sh/prun.sh` runs latest version of `trontools/quickstart` on ports 9090, 9091 and 9092 (to avoid conflicts with the work-in-progress `tron-quickstart` which runs on ports 8090, 8091 and 8092).
