@@ -89,14 +89,13 @@ docker run -it -p 8091:8091 -p 8092:8092 -p 8090:8090 \
 )
 ```
 
-### Usage in TronBox
+### Usage in TronBox 2.1+
 
 Config your `tronbox.js` file as:
 ```
 module.exports = {
   networks: {
     development: {
-      from: 'TPL66VK2gCXNCD7EJg9pgJRfqcRazjhUZY',
       privateKey: 'da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0',
       consume_user_resource_percent: 30,
       fee_limit: 100000000,
@@ -204,4 +203,3 @@ docker run -it -p 50051:50051 -p 50052:50052 \
 __The "SERVER_BUSY" error__
 
 Sometimes, for example running tests with TronBox, we ask the node to performe a lot of operatios. This can cause that the full node is busy and returns that error. If so, just repeat your command.
-

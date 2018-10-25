@@ -10,15 +10,26 @@ const tronWebBuilder = require('../utils/tronWebBuilder')
 let testingAccounts;
 let formattedTestingAccounts;
 
+
+async function getBalances() {
+  const balances = []
+  for (let i = 0; i < testingAccounts.length; i++) {
+    let address = tronWeb.address.fromPrivateKey(testingAccounts[i])
+    balances[i] = await tronWeb.trx.getBalance(address)
+  }
+  return Promise.resolve(balances)
+}
+
 async function verifyAccountsBalance() {
   const tronWeb = tronWebBuilder()
 
   let balances = []
   let ready = 0
   console.log(chalk.gray("...\n(9) Waiting the node to mine the new accounts' transactions...\n"))
-
   while (ready < testingAccounts.length) {
-    sleep.sleep(3);
+    if (first) {
+      sleep.sleep(3);
+    }
     for (let i = 0; i < testingAccounts.length; i++) {
       if (!balances[i]) {
         let address = tronWeb.address.fromPrivateKey(testingAccounts[i])
@@ -33,9 +44,9 @@ async function verifyAccountsBalance() {
   return Promise.resolve(balances);
 }
 
-async function formatAccounts() {
+async function formatAccounts(first) {
   const tronWeb = tronWebBuilder()
-  const balances = await verifyAccountsBalance()
+  const balances = first ? await verifyAccountsBalance(first) : await getBalances()
 
   formattedTestingAccounts = 'Available Accounts\n==================\n\n'
   for (let i = 0; i < testingAccounts.length; i++) {
@@ -71,7 +82,7 @@ router.get('/accounts-generation', async function (req, res) {
           : 10
   )
 
-  await formatAccounts();
+  await formatAccounts(true);
   console.log(formattedTestingAccounts);
   res.send();
 });
