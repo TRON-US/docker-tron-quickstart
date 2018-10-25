@@ -1,5 +1,7 @@
 # Bash utilities
 
+__The following tools are useful during debugging and development__
+
 `sh/build.sh` builds the local image `tron-quickstart`.
 
 `sh/run.sh` runs `tron-quickstart` generating a `tron` container on ports 8090, 8091 and 8092.

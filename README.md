@@ -199,5 +199,9 @@ docker run -it -p 50051:50051 -p 50052:50052 \
   trontools/quickstart
 ```
 
+### Known issues
 
+__The "SERVER_BUSY" error__
+
+Sometimes, for example running tests with TronBox, we ask the node to performe a lot of operatios. This can cause that the full node is busy and returns that error. If so, just repeat your command.
 

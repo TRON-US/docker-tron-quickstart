@@ -93,6 +93,5 @@ const n = "\n"
 
 console.log(n, 'Full Node listening on', chalk.bold('http://127.0.0.1:8090'),
     n, 'Solidity Node listening on', chalk.bold('http://127.0.0.1:8091'),
-    n, 'Event Server listening on', chalk.bold('http://127.0.0.1:8092'),
-    n, n, chalk.magenta(`Waiting for the nodes to sync to generate ${process.env.accounts || 10} accounts...`), n)
+    n, 'Event Server listening on', chalk.bold('http://127.0.0.1:8092'), n)
 

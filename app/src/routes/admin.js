@@ -1,3 +1,4 @@
+const sleep = require('sleep')
 const express = require('express')
 const router = express.Router()
 const chalk = require('chalk')
@@ -9,16 +10,39 @@ const tronWebBuilder = require('../utils/tronWebBuilder')
 let testingAccounts;
 let formattedTestingAccounts;
 
+async function verifyAccountsBalance() {
+  const tronWeb = tronWebBuilder()
+
+  let balances = []
+  let ready = 0
+  console.log(chalk.gray("...\n(9) Waiting the node to mine the new accounts' transactions...\n"))
+
+  while (ready < testingAccounts.length) {
+    sleep.sleep(3);
+    for (let i = 0; i < testingAccounts.length; i++) {
+      if (!balances[i]) {
+        let address = tronWeb.address.fromPrivateKey(testingAccounts[i])
+        let balance = await tronWeb.trx.getBalance(address)
+        if (balance > 0) {
+          balances[i] = balance
+          ready++
+        }
+      }
+    }
+  }
+  return Promise.resolve(balances);
+}
+
 async function formatAccounts() {
   const tronWeb = tronWebBuilder()
+  const balances = await verifyAccountsBalance()
 
   formattedTestingAccounts = 'Available Accounts\n==================\n\n'
   for (let i = 0; i < testingAccounts.length; i++) {
 
     let address = tronWeb.address.fromPrivateKey(testingAccounts[i])
-    let balance = await tronWeb.trx.getBalance(address)
 
-    formattedTestingAccounts += `(${i}) ${address} (${tronWeb.fromSun(balance)} TRX)\n`
+    formattedTestingAccounts += `(${i}) ${address} (${tronWeb.fromSun(balances[i])} TRX)\n`
   }
   formattedTestingAccounts += '\nPrivate Keys\n==================\n\n'
   for (let i = 0; i < testingAccounts.length; i++) {
@@ -48,9 +72,13 @@ router.get('/accounts-generation', async function (req, res) {
   )
 
   await formatAccounts();
-
-  res.send(formattedTestingAccounts);
+  console.log(formattedTestingAccounts);
+  res.send();
 });
+
+router.get('/', function (req, res) {
+  res.send('Welcome to Tron Quickstart')
+})
 
 
 module.exports = router

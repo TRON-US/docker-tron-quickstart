@@ -8,8 +8,14 @@ const tronWebBuilder = require('../utils/tronWebBuilder')
 let count = 1
 let done = false
 let defSet = false
+let printed = false
+let amount
 
 function waiting() {
+  if (!printed) {
+    console.log(`Waiting when nodes are ready to generate ${amount} accounts...`)
+    printed = true
+  }
   if (!done) {
     console.log(chalk.gray(`(${count++}) Waiting for sync...`))
     setTimeout(waiting, 5000)
@@ -17,6 +23,8 @@ function waiting() {
 }
 
 async function accountsGeneration(amount) {
+
+  amount = amount
 
   setTimeout(waiting, 1000)
 
@@ -45,7 +53,7 @@ async function accountsGeneration(amount) {
 
   } else {
 
-    accounts = process.env.dontUseDefault ? [] : [ tronWeb.defaultPrivateKey ]
+    accounts = process.env.useZion ? [ tronWeb.defaultPrivateKey ] : []
     amount -= accounts.length
 
     for (let i = 0; i < amount; i++) {
