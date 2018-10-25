@@ -1,4 +1,5 @@
 # Tron Quickstart (Docker)
+https://github.com/tronprotocol/docker-tron-quickstart
 
 __A docker image exposing a full node, a solidity node and an event server, i.e., a complete private network for Tron developers.__
 
@@ -27,7 +28,6 @@ docker run -it \
   --name tron \
   trontools/quickstart
 ```
-
 To verify that the image is running correctly, execute
 ```
 docker exec -it tron ps aux
@@ -127,7 +127,7 @@ const tronWeb = new TronWeb(
 
 ### Testing
 
-From version 0.0.7, Tron Quickstart sets up a certain number of accounts to be used for tests.
+From version 1.0.0, Tron Quickstart sets up a certain number of accounts to be used for tests with TronBox 2.1+.
 By default, it generates 10 accounts, but you can set more accounts setting en environment variable running the container. For example, to generate 20 accounts:
 ```
 docker run -it \
@@ -138,20 +138,20 @@ docker run -it \
   --name tron \
   trontools/quickstart
 ```
-The generator waits until the nodes are synced and ready. As soon as so, the accounts are generated. The final output is something like:
+The generator waits until the nodes are ready, generates the accounts and wait until the transactions are mined. The final output is something like:
 ```
 Available Accounts
 ==================
-(0) TVbCeZECnkPJ4kvAAcHTBu6Q79QwEmndSE (~10000 TRX)
-(1) TDAf3Kn9BqdhGxApY6bQcbWgUbQ2N6hc1t (~10000 TRX)
-(2) TJVZmWvuXeydkTQxFezvXzKu9P3KywyP33 (~10000 TRX)
-(3) TRKCKCMxS2uuSEnZRh5gwKwmNQ7gKmSATv (~10000 TRX)
-(4) TZ2Pmn147pXMxZ3kVTziF7yQtcUvzmwZ4z (~10000 TRX)
-(5) TQEr9VppYnuWtE59pm1yVD3D7ojZUzHYC2 (~10000 TRX)
-(6) TJXzNLy4prmuodubYYmrKLF8uEmfU5Zeou (~10000 TRX)
-(7) TF5xFUrJYiinXTPY3RwTjwknR6QLDyevdD (~10000 TRX)
-(8) TPLuoh7nfDuEXChc3xVUopvWPiJq26Vi7V (~10000 TRX)
-(9) TSH8CpoQpTHpzVYNKarUP6dey79W5VJSs6 (~10000 TRX)
+(0) TVbCeZECnkPJ4kvAAcHTBu6Q79QwEmndSE (10000 TRX)
+(1) TDAf3Kn9BqdhGxApY6bQcbWgUbQ2N6hc1t (10000 TRX)
+(2) TJVZmWvuXeydkTQxFezvXzKu9P3KywyP33 (10000 TRX)
+(3) TRKCKCMxS2uuSEnZRh5gwKwmNQ7gKmSATv (10000 TRX)
+(4) TZ2Pmn147pXMxZ3kVTziF7yQtcUvzmwZ4z (10000 TRX)
+(5) TQEr9VppYnuWtE59pm1yVD3D7ojZUzHYC2 (10000 TRX)
+(6) TJXzNLy4prmuodubYYmrKLF8uEmfU5Zeou (10000 TRX)
+(7) TF5xFUrJYiinXTPY3RwTjwknR6QLDyevdD (10000 TRX)
+(8) TPLuoh7nfDuEXChc3xVUopvWPiJq26Vi7V (10000 TRX)
+(9) TSH8CpoQpTHpzVYNKarUP6dey79W5VJSs6 (10000 TRX)
 
 Private Keys
 ==================
@@ -184,9 +184,36 @@ docker run -it -p 8091:8091 -p 8092:8092 -p 8090:8090 \
 ```
 After the first time, running again the container, it will use the file `app-data/accounts.json` for the accounts. If you need specific addresses, you can also edit `accounts.json`, put your own data and run again the container.
 
-### Mainnet nodes
+If you need to use as accounts[0] the default account in `tronbox.js`, add the option `-e useZion=true` when you run the image. For example:
+```
+docker run -it \
+  -p 8091:8091 \
+  -p 8092:8092 \
+  -p 8090:8090 \
+  -e "useZion=true" \
+  --name tron \
+  trontools/quickstart
+```
+By default, the proxy server returns a verbose log, containing the response of any command. If you prefer just to know what has been called, you can add the option `-e "quiet=true"`. For consistency there is also the option `-e "verbose=true"` which is prioritary, i.e., `quiet` is ignored if `verbose` is specified.
 
-Unfortunately, you cannot use this image to create a node in the main Tron network because it uses a version of java-tron who is not the one required for a standard full node.
+
+
+### Interacting with the private network
+
+The easiest way to interact with the private network is using TronWeb.
+In the folder `/app` there is a `tronWeb.js` file not used by the image, but useful for runtime debugging.
+
+First, if you haven't done yet, clone this repo and install the dependences:
+```
+git clone https://github.com/tronprotocol/docker-tron-quickstart.git
+cd docker-tron-quickstart
+(cd app && npm i)
+```
+Now you can execute
+```
+node app/tronWeb
+```
+which will open a console with a `tronWeb` instance ready to use.
 
 ### What about RPC?
 
@@ -203,3 +230,7 @@ docker run -it -p 50051:50051 -p 50052:50052 \
 __The "SERVER_BUSY" error__
 
 Sometimes, for example running tests with TronBox, we ask the node to performe a lot of operatios. This can cause that the full node is busy and returns that error. If so, just repeat your command.
+
+### Not good for main network
+
+Unfortunately, you cannot use this image to create a node in the main Tron network because it uses a version of java-tron who is not the one required for a standard full node.

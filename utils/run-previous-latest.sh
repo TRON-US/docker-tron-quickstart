@@ -9,4 +9,4 @@ docker run -it \
   -p 9092:8092 \
   -e "accounts=10" \
   --name tron0 \
-  trontools/quickstart
+  trontools/quickstart:0.0.6
