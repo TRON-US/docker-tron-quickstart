@@ -1,0 +1,30 @@
+{
+  "name": "metacoin-box",
+  "version": "1.0.3",
+  "description": "",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate": "./scripts/migrate.sh"
+  },
+  "originalAuthors": "truffle-box",
+  "authors": [
+    {
+      "name": "alinger",
+      "email": "alinger@forke.cn"
+    }
+  ],
+  "contributors": [
+    {
+      "name": "Francesco Sullo",
+      "email": "sullof@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}

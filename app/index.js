@@ -3,30 +3,35 @@ var proxy = require('http-proxy-middleware');
 var morgan = require('morgan');
 var chalk = require('chalk')
 
+const admin = require('./src/routes/admin')
+
 process.on('uncaughtException', function (error) {
   console.error(error.message)
 })
 
-var only = who => {
+var only = () => {
   return function (tokens, req, res) {
-    return chalk.bold([
+    const status = tokens.status(req, res)
+    const color = status < 400 ? 'green' : 'red'
+    return chalk[color]([' ',
       tokens.method(req, res),
-      `[${who}]${tokens.url(req, res)}`,
-      tokens.status(req, res),
+      tokens.url(req, res),
+      status,
       tokens.res(req, res, 'content-length'), '-',
       tokens['response-time'](req, res), 'ms'
     ].join(' '))
   }
 }
 
-const setHeaders = activeLog => {
+const setHeaders = (who, verbose) => {
 
   return function onProxyRes(proxyRes, req, res) {
+
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type,Accept')
     res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS')
 
-    if (activeLog) {
+    if (verbose) {
       var oldWrite = res.write,
           oldEnd = res.end;
 
@@ -43,7 +48,7 @@ const setHeaders = activeLog => {
           chunks.push(new Buffer(chunk));
 
         var body = Buffer.concat(chunks).toString('utf8');
-        console.log(req.path, body);
+        console.log('\n\n', chalk.cyan(`(${who})`), chalk.bold(req.path), '\n', body.replace(/\n+$/,''));
 
         oldEnd.apply(res, arguments);
       };
@@ -58,15 +63,18 @@ function onError(err, req, res) {
   res.end(err);
 }
 
-const setApp = (name, port0, port, activeLog) => {
+const setApp = (name, port0, port, verbose) => {
   var app = express();
-  app.use(morgan(only(name)))
-  app.get('/favicon.ico', function (req, res) {
+  app.use(morgan(only()))
+  app.use('/favicon.ico', function (req, res) {
     res.send('');
   });
+  if (name === 'full-node') {
+    app.use('/admin', admin);
+  }
   app.use('/', proxy({
     changeOrigin: true,
-    onProxyRes: setHeaders(activeLog),
+    onProxyRes: setHeaders(name, verbose),
     onError,
     target: `http://127.0.0.1:${port0}`
   }));
@@ -74,8 +82,16 @@ const setApp = (name, port0, port, activeLog) => {
 
 }
 
+
 const verbose = !process.env.quiet || process.env.verbose === 'verbose'
 
 setApp('full-node', 18190, 8090, verbose);
 setApp('solidity-node', 18191, 8091, verbose);
-setApp('event-server', 18891, 8092, verbose);
+setApp('event-server', 18891, 8092);
+
+const n = "\n"
+
+console.log(n, 'Full Node listening on', chalk.bold('http://127.0.0.1:8090'),
+    n, 'Solidity Node listening on', chalk.bold('http://127.0.0.1:8091'),
+    n, 'Event Server listening on', chalk.bold('http://127.0.0.1:8092'), n)
+

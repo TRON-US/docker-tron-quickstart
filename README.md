@@ -2,6 +2,7 @@
 
 __A docker image exposing a full node, a solidity node and an event server, i.e., a complete private network for Tron developers.__
 
+## Usage
 
 Run it with:
 ```
@@ -16,34 +17,12 @@ docker run -it \
 
 Notice the `--rm` option which will delete the container when you stop it.
 
-If running a migration or a test you have an error, most likely it is because you did it too early and the nodes didn't sync yet.
-
-If you are using [TronBox](https://www.npmjs.com/package/tronbox), you can config your `tronbox.js` file as:
-```
-module.exports = {
-  networks: {
-    development: {
-      from: 'TPL66VK2gCXNCD7EJg9pgJRfqcRazjhUZY',
-      privateKey: 'da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0',
-      consume_user_resource_percent: 30,
-      fee_limit: 100000000,
-      fullNode: "http://127.0.0.1:8090",
-      solidityNode: "http://127.0.0.1:8091",
-      eventServer: "http://127.0.0.1:8092",
-      network_id: "*"
-    }
-  }
-};
-
-
-```
-
-If you need to expose different ports, you can set them running the container. For example:
+If you need to expose different ports to avoid conflicts, for example the ports 9090, 9091 and 9092, you can set up them when you run the container, like in this example:
 ```
 docker run -it \
-  -p 3000:8090 \
-  -p 4001:8091 \
-  -p 5001:8092 \
+  -p 9090:8090 \
+  -p 9091:8091 \
+  -p 9092:8092 \
   --rm \
   --name tron \
   trontools/quickstart
@@ -68,10 +47,8 @@ root        24  7.2 18.6 4173968 382408 pts/0  Sl+  12:13   0:38 java -jar FullN
 root       100  0.0  0.1  20176  3796 pts/1    Ss   12:13   0:00 bash
 root       336  0.0  0.1  36068  3184 pts/1    R+   12:22   0:00 ps aux
 ```
-If mongod, some of the nodes or the event server are not running, restart the container:
-```
-docker restart tron
-```
+If mongod, some of the nodes or the event server are not running, exit and run the container again.
+
 Be careful, since we used the `--rm` option, restarting the container you will reset the data, similarly to what happens when you stop and run `ganache-cli` again in Truffle.
 
 To see the logs of the full node you can execute
@@ -83,27 +60,146 @@ and you can do the same for the solidity node
 docker exec -it tron tail -f /tron/SolidityNode/logs/tron.log
 ```
 
-If you prefer to have a stable private network, you can run the image avoiding using the self removing option (`--rm`). Even better, you can set local volumes and run the container telling it to use them:
-```
-mkdir fullnode-logs
-mkdir fullnode-output-directory
-mkdir soliditynode-logs
-mkdir soliditynode-output-directory
-mkdir mongo-data
-docker run -d -p 8091:8091 -p 8092:8092 -p 8090:8090 \
+### Stable private networks
+
+If you like to have a stable private network, you must set local volumes and run the container telling it to use them, like in the following example:
+```sh
+(
+# creating the local folders
+
+mkdir tron-data
+cd tron-data
+
+mkdir data          # Mongodb and Proxy app data
+mkdir -p fn/logs    # Logs of the full node
+mkdir -p fn/output  # Data full node
+mkdir -p sn/logs    # Logs solidity node
+mkdir -p sn/output  # Data solidity node
+
+# running the container using the local volumes
+
+docker run -it -p 8091:8091 -p 8092:8092 -p 8090:8090 \
   --name tron \
-  -v $PWD/mongo-data:/data/db \
-  -v $PWD/fullnode-logs:/tron/FullNode/logs \
-  -v $PWD/fullnode-output-directory:/tron/FullNode/output-directory \
-  -v $PWD/soliditynode-logs:/tron/SolidityNode/logs \
-  -v $PWD/soliditynode-output-directory:/tron/SolidityNode/output-directory \
+  -v $PWD/data:/data \
+  -v $PWD/fn/logs:/tron/FullNode/logs \
+  -v $PWD/fn/output:/tron/FullNode/output-directory \
+  -v $PWD/sn/logs:/tron/SolidityNode/logs \
+  -v $PWD/sn/output:/tron/SolidityNode/output-directory \
+  trontools/quickstart
+)
+```
+
+### Usage in TronBox 2.1+
+
+Config your `tronbox.js` file as:
+```
+module.exports = {
+  networks: {
+    development: {
+      privateKey: 'da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0',
+      consume_user_resource_percent: 30,
+      fee_limit: 100000000,
+      fullNode: "http://127.0.0.1:8090",
+      solidityNode: "http://127.0.0.1:8091",
+      eventServer: "http://127.0.0.1:8092",
+      network_id: "*"
+    }
+  }
+};
+
+```
+
+### Usage in TronWeb
+
+Instantiate tronWeb as in the following example:
+```
+const TronWeb = require('tronweb')
+
+const tronWeb = new TronWeb(
+    "http://127.0.0.1:8090",
+    "http://127.0.0.1:8091",
+    "http://127.0.0.1:8092",
+    'da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0',
+)
+
+```
+
+
+### Testing
+
+From version 0.0.7, Tron Quickstart sets up a certain number of accounts to be used for tests.
+By default, it generates 10 accounts, but you can set more accounts setting en environment variable running the container. For example, to generate 20 accounts:
+```
+docker run -it \
+  -p 8091:8091 \
+  -p 8092:8092 \
+  -p 8090:8090 \
+  -e "accounts=20" \
+  --name tron \
+  trontools/quickstart
+```
+The generator waits until the nodes are synced and ready. As soon as so, the accounts are generated. The final output is something like:
+```
+Available Accounts
+==================
+(0) TVbCeZECnkPJ4kvAAcHTBu6Q79QwEmndSE (~10000 TRX)
+(1) TDAf3Kn9BqdhGxApY6bQcbWgUbQ2N6hc1t (~10000 TRX)
+(2) TJVZmWvuXeydkTQxFezvXzKu9P3KywyP33 (~10000 TRX)
+(3) TRKCKCMxS2uuSEnZRh5gwKwmNQ7gKmSATv (~10000 TRX)
+(4) TZ2Pmn147pXMxZ3kVTziF7yQtcUvzmwZ4z (~10000 TRX)
+(5) TQEr9VppYnuWtE59pm1yVD3D7ojZUzHYC2 (~10000 TRX)
+(6) TJXzNLy4prmuodubYYmrKLF8uEmfU5Zeou (~10000 TRX)
+(7) TF5xFUrJYiinXTPY3RwTjwknR6QLDyevdD (~10000 TRX)
+(8) TPLuoh7nfDuEXChc3xVUopvWPiJq26Vi7V (~10000 TRX)
+(9) TSH8CpoQpTHpzVYNKarUP6dey79W5VJSs6 (~10000 TRX)
+
+Private Keys
+==================
+(0) 3E67AB8BC1455E07EFB5B810750CA281ED417290DC7579C8090DBBCF9B4F958A
+(1) 72C0F16C69951ECAE37A781AABE69F4E6FA6C66CDC183765EFECAD0B2FE5AD39
+(2) 93E06D087C0E9E3F5FD413597B0C14DDBE17FE51BA40A62AAFB98D6FDF0AF146
+(3) 582C0624A030DEEBB531B8FAE8CE7FFF1530CA735FAE32B0349C580DB7F5B5A1
+(4) DF4287D704E47312FE6B51E8EDF225F0E9FB8447B14516938E5ED2402380F56F
+(5) DBC58F94E3BA5FEF923C0B2F89BBE290E35E9661AA0F979BD755C1EC7D895E70
+(6) 9B2A400EDDCE6CBE60CD3CFBC5ED2903C42C5B0AFF5D0E701A403C3714AC7C21
+(7) B1DE2461BD8E5C3B92E0ACE075B02DBE770A62E4B1C94307E7E4D46347A68B24
+(8) CE6371A1662E31449EE2E79977C211AB595DD802D1AF0776456CC3797DCEC4FE
+(9) CD538105279011140F85853EEC165F0ADA3BC965849DDACB03EA734AD958B1F6
+
+```
+
+At any moment, to see the generated accounts, run
+```
+curl http://127.0.0.1:8090/admin/accounts
+```
+
+If you like to use all the time the same accounts, you can set a local volume and let docker using it, like in the following example:
+```sh
+mkdir app-data
+
+docker run -it -p 8091:8091 -p 8092:8092 -p 8090:8090 \
+  --name tron \
+  -v $PWD/app-data:/data/app \
+  trontools/quickstart
+```
+After the first time, running again the container, it will use the file `app-data/accounts.json` for the accounts. If you need specific addresses, you can also edit `accounts.json`, put your own data and run again the container.
+
+### Mainnet nodes
+
+Unfortunately, you cannot use this image to create a node in the main Tron network because it uses a version of java-tron who is not the one required for a standard full node.
+
+### What about RPC?
+
+If you are running [Tron Wallet-cli](https://github.com/tronprotocol/wallet-cli) or any other tool which connects to the private network via RPC, you can just expose the ports . . . and voila!
+
+```
+docker run -it -p 50051:50051 -p 50052:50052 \
+  --name tron \
   trontools/quickstart
 ```
 
-If you like to check the event database, connect to mongo like:
-```
-mongo
-use events
-db.auth('trondev','vednort')
-db.events.find()
-```
+### Known issues
+
+__The "SERVER_BUSY" error__
+
+Sometimes, for example running tests with TronBox, we ask the node to performe a lot of operatios. This can cause that the full node is busy and returns that error. If so, just repeat your command.

@@ -1,4 +1,4 @@
-# Tron Quickstart @0.0.4
+# Tron Quickstart @1.0.0
 
 FROM ubuntu:18.04
 LABEL maintainer="Francesco Sullo <francesco@sullo.co>"
@@ -56,7 +56,7 @@ RUN apt-get install git -y && \
   git clone https://github.com/tronprotocol/java-tron.git && \
   cd java-tron && \
   git fetch && \
-  git checkout test_ev2 && \
+  git checkout shasta-dev && \
   cp ../conf/mongodb.properties src/main/resources/. && \
   ./gradlew build -x test && \
   cd ..
@@ -75,9 +75,6 @@ RUN git clone https://github.com/tronprotocol/tron-grid.git && \
 
 # Configures full and solidity node
 
-ADD app /tron/app
-ADD start.sh /tron/start.sh
-
 RUN mkdir FullNode && \
   cp java-tron/build/libs/FullNode.jar FullNode/. && \
   mv conf/fullnode.conf FullNode/config.conf
@@ -89,9 +86,25 @@ RUN mkdir SolidityNode && \
 
 # Install proxy dependencies
 
-RUN chmod +x start.sh && \
-  cd app && \
-  npm install
+RUN apt-get install build-essential -y
 
+RUN mkdir /tron/app
+ADD app/package.json /tron/app/package.json
+ADD app/package-lock.json /tron/app/package-lock.json
 
+RUN cd app && npm install
+
+RUN apt-get remove maven git -y && \
+  apt-get clean all && \
+  apt-get autoremove -y
+
+# Separating install from src speeds up the rebuilding
+# if the node app is changed, but has the same dependences
+
+ADD app/index.js /tron/app/index.js
+ADD app/src /tron/app/src
+ADD scripts /tron/scripts
+
+ADD start.sh /tron/start.sh
+RUN chmod +x start.sh
 CMD ["./start.sh"]
