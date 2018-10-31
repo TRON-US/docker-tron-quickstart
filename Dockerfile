@@ -1,4 +1,4 @@
-# Tron Quickstart @1.0.0
+# Tron Quickstart @1.1.0
 
 FROM ubuntu:18.04
 LABEL maintainer="Francesco Sullo <francesco@sullo.co>"

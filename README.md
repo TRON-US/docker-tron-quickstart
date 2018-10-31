@@ -128,45 +128,56 @@ const tronWeb = new TronWeb(
 ### Testing
 
 From version 1.0.0, Tron Quickstart sets up a certain number of accounts to be used for tests with TronBox 2.1+.
-By default, it generates 10 accounts, but you can set more accounts setting en environment variable running the container. For example, to generate 20 accounts:
-```
-docker run -it \
-  -p 8091:8091 \
-  -p 8092:8092 \
-  -p 8090:8090 \
-  -e "accounts=20" \
-  --name tron \
-  trontools/quickstart
-```
-The generator waits until the nodes are ready, generates the accounts and wait until the transactions are mined. The final output is something like:
+By default, it generates 10 accounts and waits until the transactions are mined. The final output is something like:
 ```
 Available Accounts
 ==================
-(0) TVbCeZECnkPJ4kvAAcHTBu6Q79QwEmndSE (10000 TRX)
-(1) TDAf3Kn9BqdhGxApY6bQcbWgUbQ2N6hc1t (10000 TRX)
-(2) TJVZmWvuXeydkTQxFezvXzKu9P3KywyP33 (10000 TRX)
-(3) TRKCKCMxS2uuSEnZRh5gwKwmNQ7gKmSATv (10000 TRX)
-(4) TZ2Pmn147pXMxZ3kVTziF7yQtcUvzmwZ4z (10000 TRX)
-(5) TQEr9VppYnuWtE59pm1yVD3D7ojZUzHYC2 (10000 TRX)
-(6) TJXzNLy4prmuodubYYmrKLF8uEmfU5Zeou (10000 TRX)
-(7) TF5xFUrJYiinXTPY3RwTjwknR6QLDyevdD (10000 TRX)
-(8) TPLuoh7nfDuEXChc3xVUopvWPiJq26Vi7V (10000 TRX)
-(9) TSH8CpoQpTHpzVYNKarUP6dey79W5VJSs6 (10000 TRX)
+
+(0) THonCrSv2bkzXu4Azrc6L949YJHqRs4XYN (10000 TRX)
+(1) TAWCqmAvjs1GdB39AgVZDo7sjuSCTQAg4T (10000 TRX)
+(2) TMG1rifQBAABz4qKxZr4RqA8Zr4eCwgQvy (10000 TRX)
+(3) TA76Y4dnKzD8BmmBaLBxtV2YqJHo4Jc7zZ (10000 TRX)
+(4) TBhjRJc3btGMotw3vz7VpDcrfYs98DdQNA (10000 TRX)
+(5) TQP9CT7w8mr9mmjhNyuaZpo3BJizoC6sM5 (10000 TRX)
+(6) TBKaAgZfcbF9q1496uUjacEjBPLqb7djc4 (10000 TRX)
+(7) THo2uD5CamAbhHjP6QTyj7RxPwTkbk6vse (10000 TRX)
+(8) TWmBP7dTWQVcovrqZaaHerJWirdh7B6NJa (10000 TRX)
+(9) TRBrPNWAkKGoXjYHLWdrvaqF49G2MYukp6 (10000 TRX)
 
 Private Keys
 ==================
-(0) 3E67AB8BC1455E07EFB5B810750CA281ED417290DC7579C8090DBBCF9B4F958A
-(1) 72C0F16C69951ECAE37A781AABE69F4E6FA6C66CDC183765EFECAD0B2FE5AD39
-(2) 93E06D087C0E9E3F5FD413597B0C14DDBE17FE51BA40A62AAFB98D6FDF0AF146
-(3) 582C0624A030DEEBB531B8FAE8CE7FFF1530CA735FAE32B0349C580DB7F5B5A1
-(4) DF4287D704E47312FE6B51E8EDF225F0E9FB8447B14516938E5ED2402380F56F
-(5) DBC58F94E3BA5FEF923C0B2F89BBE290E35E9661AA0F979BD755C1EC7D895E70
-(6) 9B2A400EDDCE6CBE60CD3CFBC5ED2903C42C5B0AFF5D0E701A403C3714AC7C21
-(7) B1DE2461BD8E5C3B92E0ACE075B02DBE770A62E4B1C94307E7E4D46347A68B24
-(8) CE6371A1662E31449EE2E79977C211AB595DD802D1AF0776456CC3797DCEC4FE
-(9) CD538105279011140F85853EEC165F0ADA3BC965849DDACB03EA734AD958B1F6
+
+(0) 84d9f2d42a52839ca2ed6992af7f2e9617263a3eb9a358f25ccddf704f7826a4
+(1) 086fe9467b9c2753eedf22abd88a6651de3d2fcdfbc0f1a8ce59829719a6031a
+(2) 57de89ab1502d8d6f08a63342e7bf2e9d361ed0a0d6fe57733aba6010873839b
+(3) 7605e63fc9c738268e86396d242389df2cdb2a3fbe17145b43fc238ef5cb4ac2
+(4) 1f8fe4c1d38814c1868c5d76dda2afd7b7715c8a8382a458004502a6a0dd39d7
+(5) a012ffd67845b0e189d627082d40d32c98cc4c5221a49f611f22f75a94ff1254
+(6) 92294e76ba71dbb6e43a701596253857d6481867f8101f99b72125359d3ae28d
+(7) 89e73d62ad9e74d6d725d020cd037ecbb590a7be52091e830f55717c98181590
+(8) f3f38eacb1e32cb08642097ec0763e43d99aa7c5385dd4e3a85902c50ba66998
+(9) 0e0ac6676ca312b88939584bebc0f279a3c13c9236846b95eaa9df8588538ad5
+
+HD Wallet
+==================
+Mnemonic:      wage symptom exchange mask elder above wool later engine slot place rocket
+Base HD Path:  m/44'/60'/0'/0//{account_index}
 
 ```
+
+#### Available options:
+
+To set an option set an env variable, like for example `-e "accounts=20"` to set 20 default accounts.
+
+List of options
+* `accounts=12` sets the number of generated accounts
+* `useDefaultPrivateKey=true` tells TQ to use the default account as `accounts[0]`
+* `mnemonic=wrong bit chicken kitchen rat` uses a specified mnemonic
+* `defaultBalance=100000` sets the initial balance for the generated accounts (in the example to 100,000 TRX)
+* `seed=ushwe63hgeWUS` sets the seed to be used to generate the mnemonic (if none is passed)
+* `hdPath=m/44'/60'/0'/0` sets a custom bit39 hdPath
+
+
 
 At any moment, to see the generated accounts, run
 ```
@@ -184,18 +195,19 @@ docker run -it -p 8091:8091 -p 8092:8092 -p 8090:8090 \
 ```
 After the first time, running again the container, it will use the file `app-data/accounts.json` for the accounts. If you need specific addresses, you can also edit `accounts.json`, put your own data and run again the container.
 
-If you need to use as accounts[0] the default account in `tronbox.js`, add the option `-e useZion=true` when you run the image. For example:
+If you need to use as accounts[0] the default account in `tronbox.js`, add the option `-e useDefaultPrivateKey=true` when you run the image. For example:
 ```
 docker run -it \
   -p 8091:8091 \
   -p 8092:8092 \
   -p 8090:8090 \
-  -e "useZion=true" \
+  -e "useDefaultPrivateKey=true" \
   --name tron \
   trontools/quickstart
 ```
 By default, the proxy server returns a verbose log, containing the response of any command. If you prefer just to know what has been called, you can add the option `-e "quiet=true"`. For consistency there is also the option `-e "verbose=true"` which is prioritary, i.e., `quiet` is ignored if `verbose` is specified.
 
+To see the queryString of a GET or POST command, use the options `-e "showQueryString=true"`.
 
 
 ### Interacting with the private network
