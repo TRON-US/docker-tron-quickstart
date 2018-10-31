@@ -1,7 +1,9 @@
 var express = require('express');
 var proxy = require('http-proxy-middleware');
 var morgan = require('morgan');
-var chalk = require('chalk')
+var chalk = require('chalk');
+var _ = require('lodash');
+// const jsonParser = require('body-parser').json()
 
 const admin = require('./src/routes/admin')
 
@@ -56,6 +58,12 @@ const setHeaders = (who, verbose) => {
   }
 }
 
+function onProxyReq(proxyReq, req, res) {
+  if (process.env.showQueryString && _.keys(req.query).length) {
+    console.log(chalk.gray(' QueryString:'),chalk.cyan(JSON.stringify(req.query)))
+  }
+}
+
 function onError(err, req, res) {
   res.writeHead(500, {
     'Content-Type': 'text/plain'
@@ -74,6 +82,7 @@ const setApp = (name, port0, port, verbose) => {
   }
   app.use('/', proxy({
     changeOrigin: true,
+    onProxyReq,
     onProxyRes: setHeaders(name, verbose),
     onError,
     target: `http://127.0.0.1:${port0}`
