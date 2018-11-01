@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Tron Quickstart v0.0.6"
+echo "\n\nTron Quickstart v1.1.2\n"
 
 echo "Run mongodb"
 nohup mongod >> mongod.log 2>&1 &

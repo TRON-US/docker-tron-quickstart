@@ -28,11 +28,6 @@ function waiting() {
 
 async function accountsGeneration() {
 
-  const env = _.pick(
-      process.env,
-      'seed,mnemonic,hdPath,useDefaultPrivateKey,defaultBalance,accounts'.split(',')
-  )
-
   if (!defSet) {
     tronWeb = tronWebBuilder()
     tronWeb.setDefaultBlock('latest');
@@ -65,8 +60,8 @@ async function accountsGeneration() {
   }
 
   if (!accounts) {
-    accounts = await deriveAccountsFromSeedAndOrMnemonic(env)
-    if (env.useDefaultPrivateKey) {
+    accounts = await deriveAccountsFromSeedAndOrMnemonic(process.env)
+    if (process.env.useDefaultPrivateKey) {
       accounts.privateKeys = [tronWeb.defaultPrivateKey].concat(accounts.accounts)
     }
     if (!isDev) {
@@ -74,11 +69,7 @@ async function accountsGeneration() {
       fs.writeFileSync(path.join(tmpDir, 'accounts.json'), JSON.stringify(accounts, null, 2))
     }
   }
-  const zero = env.useDefaultPrivateKey ? 1 : 0
-  for (let i = zero; i < accounts.privateKeys.length; i++) {
-    let address = tronWeb.address.fromPrivateKey(accounts.privateKeys[i])
-    await tronWeb.trx.sendTransaction(address, tronWeb.toSun(env.defaultBalance || 10000))
-  }
+
   return Promise.resolve(accounts)
 }
 

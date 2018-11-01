@@ -24,18 +24,29 @@ async function getBalances() {
 async function verifyAccountsBalance() {
   const tronWeb = tronWebBuilder()
 
+  const zero = process.env.useDefaultPrivateKey ? 1 : 0
+  const amount = process.env.defaultBalance || 10000
   let balances = []
   let ready = 0
+  let trxSent = []
   console.log(chalk.gray("...\n(9) Waiting the node to mine the new accounts' transactions..."))
+
+  let count = 1
 
   let privateKeys = testingAccounts.privateKeys
 
   while (ready < privateKeys.length) {
-    console.log(chalk.gray('Working...'))
-    sleep.sleep(3);
+    console.log(chalk.gray(`(${count++}) Working...`))
     for (let i = 0; i < privateKeys.length; i++) {
-      if (!balances[i]) {
-        let address = tronWeb.address.fromPrivateKey(privateKeys[i])
+      let address = tronWeb.address.fromPrivateKey(privateKeys[i])
+      if (!trxSent[i]) {
+        let result = await tronWeb.trx.sendTransaction(address, tronWeb.toSun(amount))
+        if (result.result) {
+          console.log(chalk.gray(`Sent ${amount} TRX to ${address}`))
+          trxSent[i] = true
+        } else {
+        }
+      } else if (!balances[i]) {
         let balance = await tronWeb.trx.getBalance(address)
         if (balance > 0) {
           balances[i] = balance
@@ -43,6 +54,7 @@ async function verifyAccountsBalance() {
         }
       }
     }
+    sleep.sleep(3);
   }
   return Promise.resolve(balances);
 }
@@ -63,8 +75,8 @@ async function formatAccounts(balances) {
   }
   formattedTestingAccounts += '\nHD Wallet\n' +
       '==================\n' +
-      'Mnemonic:      '+testingAccounts.mnemonic +'\n' +
-      'Base HD Path:  '+testingAccounts.hdPath+'{account_index}\n'
+      'Mnemonic:      ' + testingAccounts.mnemonic + '\n' +
+      'Base HD Path:  ' + testingAccounts.hdPath + '{account_index}\n'
 
   return Promise.resolve()
 }
