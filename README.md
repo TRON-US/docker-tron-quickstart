@@ -60,35 +60,6 @@ and you can do the same for the solidity node
 docker exec -it tron tail -f /tron/SolidityNode/logs/tron.log
 ```
 
-### Stable private networks
-
-If you like to have a stable private network, you must set local volumes and run the container telling it to use them, like in the following example:
-```sh
-(
-# creating the local folders
-
-mkdir tron-data
-cd tron-data
-
-mkdir data          # Mongodb and Proxy app data
-mkdir -p fn/logs    # Logs of the full node
-mkdir -p fn/output  # Data full node
-mkdir -p sn/logs    # Logs solidity node
-mkdir -p sn/output  # Data solidity node
-
-# running the container using the local volumes
-
-docker run -it -p 8091:8091 -p 8092:8092 -p 8090:8090 \
-  --name tron \
-  -v $PWD/data:/data \
-  -v $PWD/fn/logs:/tron/FullNode/logs \
-  -v $PWD/fn/output:/tron/FullNode/output-directory \
-  -v $PWD/sn/logs:/tron/SolidityNode/logs \
-  -v $PWD/sn/output:/tron/SolidityNode/output-directory \
-  trontools/quickstart
-)
-```
-
 ### Usage in TronBox 2.1+
 
 Config your `tronbox.js` file as:
@@ -171,7 +142,7 @@ To set an option set an env variable, like for example `-e "accounts=20"` to set
 
 List of options
 * `accounts=12` sets the number of generated accounts
-* `useDefaultPrivateKey=true` tells TQ to use the default account as `accounts[0]`
+* `useDefaultPrivateKey=true` tells Quickstart to use the default account as `accounts[0]`
 * `mnemonic=wrong bit chicken kitchen rat` uses a specified mnemonic
 * `defaultBalance=100000` sets the initial balance for the generated accounts (in the example to 100,000 TRX)
 * `seed=ushwe63hgeWUS` sets the seed to be used to generate the mnemonic (if none is passed)
@@ -184,27 +155,21 @@ At any moment, to see the generated accounts, run
 curl http://127.0.0.1:8090/admin/accounts
 ```
 
-If you like to use all the time the same accounts, you can set a local volume and let docker using it, like in the following example:
+#### Persistency
+
+If you like to use all the time the same accounts you can pass a mnemonic or let docker using a local `accounts.json` file, like in the following example:
 ```sh
-mkdir app-data
+if [[ ! -d "accounts-data" ]]; then mkdir accounts-data; fi
 
 docker run -it -p 8091:8091 -p 8092:8092 -p 8090:8090 \
   --name tron \
-  -v $PWD/app-data:/data/app \
+  -v $PWD/accounts-data:/config \
   trontools/quickstart
 ```
-After the first time, running again the container, it will use the file `app-data/accounts.json` for the accounts. If you need specific addresses, you can also edit `accounts.json`, put your own data and run again the container.
+In the example above, after the first time, running again the container, Tron Quickstart will use the file `accounts-data/accounts.json` for the accounts. If you need specific addresses, you can edit `accounts.json`, put your own private keys in the `privateKeys` array, and run again the container.
 
-If you need to use as accounts[0] the default account in `tronbox.js`, add the option `-e useDefaultPrivateKey=true` when you run the image. For example:
-```
-docker run -it \
-  -p 8091:8091 \
-  -p 8092:8092 \
-  -p 8090:8090 \
-  -e "useDefaultPrivateKey=true" \
-  --name tron \
-  trontools/quickstart
-```
+#### Logging
+
 By default, the proxy server returns a verbose log, containing the response of any command. If you prefer just to know what has been called, you can add the option `-e "quiet=true"`. For consistency there is also the option `-e "verbose=true"` which is prioritary, i.e., `quiet` is ignored if `verbose` is specified.
 
 To see the queryString of a GET or POST command, use the options `-e "showQueryString=true"`.
@@ -247,6 +212,6 @@ Sometimes, for example running tests with TronBox, we ask the node to performe a
 
 Unfortunately, you cannot use this image to create a node in the main Tron network because it uses a version of java-tron who is not the one required for a standard full node.
 
-### Latest version is 1.1.2
+### Latest version is 1.1.3
 
 To be updated, take a look at https://hub.docker.com/r/trontools/quickstart/tags/

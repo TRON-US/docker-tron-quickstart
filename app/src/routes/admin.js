@@ -14,8 +14,8 @@ async function getBalances() {
   const tronWeb = tronWebBuilder()
 
   const balances = []
-  for (let i = 0; i < testingAccounts.length; i++) {
-    let address = tronWeb.address.fromPrivateKey(testingAccounts[i])
+  for (let i = 0; i < testingAccounts.privateKeys.length; i++) {
+    let address = tronWeb.address.fromPrivateKey(testingAccounts.privateKeys[i])
     balances[i] = await tronWeb.trx.getBalance(address)
   }
   return Promise.resolve(balances)
@@ -24,27 +24,24 @@ async function getBalances() {
 async function verifyAccountsBalance() {
   const tronWeb = tronWebBuilder()
 
-  const zero = process.env.useDefaultPrivateKey ? 1 : 0
+  console.log(chalk.gray("...\nLoading the accounts and waiting for the node to mine the transactions..."))
+
   const amount = process.env.defaultBalance || 10000
-  let balances = []
+  const balances = []
   let ready = 0
-  let trxSent = []
-  console.log(chalk.gray("...\n(9) Waiting the node to mine the new accounts' transactions..."))
-
+  const trxSent = []
   let count = 1
-
   let privateKeys = testingAccounts.privateKeys
 
-  while (ready < privateKeys.length) {
-    console.log(chalk.gray(`(${count++}) Working...`))
+  while (true) {
+    console.log(chalk.gray(`(${count++}) Waiting for receipts...`))
     for (let i = 0; i < privateKeys.length; i++) {
       let address = tronWeb.address.fromPrivateKey(privateKeys[i])
-      if (!trxSent[i]) {
+      if (privateKeys[i] !== tronWeb.defaultPrivateKey && !trxSent[i]) {
         let result = await tronWeb.trx.sendTransaction(address, tronWeb.toSun(amount))
         if (result.result) {
-          console.log(chalk.gray(`Sent ${amount} TRX to ${address}`))
+          console.log(chalk.gray(`Sending ${amount} TRX to ${address}`))
           trxSent[i] = true
-        } else {
         }
       } else if (!balances[i]) {
         let balance = await tronWeb.trx.getBalance(address)
@@ -54,8 +51,11 @@ async function verifyAccountsBalance() {
         }
       }
     }
-    sleep.sleep(3);
+    if (ready < privateKeys.length)
+      sleep.sleep(3);
+    else break;
   }
+  console.log(chalk.gray('Done.\n'));
   return Promise.resolve(balances);
 }
 

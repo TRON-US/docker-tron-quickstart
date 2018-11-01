@@ -13,11 +13,10 @@ let count = 1
 let done = false
 let defSet = false
 let printed = false
-let amount
 
 function waiting() {
   if (!printed) {
-    console.log(`Waiting when nodes are ready to generate ${amount} accounts...`)
+    console.log(chalk.gray(`Waiting when nodes are ready to generate ${process.env.accounts || 10} accounts...`))
     printed = true
   }
   if (!done) {
@@ -37,17 +36,18 @@ async function accountsGeneration() {
 
   if (!await tronWeb.fullNode.isConnected()) {
     sleep.sleep(1)
-    return await accountsGeneration(amount)
+    return await accountsGeneration()
   }
 
   done = true;
   let accounts;
 
-  const tmpDir = '/data/app'
+  const tmpDir = '/config'
   const jsonPath = path.join(tmpDir, 'accounts.json')
 
   if (!isDev && fs.existsSync(jsonPath)) {
     accounts = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'))
+
     if (Array.isArray(accounts)) {
       // for retro-compatibility
       accounts = {
