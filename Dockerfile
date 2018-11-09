@@ -105,6 +105,9 @@ ADD app/index.js /tron/app/index.js
 ADD app/src /tron/app/src
 ADD scripts /tron/scripts
 
+ADD tronWeb /tron/tronWeb
+RUN chmod +x tronWeb
+
 ADD start.sh /tron/start.sh
 RUN chmod +x start.sh
 CMD ["./start.sh"]
