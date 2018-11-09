@@ -148,12 +148,23 @@ List of options
 * `seed=ushwe63hgeWUS` sets the seed to be used to generate the mnemonic (if none is passed)
 * `hdPath=m/44'/60'/0'/0` sets a custom bit39 hdPath
 
-
+#### Available accounts
 
 At any moment, to see the generated accounts, run
 ```
 curl http://127.0.0.1:8090/admin/accounts
 ```
+
+If you prefer to see the addresses in hex format you can run
+```
+curl http://127.0.0.1:8090/admin/accounts?format=hex
+```
+And if you like to see both formats, you can run
+```
+curl http://127.0.0.1:8090/admin/accounts?format=all
+```
+
+
 
 #### Persistency
 

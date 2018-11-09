@@ -96,7 +96,7 @@ const verbose = !process.env.quiet || process.env.verbose === 'verbose'
 
 setApp('full-node', 18190, 8090, verbose);
 setApp('solidity-node', 18191, 8091, verbose);
-setApp('event-server', 18891, 8092);
+setApp('event-server', 18891, 8092, verbose);
 
 const n = "\n"
 

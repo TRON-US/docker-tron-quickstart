@@ -59,7 +59,7 @@ async function verifyAccountsBalance() {
   return Promise.resolve(balances);
 }
 
-async function formatAccounts(balances) {
+async function formatAccounts(balances, format) {
   const tronWeb = tronWebBuilder()
 
   let privateKeys = testingAccounts.privateKeys
@@ -67,12 +67,17 @@ async function formatAccounts(balances) {
   formattedTestingAccounts = 'Available Accounts\n==================\n\n'
   for (let i = 0; i < privateKeys.length; i++) {
     let address = tronWeb.address.fromPrivateKey(privateKeys[i])
-    formattedTestingAccounts += `(${i}) ${address} (${tronWeb.fromSun(balances[i])} TRX)\n`
+
+    formattedTestingAccounts += `(${i}) ${format === 'hex' ? tronWeb.address.toHex(address) : address} (${tronWeb.fromSun(balances[i])} TRX)\n${format === 'all' ? '    '+ tronWeb.address.toHex(address) + '\n' : ''}`
+
   }
+
   formattedTestingAccounts += '\nPrivate Keys\n==================\n\n'
+
   for (let i = 0; i < privateKeys.length; i++) {
     formattedTestingAccounts += `(${i}) ${privateKeys[i]}\n`
   }
+
   formattedTestingAccounts += '\nHD Wallet\n' +
       '==================\n' +
       'Mnemonic:      ' + testingAccounts.mnemonic + '\n' +
@@ -85,7 +90,7 @@ async function formatAccounts(balances) {
 router.get('/accounts', async function (req, res) {
   console.log('\n\n', chalk.green('(tools)'), chalk.bold('/admin/accounts'));
   const balances = await getBalances()
-  await formatAccounts(balances)
+  await formatAccounts(balances, req.query.format)
   res.set('Content-Type', 'text/plain').send(formattedTestingAccounts);
 });
 
