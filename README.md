@@ -188,20 +188,11 @@ To see the queryString of a GET or POST command, use the options `-e "showQueryS
 
 ### Interacting with the private network
 
-The easiest way to interact with the private network is using TronWeb.
-In the folder `/app` there is a `tronWeb.js` file not used by the image, but useful for runtime debugging.
-
-First, if you haven't done yet, clone this repo and install the dependences:
+The easiest way to interact with the private network is using TronWeb from inside the container:
 ```
-git clone https://github.com/tronprotocol/docker-tron-quickstart.git
-cd docker-tron-quickstart
-(cd app && npm i)
+docker exec -it tron ./tronWeb
 ```
-Now you can execute
-```
-node app/tronWeb
-```
-which will open a console with a `tronWeb` instance ready to use.
+It will open a console with a `tronWeb` instance ready to use.
 
 ### What about RPC?
 

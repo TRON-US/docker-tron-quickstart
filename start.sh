@@ -2,7 +2,7 @@
 
 echo "
 
-Tron Quickstart v1.1.3
+Tron Quickstart v1.1.4
 "
 
 echo "Run MongoDB..."

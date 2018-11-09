@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+const tronWebBuilder = require('./app/src/utils/tronWebBuilder')
+global.tronWeb = tronWebBuilder()
+require('repl').start({})
+
+
