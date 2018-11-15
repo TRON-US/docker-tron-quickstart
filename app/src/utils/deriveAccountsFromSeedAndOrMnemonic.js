@@ -3,10 +3,12 @@
 // thanks to Trufflesuite/Ganache-core
 // https://github.com/trufflesuite/ganache-core/blob/develop/lib/statemanager.js
 
+const _ = require('lodash')
 const utils = require("ethereumjs-util")
 const seedrandom = require("seedrandom")
 const bip39 = require("bip39")
 const hdkey = require("ethereumjs-wallet/hdkey")
+const tronWebBuilder = require('../utils/tronWebBuilder')
 
 function toHex(val) {
   if (typeof val === "string") {
@@ -59,8 +61,21 @@ function randomAlphaNumericString(length, rng) {
 
 async function deriveAccountsFromSeedAndOrMnemonic(options) {
 
-  const total_accounts = (options.accounts ? parseInt(options.accounts, 10) : 10)
-      - (options.useDefaultPrivateKey ? 1 : 0)
+  if (!options) {
+    options = process.env
+  } else {
+    options = _.defaults(options, process.env)
+  }
+
+  if (options.addAccounts) {
+    for (let key of 'mnemonic,hdPath,seed,useDefaultPrivateKey'.split(',')) {
+      delete options[key];
+    }
+  }
+
+  const tronWeb = tronWebBuilder()
+
+  const total_accounts = options.accounts ? parseInt(options.accounts, 10) : 10
 
   const hdPath = options.hdPath || "m/44'/60'/0'/0/"
 
@@ -79,12 +94,16 @@ async function deriveAccountsFromSeedAndOrMnemonic(options) {
   for (let i = 0; i < total_accounts; i++) {
     let acct = wallet.derivePath(hdPath + i)
     let privateKey = acct.getWallet().getPrivateKey().toString('hex')
+    if (!i && options.useDefaultPrivateKey) {
+      privateKey = tronWeb.defaultPrivateKey
+    }
     privateKeys.push(privateKey)
   }
 
   return Promise.resolve({
     hdPath,
     mnemonic,
+    usingDefaultPrivateKey: options.useDefaultPrivateKey,
     privateKeys
   })
 }

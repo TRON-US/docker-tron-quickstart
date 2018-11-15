@@ -165,6 +165,34 @@ curl http://127.0.0.1:8090/admin/accounts?format=all
 ```
 
 
+#### More accounts?
+
+Sometimes you must have new accounts any times that you run a test. For example, if you are testing a native token, after that you have created it for a certain account, you can't delete it. So, next time you repeat the test, the test will fail.
+
+The obvious solution is to stop the container and run it again. Starting from Tron Quickstart 1.1.5 there is a better solution. You can use the following code to generate more addresses and retrieve them:
+
+```js
+async function newTestAccounts(amount) => {
+    return await tronWeb.fullNode.request('/admin/temporary-accounts-generation?accounts=' + amount);
+}
+
+async function getTestAccounts() => {
+    const accounts = {
+        b58: [],
+        hex: [],
+        pks: []
+    }
+    const accountsJson = await tronWeb.fullNode.request('/admin/accounts-json');
+    accounts.pks = accountsJson.more[accountsJson.more.length - 1].privateKeys
+    for (let i = 0; i < accounts.pks.length; i++) {
+        let addr = tronWeb.address.fromPrivateKey(accounts.pks[i]);
+        accounts.b58.push(addr);
+        accounts.hex.push(tronWeb.address.toHex(addr));
+    }
+    return accounts;
+}
+```
+
 
 #### Persistency
 

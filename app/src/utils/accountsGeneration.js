@@ -25,7 +25,13 @@ function waiting() {
   }
 }
 
-async function accountsGeneration() {
+async function accountsGeneration(options) {
+
+  if (!options) {
+    options = process.env
+  } else {
+    options = _.defaults(options, process.env)
+  }
 
   if (!defSet) {
     tronWeb = tronWebBuilder()
@@ -59,10 +65,14 @@ async function accountsGeneration() {
     }
   }
 
-  if (!accounts) {
-    accounts = await deriveAccountsFromSeedAndOrMnemonic(process.env)
-    if (process.env.useDefaultPrivateKey) {
-      accounts.privateKeys = [tronWeb.defaultPrivateKey].concat(accounts.accounts)
+  if (!accounts || options.addAccounts) {
+    const newAccounts = await deriveAccountsFromSeedAndOrMnemonic(options)
+
+    if (!accounts) {
+      accounts = newAccounts;
+      accounts.more = [];
+    } else {
+      accounts.more.push(newAccounts);
     }
     if (!isDev) {
       fs.ensureDirSync(tmpDir)
