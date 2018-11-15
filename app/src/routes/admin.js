@@ -2,6 +2,7 @@ const sleep = require('sleep')
 const express = require('express')
 const router = express.Router()
 const chalk = require('chalk')
+const _ = require('lodash')
 const accountsGeneration = require('../utils/accountsGeneration')
 
 const tronWebBuilder = require('../utils/tronWebBuilder')
@@ -9,39 +10,60 @@ const tronWebBuilder = require('../utils/tronWebBuilder')
 let testingAccounts;
 let formattedTestingAccounts;
 
+function flatAccounts() {
+  let privateKeys = testingAccounts.privateKeys
+  for (let j = 0; j < testingAccounts.more.length; j++) {
+    privateKeys = privateKeys.concat(testingAccounts.more[j].privateKeys);
+  }
+  return privateKeys;
+}
+
 
 async function getBalances() {
   const tronWeb = tronWebBuilder()
 
   const balances = []
-  for (let i = 0; i < testingAccounts.privateKeys.length; i++) {
-    let address = tronWeb.address.fromPrivateKey(testingAccounts.privateKeys[i])
-    balances[i] = await tronWeb.trx.getBalance(address)
+  let k = 0;
+  let privateKeys = flatAccounts()
+
+  for (let i = 0; i < privateKeys.length; i++) {
+    let address = tronWeb.address.fromPrivateKey(privateKeys[i])
+    balances[k++] = await tronWeb.trx.getBalance(address)
   }
   return Promise.resolve(balances)
 }
 
-async function verifyAccountsBalance() {
+let trxSent = {}
+
+
+async function verifyAccountsBalance(options) {
+
+  if (!options) {
+    options = process.env
+  } else {
+    options = _.defaults(options, process.env)
+  }
+
   const tronWeb = tronWebBuilder()
 
   console.log(chalk.gray("...\nLoading the accounts and waiting for the node to mine the transactions..."))
 
-  const amount = process.env.defaultBalance || 10000
+  const amount = options.defaultBalance || 10000
   const balances = []
   let ready = 0
-  const trxSent = []
   let count = 1
-  let privateKeys = testingAccounts.privateKeys
+  let accounts = !testingAccounts.more.length ? testingAccounts : testingAccounts.more[testingAccounts.more.length - 1];
+  let privateKeys = accounts.privateKeys
 
   while (true) {
     console.log(chalk.gray(`(${count++}) Waiting for receipts...`))
     for (let i = 0; i < privateKeys.length; i++) {
       let address = tronWeb.address.fromPrivateKey(privateKeys[i])
-      if (privateKeys[i] !== tronWeb.defaultPrivateKey && !trxSent[i]) {
+      if (privateKeys[i] !== tronWeb.defaultPrivateKey && !trxSent[address]) {
         let result = await tronWeb.trx.sendTransaction(address, tronWeb.toSun(amount))
         if (result.result) {
           console.log(chalk.gray(`Sending ${amount} TRX to ${address}`))
-          trxSent[i] = true
+          trxSent[address] = true
         }
       } else if (!balances[i]) {
         let balance = await tronWeb.trx.getBalance(address)
@@ -62,7 +84,7 @@ async function verifyAccountsBalance() {
 async function formatAccounts(balances, format) {
   const tronWeb = tronWebBuilder()
 
-  let privateKeys = testingAccounts.privateKeys
+  const privateKeys = flatAccounts()
 
   formattedTestingAccounts = 'Available Accounts\n==================\n\n'
   for (let i = 0; i < privateKeys.length; i++) {
@@ -96,22 +118,35 @@ router.get('/accounts', async function (req, res) {
 
 router.get('/accounts-json', function (req, res) {
   console.log('\n\n', chalk.green('(tools)'), chalk.bold('/admin/accounts-json'));
-  res.json(testingAccounts);
+  res.header("Content-Type",'application/json');
+  res.send(JSON.stringify(testingAccounts, null, 2));
 });
 
 router.get('/accounts-generation', async function (req, res) {
   console.log('\n\n', chalk.green('(tools)'), chalk.bold('/admin/accounts-generation'));
 
   testingAccounts = await accountsGeneration()
-  const balances = await verifyAccountsBalance()
-  // console.log('balances', balances)
+  await verifyAccountsBalance()
+  const balances = await getBalances()
   await formatAccounts(balances);
   console.log(formattedTestingAccounts);
   res.send();
 });
 
+router.get('/temporary-accounts-generation', async function (req, res) {
+  console.log('\n\n', chalk.green('(tools)'), chalk.bold('/admin/temporary-accounts-generation'));
+
+  const options = req.query || {}
+  options.addAccounts = true
+  testingAccounts = await accountsGeneration(options)
+  await verifyAccountsBalance()
+  const balances = await getBalances()
+  await formatAccounts(balances);
+  res.set('Content-Type', 'text/plain').send(formattedTestingAccounts);
+});
+
 router.get('/', function (req, res) {
-  res.send('Welcome to Tron Quickstart')
+  res.send('Welcome to Tron Quickstart '+ require('../../package').version)
 })
 
 

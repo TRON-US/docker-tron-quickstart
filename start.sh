@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-echo "
-
-Tron Quickstart v1.1.4
-"
+node app/version
 
 echo "Run MongoDB..."
 

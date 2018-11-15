@@ -102,6 +102,7 @@ RUN apt-get remove maven git -y && \
 # if the node app is changed, but has the same dependences
 
 ADD app/index.js /tron/app/index.js
+ADD app/version.js /tron/app/version.js
 ADD app/src /tron/app/src
 ADD scripts /tron/scripts
 
