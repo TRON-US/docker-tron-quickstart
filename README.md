@@ -211,7 +211,9 @@ In the example above, after the first time, running again the container, Tron Qu
 
 By default, the proxy server returns a verbose log, containing the response of any command. If you prefer just to know what has been called, you can add the option `-e "quiet=true"`. For consistency there is also the option `-e "verbose=true"` which is prioritary, i.e., `quiet` is ignored if `verbose` is specified.
 
-To see the queryString of a GET or POST command, use the options `-e "showQueryString=true"`.
+To see the queryString of any command, use the options `-e "showQueryString=true"`.
+
+To see the parameter passed to a POST command, use the options `-e "showBody=true"`.
 
 
 ### Interacting with the private network
@@ -242,6 +244,6 @@ Sometimes, for example running tests with TronBox, we ask the node to performe a
 
 Unfortunately, you cannot use this image to create a node in the main Tron network because it uses a version of java-tron who is not the one required for a standard full node.
 
-### Latest version is 1.1.3
+### Latest version is 1.1.6
 
 To be updated, take a look at https://hub.docker.com/r/trontools/quickstart/tags/

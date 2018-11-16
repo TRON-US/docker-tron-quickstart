@@ -3,7 +3,7 @@ var proxy = require('http-proxy-middleware');
 var morgan = require('morgan');
 var chalk = require('chalk');
 var _ = require('lodash');
-// const jsonParser = require('body-parser').json()
+var bodyParser = require('body-parser')
 
 const admin = require('./src/routes/admin')
 
@@ -62,6 +62,13 @@ function onProxyReq(proxyReq, req, res) {
   if (process.env.showQueryString && _.keys(req.query).length) {
     console.log(chalk.gray(' QueryString:'),chalk.cyan(JSON.stringify(req.query)))
   }
+  if (process.env.showBody && req.method == "POST" && _.keys(req.body).length) {
+    let bodyData = JSON.stringify(req.body);
+    console.log(chalk.gray(' Body:'),chalk.cyan(bodyData))
+    proxyReq.setHeader('Content-Type','application/json');
+    proxyReq.setHeader('Content-Length', Buffer.byteLength(bodyData));
+    proxyReq.write(bodyData);
+  }
 }
 
 function onError(err, req, res) {
@@ -74,6 +81,7 @@ function onError(err, req, res) {
 const setApp = (name, port0, port, verbose) => {
   var app = express();
   app.use(morgan(only()))
+  app.use(bodyParser.json())
   app.use('/favicon.ico', function (req, res) {
     res.send('');
   });

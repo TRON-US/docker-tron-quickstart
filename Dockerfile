@@ -56,7 +56,7 @@ RUN apt-get install git -y && \
   git clone https://github.com/tronprotocol/java-tron.git && \
   cd java-tron && \
   git fetch && \
-  git checkout shasta-dev && \
+  git checkout ev2-improve && \
   cp ../conf/mongodb.properties src/main/resources/. && \
   ./gradlew build -x test && \
   cd ..
@@ -69,7 +69,7 @@ RUN git clone https://github.com/tronprotocol/tron-grid.git && \
   cp ../conf/application.properties src/main/resources/. && \
   apt-get install -y maven && \
   mvn package && \
-  mv target/trongrid-0.0.1-SNAPSHOT.jar target/EventServer.jar && \
+  mv target/trongrid-1.0.1-SNAPSHOT.jar target/EventServer.jar && \
   cd ..
 
 
@@ -86,7 +86,7 @@ RUN mkdir SolidityNode && \
 
 # Install proxy dependencies
 
-RUN apt-get install build-essential -y
+RUN apt-get update && apt-get install build-essential -y
 
 RUN mkdir /tron/app
 ADD app/package.json /tron/app/package.json
