@@ -6,16 +6,17 @@ const _ = require('lodash')
 const accountsGeneration = require('../utils/accountsGeneration')
 
 const tronWebBuilder = require('../utils/tronWebBuilder')
+const config = require('../config')
 
-let testingAccounts;
-let formattedTestingAccounts;
+let testingAccounts
+let formattedTestingAccounts
 
 function flatAccounts() {
   let privateKeys = testingAccounts.privateKeys
   for (let j = 0; j < testingAccounts.more.length; j++) {
-    privateKeys = privateKeys.concat(testingAccounts.more[j].privateKeys);
+    privateKeys = privateKeys.concat(testingAccounts.more[j].privateKeys)
   }
-  return privateKeys;
+  return privateKeys
 }
 
 
@@ -23,7 +24,7 @@ async function getBalances() {
   const tronWeb = tronWebBuilder()
 
   const balances = []
-  let k = 0;
+  let k = 0
   let privateKeys = flatAccounts()
 
   for (let i = 0; i < privateKeys.length; i++) {
@@ -38,10 +39,12 @@ let trxSent = {}
 
 async function verifyAccountsBalance(options) {
 
+  const env = config.getEnv()
+
   if (!options) {
-    options = process.env
+    options = env
   } else {
-    options = _.defaults(options, process.env)
+    options = _.defaults(options, env)
   }
 
   const tronWeb = tronWebBuilder()
@@ -52,7 +55,7 @@ async function verifyAccountsBalance(options) {
   const balances = []
   let ready = 0
   let count = 1
-  let accounts = !testingAccounts.more.length ? testingAccounts : testingAccounts.more[testingAccounts.more.length - 1];
+  let accounts = !testingAccounts.more.length ? testingAccounts : testingAccounts.more[testingAccounts.more.length - 1]
   let privateKeys = accounts.privateKeys
 
   while (true) {
@@ -74,11 +77,11 @@ async function verifyAccountsBalance(options) {
       }
     }
     if (ready < privateKeys.length)
-      sleep.sleep(3);
-    else break;
+      sleep.sleep(3)
+    else break
   }
-  console.log(chalk.gray('Done.\n'));
-  return Promise.resolve(balances);
+  console.log(chalk.gray('Done.\n'))
+  return Promise.resolve(balances)
 }
 
 async function formatAccounts(balances, format) {
@@ -110,40 +113,55 @@ async function formatAccounts(balances, format) {
 
 
 router.get('/accounts', async function (req, res) {
-  console.log('\n\n', chalk.green('(tools)'), chalk.bold('/admin/accounts'));
+  console.log('\n\n', chalk.green('(admin)'), chalk.bold('/admin/accounts'))
   const balances = await getBalances()
   await formatAccounts(balances, req.query.format)
-  res.set('Content-Type', 'text/plain').send(formattedTestingAccounts);
-});
+  res.set('Content-Type', 'text/plain').send(formattedTestingAccounts)
+})
+
+
+router.get('/set-env', async function (req, res) {
+  console.log('\n\n', chalk.green('(admin)'), chalk.bold('/admin/set-env'))
+  const env = config.getEnv(req.query)
+
+  for (let key in env) {
+    process.env[key] = env[key]
+  }
+
+  console.log('New env: ', config.getEnv())
+
+  res.set('Content-Type', 'text/plain').send('Environment variable updated')
+})
+
 
 router.get('/accounts-json', function (req, res) {
-  console.log('\n\n', chalk.green('(tools)'), chalk.bold('/admin/accounts-json'));
-  res.header("Content-Type",'application/json');
-  res.send(JSON.stringify(testingAccounts, null, 2));
-});
+  console.log('\n\n', chalk.green('(admin)'), chalk.bold('/admin/accounts-json'))
+  res.header("Content-Type",'application/json')
+  res.send(JSON.stringify(testingAccounts, null, 2))
+})
 
 router.get('/accounts-generation', async function (req, res) {
-  console.log('\n\n', chalk.green('(tools)'), chalk.bold('/admin/accounts-generation'));
+  console.log('\n\n', chalk.green('(admin)'), chalk.bold('/admin/accounts-generation'))
 
   testingAccounts = await accountsGeneration()
   await verifyAccountsBalance()
   const balances = await getBalances()
-  await formatAccounts(balances);
-  console.log(formattedTestingAccounts);
-  res.send();
-});
+  await formatAccounts(balances)
+  console.log(formattedTestingAccounts)
+  res.send()
+})
 
 router.get('/temporary-accounts-generation', async function (req, res) {
-  console.log('\n\n', chalk.green('(tools)'), chalk.bold('/admin/temporary-accounts-generation'));
+  console.log('\n\n', chalk.green('(admin)'), chalk.bold('/admin/temporary-accounts-generation'))
 
   const options = req.query || {}
   options.addAccounts = true
   testingAccounts = await accountsGeneration(options)
   await verifyAccountsBalance()
   const balances = await getBalances()
-  await formatAccounts(balances);
-  res.set('Content-Type', 'text/plain').send(formattedTestingAccounts);
-});
+  await formatAccounts(balances)
+  res.set('Content-Type', 'text/plain').send(formattedTestingAccounts)
+})
 
 router.get('/', function (req, res) {
   res.send('Welcome to Tron Quickstart '+ require('../../package').version)

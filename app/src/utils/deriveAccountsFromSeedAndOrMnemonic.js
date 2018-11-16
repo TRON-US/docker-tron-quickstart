@@ -9,6 +9,7 @@ const seedrandom = require("seedrandom")
 const bip39 = require("bip39")
 const hdkey = require("ethereumjs-wallet/hdkey")
 const tronWebBuilder = require('../utils/tronWebBuilder')
+const config = require('../config')
 
 function toHex(val) {
   if (typeof val === "string") {
@@ -61,21 +62,23 @@ function randomAlphaNumericString(length, rng) {
 
 async function deriveAccountsFromSeedAndOrMnemonic(options) {
 
+  const env = config.getEnv()
+
   if (!options) {
-    options = process.env
+    options = env
   } else {
-    options = _.defaults(options, process.env)
+    options = _.defaults(options, env)
   }
 
   if (options.addAccounts) {
     for (let key of 'mnemonic,hdPath,seed,useDefaultPrivateKey'.split(',')) {
-      delete options[key];
+      delete options[key]
     }
   }
 
   const tronWeb = tronWebBuilder()
 
-  const total_accounts = options.accounts ? parseInt(options.accounts, 10) : 10
+  const total_accounts = options.accounts
 
   const hdPath = options.hdPath || "m/44'/60'/0'/0/"
 
