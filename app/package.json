@@ -1,6 +1,6 @@
 {
   "name": "tron-proxy",
-  "version": "1.1.5",
+  "version": "1.1.7",
   "description": "A minimalist proxy for a Tron private network",
   "main": "index.js",
   "repository": "https://github.com/tronprotocol/docker-tron-quickstart",
@@ -11,6 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "bip39": "^2.5.0",
+    "body-parser": "^1.18.3",
     "chalk": "^2.4.1",
     "ethereumjs-util": "^6.0.0",
     "ethereumjs-wallet": "^0.6.2",

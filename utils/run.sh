@@ -8,5 +8,7 @@ docker run -it \
   -p 8091:8091 \
   -p 8092:8092 \
   -e "defaultBalance=100000" \
+  -e "showQueryString=true" \
+  -e "showBody=true" \
   --name tron \
   tron-quickstart

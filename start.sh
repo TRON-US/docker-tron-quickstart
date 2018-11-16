@@ -30,7 +30,7 @@ sleep 3
 
 echo "Start nodes and event server..."
 
-(cd /tron/tron-grid/target && nohup java -jar EventServer.jar >> start.log 2>&1 &)
+(cd /tron/tron-grid && nohup java -jar EventServer.jar >> start.log 2>&1 &)
 (cd /tron/FullNode && nohup java -jar FullNode.jar -c config.conf --witness >> start.log 2>&1 &)
 (cd /tron/SolidityNode && nohup java -jar SolidityNode.jar -c config.conf >> start.log 2>&1 &)
 
