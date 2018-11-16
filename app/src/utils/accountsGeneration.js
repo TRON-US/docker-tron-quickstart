@@ -4,6 +4,7 @@ const fs = require('fs-extra')
 const path = require('path')
 const chalk = require('chalk')
 const deriveAccountsFromSeedAndOrMnemonic = require('./deriveAccountsFromSeedAndOrMnemonic')
+const config = require('../config')
 
 const isDev = process.platform === 'darwin'
 
@@ -15,8 +16,9 @@ let defSet = false
 let printed = false
 
 function waiting() {
+  const env = config.getEnv()
   if (!printed) {
-    console.log(chalk.gray(`Waiting when nodes are ready to generate ${process.env.accounts || 10} accounts...`))
+    console.log(chalk.gray(`Waiting when nodes are ready to generate ${env.accounts} accounts...`))
     printed = true
   }
   if (!done) {
@@ -27,15 +29,17 @@ function waiting() {
 
 async function accountsGeneration(options) {
 
+  const env = config.getEnv()
+
   if (!options) {
-    options = process.env
+    options = env
   } else {
-    options = _.defaults(options, process.env)
+    options = _.defaults(options, env)
   }
 
   if (!defSet) {
     tronWeb = tronWebBuilder()
-    tronWeb.setDefaultBlock('latest');
+    tronWeb.setDefaultBlock('latest')
     setTimeout(waiting, 1000)
     defSet = true
   }
@@ -45,8 +49,8 @@ async function accountsGeneration(options) {
     return await accountsGeneration()
   }
 
-  done = true;
-  let accounts;
+  done = true
+  let accounts
 
   const tmpDir = '/config'
   const jsonPath = path.join(tmpDir, 'accounts.json')
@@ -69,10 +73,10 @@ async function accountsGeneration(options) {
     const newAccounts = await deriveAccountsFromSeedAndOrMnemonic(options)
 
     if (!accounts) {
-      accounts = newAccounts;
-      accounts.more = [];
+      accounts = newAccounts
+      accounts.more = []
     } else {
-      accounts.more.push(newAccounts);
+      accounts.more.push(newAccounts)
     }
     if (!isDev) {
       fs.ensureDirSync(tmpDir)

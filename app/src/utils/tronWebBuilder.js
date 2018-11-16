@@ -1,16 +1,16 @@
 const TronWeb = require('tronweb')
-const conf = require('../config')
+const network = require('../config').network
 
 let instance
 
 module.exports = function () {
   if (!instance) {
     instance = new TronWeb(
-        conf.fullNode,
-        conf.solidityNode,
-        conf.eventServer,
-        conf.privateKey
+        network.fullNode,
+        network.solidityNode,
+        network.eventServer,
+        network.privateKey
     )
   }
-  return instance;
+  return instance
 }
