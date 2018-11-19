@@ -52,8 +52,8 @@ const setHeaders = (who) => {
         if (chunk)
           chunks.push(new Buffer(chunk))
 
-        let body = Buffer.concat(chunks).toString('utf8')
-        console.log('\n\n', chalk.cyan(`(${who})`), chalk.bold(req.path), '\n', body.replace(/\n+$/, ''))
+        let body = Buffer.concat(chunks).toString('utf8').replace(/\n+$/g, '')
+        console.log('\n\n', chalk.cyan(`(${who})`), chalk.bold(req.path), '\n', chalk.gray(`Output:`), env.formatJson ? JSON.stringify(JSON.parse(body), null, 2) : body)
 
         oldEnd.apply(res, arguments)
       }
@@ -65,11 +65,11 @@ function onProxyReq(proxyReq, req, res) {
   const env = config.getEnv()
 
   if (env.verbose && env.showQueryString && _.keys(req.query).length) {
-    console.log(chalk.gray(' QueryString:'),chalk.cyan(JSON.stringify(req.query)))
+    console.log(chalk.gray(' QueryString:'),chalk.cyan(JSON.stringify(req.query, null, env.formatJson ? 2 : null)))
   }
 
   if (env.verbose && env.showBody && req.method == "POST" && _.keys(req.body).length) {
-    let bodyData = JSON.stringify(req.body)
+    let bodyData = JSON.stringify(req.body, null, env.formatJson ? 2 : null)
     console.log(chalk.gray(' Body:'), chalk.cyan(bodyData))
     proxyReq.setHeader('Content-Type', 'application/json')
     proxyReq.setHeader('Content-Length', Buffer.byteLength(bodyData))

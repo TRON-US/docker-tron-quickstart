@@ -31,7 +31,8 @@ const config = {
       'mnemonic',
       'hdPath',
       'seed',
-      'addAccounts'
+      'addAccounts',
+      'formatJson'
   ],
   getEnv: (env = process.env) => {
       env = _.pick(env, config.env)

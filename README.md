@@ -147,6 +147,7 @@ List of options
 * `defaultBalance=100000` sets the initial balance for the generated accounts (in the example to 100,000 TRX)
 * `seed=ushwe63hgeWUS` sets the seed to be used to generate the mnemonic (if none is passed)
 * `hdPath=m/44'/60'/0'/0` sets a custom bit39 hdPath
+* `formatJson=true` formats the output
 
 #### Available accounts
 

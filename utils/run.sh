@@ -11,5 +11,6 @@ docker run -it \
   -e "showQueryString=true" \
   -e "showBody=true" \
   -e "accounts=1" \
+  -e "formatJson=true" \
   --name tron \
   tron-quickstart
