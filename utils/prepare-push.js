@@ -17,7 +17,7 @@ fs.writeFileSync(readmePath, readme)
 const build = spawn('utils/build.sh', []);
 
 build.stdout.on('data', function (data) {
-  console.log('stdout: ' + data.toString());
+  process.stdout.write(data.toString());
 });
 
 build.stderr.on('data', function (data) {

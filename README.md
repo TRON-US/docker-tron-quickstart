@@ -147,6 +147,7 @@ List of options
 * `defaultBalance=100000` sets the initial balance for the generated accounts (in the example to 100,000 TRX)
 * `seed=ushwe63hgeWUS` sets the seed to be used to generate the mnemonic (if none is passed)
 * `hdPath=m/44'/60'/0'/0` sets a custom bit39 hdPath
+* `formatJson=true` formats the output
 
 #### Available accounts
 
@@ -253,6 +254,6 @@ Sometimes, for example running tests with TronBox, we ask the node to performe a
 
 Unfortunately, you cannot use this image to create a node in the main Tron network because it uses a version of java-tron who is not the one required for a standard full node.
 
-### Latest version is `1.1.11`
+### Latest version is `1.1.13`
 
 To be updated, take a look at https://hub.docker.com/r/trontools/quickstart/tags/
