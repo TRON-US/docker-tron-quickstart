@@ -16,9 +16,9 @@ const only = () => {
   return function (tokens, req, res) {
     const status = tokens.status(req, res)
     const color = status < 400 ? 'green' : 'red'
-    return chalk[color]([' ',
+    return chalk[color]([
       tokens.method(req, res),
-      tokens.url(req, res),
+      // tokens.url(req, res),
       status,
       tokens.res(req, res, 'content-length'), '-',
       tokens['response-time'](req, res), 'ms'
@@ -53,7 +53,7 @@ const setHeaders = (who) => {
           chunks.push(new Buffer(chunk))
 
         let body = Buffer.concat(chunks).toString('utf8').replace(/\n+$/g, '')
-        console.log('\n\n', chalk.cyan(`(${who})`), chalk.bold(req.path), '\n', chalk.gray(`Output:`), env.formatJson ? JSON.stringify(JSON.parse(body), null, 2) : body)
+        console.log(chalk.bold(chalk.cyan(who), req.path), chalk.gray(`\n[Output]`), env.formatJson ? JSON.stringify(JSON.parse(body), null, 2) : body)
 
         oldEnd.apply(res, arguments)
       }
@@ -63,14 +63,20 @@ const setHeaders = (who) => {
 
 function onProxyReq(proxyReq, req, res) {
   const env = config.getEnv()
+  let done = false
 
   if (env.verbose && env.showQueryString && _.keys(req.query).length) {
-    console.log(chalk.gray(' QueryString:'),chalk.cyan(JSON.stringify(req.query, null, env.formatJson ? 2 : null)))
+    console.log('\n')
+    console.log(chalk.gray('[QueryString]'), JSON.stringify(req.query, null, env.formatJson ? 2 : null))
+    done = true
   }
 
   if (env.verbose && env.showBody && req.method == "POST" && _.keys(req.body).length) {
+    if (!done) {
+      console.log('\n')
+    }
     let bodyData = JSON.stringify(req.body, null, env.formatJson ? 2 : null)
-    console.log(chalk.gray(' Body:'), chalk.cyan(bodyData))
+    console.log(chalk.gray('[PostBody]'), bodyData)
     proxyReq.setHeader('Content-Type', 'application/json')
     proxyReq.setHeader('Content-Length', Buffer.byteLength(bodyData))
     proxyReq.write(bodyData)
@@ -91,7 +97,7 @@ const setApp = (name, port0, port) => {
   app.use('/favicon.ico', function (req, res) {
     res.send('')
   })
-  if (name === 'full-node') {
+  if (name === 'FULL-NODE') {
     app.use('/admin', admin)
   }
   app.use('/', proxy({
@@ -106,9 +112,9 @@ const setApp = (name, port0, port) => {
 }
 
 
-setApp('full-node', 18190, 8090)
-setApp('solidity-node', 18191, 8091)
-setApp('event-server', 18891, 8092)
+setApp('FULL-NODE', 18190, 8090)
+setApp('SOLIDITY-NODE', 18191, 8091)
+setApp('EVENT-SERVER', 18891, 8092)
 
 const n = "\n"
 

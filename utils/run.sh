@@ -10,7 +10,6 @@ docker run -it \
   -e "defaultBalance=100000" \
   -e "showQueryString=true" \
   -e "showBody=true" \
-  -e "accounts=1" \
   -e "formatJson=true" \
   --name tron \
   tron-quickstart

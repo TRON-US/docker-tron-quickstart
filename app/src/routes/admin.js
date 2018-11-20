@@ -93,7 +93,7 @@ async function formatAccounts(balances, format) {
   for (let i = 0; i < privateKeys.length; i++) {
     let address = tronWeb.address.fromPrivateKey(privateKeys[i])
 
-    formattedTestingAccounts += `(${i}) ${format === 'hex' ? tronWeb.address.toHex(address) : address} (${tronWeb.fromSun(balances[i])} TRX)\n${format === 'all' ? '    '+ tronWeb.address.toHex(address) + '\n' : ''}`
+    formattedTestingAccounts += `(${i}) ${format === 'hex' ? tronWeb.address.toHex(address) : address} (${tronWeb.fromSun(balances[i])} TRX)\n${format === 'all' ? '    ' + tronWeb.address.toHex(address) + '\n' : ''}`
 
   }
 
@@ -112,8 +112,12 @@ async function formatAccounts(balances, format) {
 }
 
 
+function logRouter(route) {
+  console.log( chalk.bold(chalk.cyan('\n\nADMIN'), `/admin/${route}`))
+}
+
 router.get('/accounts', async function (req, res) {
-  console.log('\n\n', chalk.green('(admin)'), chalk.bold('/admin/accounts'))
+  logRouter('accounts')
   const balances = await getBalances()
   await formatAccounts(balances, req.query.format)
   res.set('Content-Type', 'text/plain').send(formattedTestingAccounts)
@@ -121,7 +125,7 @@ router.get('/accounts', async function (req, res) {
 
 
 router.get('/set-env', async function (req, res) {
-  console.log('\n\n', chalk.green('(admin)'), chalk.bold('/admin/set-env'))
+  logRouter('set-env')
   const env = config.getEnv(req.query)
 
   for (let key in env) {
@@ -135,13 +139,13 @@ router.get('/set-env', async function (req, res) {
 
 
 router.get('/accounts-json', function (req, res) {
-  console.log('\n\n', chalk.green('(admin)'), chalk.bold('/admin/accounts-json'))
-  res.header("Content-Type",'application/json')
+  logRouter('accounts-json')
+  res.header("Content-Type", 'application/json')
   res.send(JSON.stringify(testingAccounts, null, 2))
 })
 
 router.get('/accounts-generation', async function (req, res) {
-  console.log('\n\n', chalk.green('(admin)'), chalk.bold('/admin/accounts-generation'))
+  logRouter('accounts-generation')
 
   testingAccounts = await accountsGeneration()
   await verifyAccountsBalance()
@@ -152,7 +156,7 @@ router.get('/accounts-generation', async function (req, res) {
 })
 
 router.get('/temporary-accounts-generation', async function (req, res) {
-  console.log('\n\n', chalk.green('(admin)'), chalk.bold('/admin/temporary-accounts-generation'))
+  logRouter('accounts-generation')
 
   const options = req.query || {}
   options.addAccounts = true
@@ -164,7 +168,7 @@ router.get('/temporary-accounts-generation', async function (req, res) {
 })
 
 router.get('/', function (req, res) {
-  res.send('Welcome to Tron Quickstart '+ require('../../package').version)
+  res.send('Welcome to Tron Quickstart ' + require('../../package').version)
 })
 
 
