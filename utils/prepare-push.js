@@ -6,7 +6,7 @@ const path = require('path')
 
 execSync('(cd app && npm version patch)')
 
-const ver = require('../app/package.json').version
+let ver = require('../app/package.json').version
 const readmePath = path.resolve(__dirname, '../README.md')
 
 let readme = fs.readFileSync(readmePath, 'utf-8')
@@ -14,21 +14,27 @@ readme = readme.replace(/### Latest version is `[\d\.]+`/, "### Latest version i
 
 fs.writeFileSync(readmePath, readme)
 
-const build = spawn('utils/build.sh', []);
+const build = spawn('utils/build.sh', [])
 
 build.stdout.on('data', function (data) {
-  process.stdout.write(data.toString());
-});
+  process.stdout.write(data.toString())
+})
 
 build.stderr.on('data', function (data) {
-  console.log('stderr: ' + data.toString());
-});
+  console.log('stderr: ' + data.toString())
+})
 
 build.on('exit', function (code) {
 
   console.log(`Tagging new version ${ver}\n`)
-  execSync(`utils/tag.sh ${ver}`)
+  execSync(`docker tag tron-quickstart trontools/quickstart:${ver} && docker tag tron-quickstart trontools/quickstart:latest`)
+
+  ver = ver.split('.')
+  const prev = `${ver[0]}.${ver[1]}.${parseInt(ver[2]) - 1}`
+
+  console.log(`Deleting previous ${prev} version locally\n`)
+  execSync(`docker rmi ${prev}`)
 
   console.log('Ready for pushing. Launch:\ndocker push trontools/quickstart\n')
-});
+})
 

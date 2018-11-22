@@ -63,20 +63,25 @@ const setHeaders = (who) => {
 
 function onProxyReq(proxyReq, req, res) {
   const env = config.getEnv()
-  let done = false
+  let qs = false
 
-  if (env.verbose && env.showQueryString && _.keys(req.query).length) {
-    console.log('\n')
-    console.log(chalk.gray('[QueryString]'), JSON.stringify(req.query, null, env.formatJson ? 2 : null))
-    done = true
+  if (env.verbose) {
+    if (env.showQueryString && _.keys(req.query).length) {
+      qs = true
+      console.log('\n')
+      console.log(chalk.gray('[QueryString]'), JSON.stringify(req.query, null, env.formatJson ? 2 : null))
+    }
+
+    if (env.showBody && req.method === "POST" && _.keys(req.body).length) {
+      if (!qs) {
+        console.log('\n')
+      }
+      console.log(chalk.gray('[PostBody]'), JSON.stringify(req.body, null, env.formatJson ? 2 : null))
+    }
   }
 
-  if (env.verbose && env.showBody && req.method == "POST" && _.keys(req.body).length) {
-    if (!done) {
-      console.log('\n')
-    }
-    let bodyData = JSON.stringify(req.body, null, env.formatJson ? 2 : null)
-    console.log(chalk.gray('[PostBody]'), bodyData)
+  if (req.method === "POST") {
+    let bodyData = JSON.stringify(req.body)
     proxyReq.setHeader('Content-Type', 'application/json')
     proxyReq.setHeader('Content-Length', Buffer.byteLength(bodyData))
     proxyReq.write(bodyData)

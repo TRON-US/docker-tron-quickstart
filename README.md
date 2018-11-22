@@ -232,7 +232,7 @@ The easiest way to interact with the private network is using TronWeb from insid
 ```
 docker exec -it tron ./tronWeb
 ```
-It will open a console with a `tronWeb` instance ready to use.
+It will open a console with a `tronWeb` instance ready to use. Run any command — for example: `tronWeb.toHex("some")` — to verify that it works.
 
 ### What about RPC?
 
@@ -254,6 +254,11 @@ Sometimes, for example running tests with TronBox, we ask the node to performe a
 
 Unfortunately, you cannot use this image to create a node in the main Tron network because it uses a version of java-tron who is not the one required for a standard full node.
 
-### Latest version is `1.1.15`
+### Latest version is `1.1.16`
 
 To be updated, take a look at https://hub.docker.com/r/trontools/quickstart/tags/
+
+To see which version are you currently running, execute:
+```
+docker exec -it tron node app/version
+```

@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-docker rm -f tron
-
 # This script is here to support the development.
 # If you like to use this with the actual image replace tron-quickstart with trontools/quickstart
 
