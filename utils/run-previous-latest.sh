@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-docker rm -f tron0
-
 docker run -it \
   --rm \
   -p 9090:8090 \

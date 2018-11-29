@@ -23,6 +23,6 @@
     "morgan": "^1.9.1",
     "seedrandom": "^2.4.4",
     "sleep": "^5.2.3",
-    "tronweb": "^2.0.21"
+    "tronweb": "^2.1.5"
   }
 }
