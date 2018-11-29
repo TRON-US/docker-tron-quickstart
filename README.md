@@ -5,7 +5,18 @@ __A docker image exposing a full node, a solidity node and an event server, i.e.
 
 ## Usage
 
-Run it with:
+If you are using TronBox 2.1.9+ and are setting just a `fullHost` in `tronbox.js` run
+
+```
+docker run -it \
+  -p 9090:9090 \
+  --rm \
+  --name tron \
+  trontools/quickstart
+```
+Notice the `--rm` option which will delete the container when you stop it.
+
+With TronBox < 2.1.9, run instead:
 ```
 docker run -it \
   -p 8091:8091 \
@@ -15,8 +26,6 @@ docker run -it \
   --name tron \
   trontools/quickstart
 ```
-
-Notice the `--rm` option which will delete the container when you stop it.
 
 If you need to expose different ports to avoid conflicts, for example the ports 9090, 9091 and 9092, you can set up them when you run the container, like in this example:
 ```
@@ -73,6 +82,22 @@ module.exports = {
       fullNode: "http://127.0.0.1:8090",
       solidityNode: "http://127.0.0.1:8091",
       eventServer: "http://127.0.0.1:8092",
+      network_id: "*"
+    }
+  }
+};
+
+```
+
+In TronBox 2.1.9+ you can just set a `fullHost` like in:
+```
+module.exports = {
+  networks: {
+    development: {
+      privateKey: 'da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0',
+      consume_user_resource_percent: 30,
+      fee_limit: 100000000,
+      fullHost: "http://127.0.0.1:9090",
       network_id: "*"
     }
   }

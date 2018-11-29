@@ -121,9 +121,54 @@ setApp('FULL-NODE', 18190, 8090)
 setApp('SOLIDITY-NODE', 18191, 8091)
 setApp('EVENT-SERVER', 18891, 8092)
 
+
+const conf = {
+  changeOrigin: true,
+  onProxyReq,
+  onError
+}
+
+const app = express();
+app.use(morgan(only()))
+app.use(bodyParser.json())
+
+app.use('/wallet', proxy({
+  ...conf,
+  onProxyRes: setHeaders('FULL-NODE'),
+  target: 'http://127.0.0.1:18190'
+}));
+
+app.use('/favicon.ico', function (req, res) {
+  res.send('')
+})
+
+app.use('/admin', admin)
+
+app.use('/walletsolidity', proxy({
+  ...conf,
+  onProxyRes: setHeaders('SOLIDITY-NODE'),
+  target: 'http://127.0.0.1:18191'
+}));
+
+app.use('/walletextension', proxy({
+  ...conf,
+  onProxyRes: setHeaders('SOLIDITY-NODE'),
+  target: 'http://127.0.0.1:18191'
+}));
+
+app.use('/', proxy({
+  ...conf,
+  onProxyRes: setHeaders('EVENT-SERVER'),
+  target: 'http://127.0.0.1:18891'
+}));
+
+app.listen(9090);
+
+
 const n = "\n"
 
-console.log(n, 'Full Node listening on', chalk.bold('http://127.0.0.1:8090'),
-    n, 'Solidity Node listening on', chalk.bold('http://127.0.0.1:8091'),
-    n, 'Event Server listening on', chalk.bold('http://127.0.0.1:8092'), n)
+console.log(n, 'fullNode listening on', chalk.bold('http://127.0.0.1:8090'),
+    n, 'solidityNode listening on', chalk.bold('http://127.0.0.1:8091'),
+    n, 'eventServer listening on', chalk.bold('http://127.0.0.1:8092'),
+    n, 'fullHost listening on', chalk.bold('http://127.0.0.1:9090'), n)
 
