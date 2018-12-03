@@ -67,6 +67,8 @@ async function verifyAccountsBalance(options) {
         if (result.result) {
           console.log(chalk.gray(`Sending ${amount} TRX to ${address}`))
           trxSent[address] = true
+        } else {
+          console.error(chalk.red('Error', JSON.stringify(result)))
         }
       } else if (!balances[i]) {
         let balance = await tronWeb.trx.getBalance(address)

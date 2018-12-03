@@ -2,11 +2,11 @@
 
 __The following tools are useful during debugging and development__
 
-`build.sh` builds the local image `tron-quickstart`.
+`build.sh` builds the local image `tronquickstart`.
 
-`run.sh` runs `tron-quickstart` generating a `tron` container on ports 8090, 8091 and 8092.
+`run.sh` runs `tronquickstart` generating a `tron` container on ports 8090, 8091 and 8092.
 
-`run-persistent.sh` runs `tron-quickstart` using local folders for data persistence, generating a `tron` container.
+`run-persistent.sh` runs `tronquickstart` using local folders for data persistence, generating a `tron` container.
 
 `bash.sh` connects to the `tron` container opening a bash prompt.
 
@@ -14,8 +14,8 @@ __The following tools are useful during debugging and development__
 
 `accounts-list.sh` shows the accounts available in the `tron` container.
 
-`tag.sh` tags a new `tron-quickstart` image in preparation of a push to the Docker Hub.
+`tag.sh` tags a new `tronquickstart` image in preparation of a push to the Docker Hub.
 
 `verify.sh` verifies the full node, solidity node and eventServer are listening.
 
-`run-previous-latest.sh` runs latest released version of `trontools/quickstart` on ports 9090, 9091 and 9092 (to avoid conflicts with the work-in-progress `tron-quickstart` which runs, typically, on ports 8090, 8091 and 8092).
+`run-previous-latest.sh` runs latest released version of `trontools/quickstart` on ports 9090, 9091 and 9092 (to avoid conflicts with the work-in-progress `tronquickstart` which runs, typically, on ports 8090, 8091 and 8092).

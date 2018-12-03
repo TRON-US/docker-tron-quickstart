@@ -1,13 +1,13 @@
 const _ = require('lodash')
 
-let port0 = 18190
-let port1 = 18191
+let port0 = 8090
+let port1 = 8091
 let port2 = 18891
 
 if (process.platform === 'darwin') {
-  port0 = 8090
-  port1 = 8091
-  port2 = 8092
+  port0 = 9090
+  port1 = 9090
+  port2 = 9090
 }
 
 const config = {

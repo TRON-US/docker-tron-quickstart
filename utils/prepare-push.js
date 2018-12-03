@@ -27,7 +27,7 @@ build.stderr.on('data', function (data) {
 build.on('exit', function (code) {
 
   console.log(`Tagging new version ${ver}\n`)
-  execSync(`docker tag tron-quickstart trontools/quickstart:${ver} && docker tag tron-quickstart trontools/quickstart:latest`)
+  execSync(`utils/tag.sh ${ver}`)
 
   ver = ver.split('.')
   const prev = `${ver[0]}.${ver[1]}.${parseInt(ver[2]) - 1}`

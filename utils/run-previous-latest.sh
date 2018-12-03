@@ -2,9 +2,10 @@
 
 docker run -it \
   --rm \
-  -p 9090:8090 \
-  -p 9091:8091 \
-  -p 9092:8092 \
+  -p 18090:8090 \
+  -p 18091:8091 \
+  -p 18092:8092 \
+  -p 19090:9090 \
   -e "accounts=10" \
   --name tron0 \
-  trontools/quickstart:0.0.6
+  trontools/quickstart:latest

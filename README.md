@@ -287,3 +287,8 @@ To see which version are you currently running, execute:
 ```
 docker exec -it tron node app/version
 ```
+
+### Partial history
+
+__1.2.0__
+Introduce compatibility with java-tron 3.2. It requires TronBox >= 2.2.0, because java-tron 3.2 requires the new parameter `originalEnergyLimit` in `tronbox.js`

@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker build -t tron-quickstart .
+docker build -t tronquickstart .
