@@ -116,7 +116,6 @@ const setApp = (name, port0, port) => {
 
 }
 
-
 setApp('FULL-NODE', 18190, 8090)
 setApp('SOLIDITY-NODE', 18191, 8091)
 setApp('EVENT-SERVER', 18891, 8092)
@@ -135,7 +134,7 @@ app.use(bodyParser.json())
 app.use('/wallet', proxy({
   ...conf,
   onProxyRes: setHeaders('FULL-NODE'),
-  target: 'http://127.0.0.1:8090'
+  target: 'http://127.0.0.1:18190'
 }));
 
 app.use('/favicon.ico', function (req, res) {
@@ -147,13 +146,13 @@ app.use('/admin', admin)
 app.use('/walletsolidity', proxy({
   ...conf,
   onProxyRes: setHeaders('SOLIDITY-NODE'),
-  target: 'http://127.0.0.1:8091'
+  target: 'http://127.0.0.1:18191'
 }));
 
 app.use('/walletextension', proxy({
   ...conf,
   onProxyRes: setHeaders('SOLIDITY-NODE'),
-  target: 'http://127.0.0.1:8091'
+  target: 'http://127.0.0.1:18191'
 }));
 
 app.use('/', proxy({

@@ -114,6 +114,7 @@ ADD scripts /tron/scripts
 ADD tronWeb /tron/tronWeb
 RUN chmod +x tronWeb
 
+ADD conf/set-mongo /tron/conf/set-mongo
 ADD start.sh /tron/start.sh
 RUN chmod +x start.sh
 

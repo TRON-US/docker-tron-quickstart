@@ -1,7 +1,7 @@
-const sleep = require('sleep')
 const express = require('express')
 const router = express.Router()
 const chalk = require('chalk')
+const wait = require('../utils/wait')
 const _ = require('lodash')
 const accountsGeneration = require('../utils/accountsGeneration')
 
@@ -18,7 +18,6 @@ function flatAccounts() {
   }
   return privateKeys
 }
-
 
 async function getBalances() {
   const tronWeb = tronWebBuilder()
@@ -77,7 +76,7 @@ async function verifyAccountsBalance(options) {
       }
     }
     if (ready < privateKeys.length)
-      sleep.sleep(3)
+      wait(3)
     else break
   }
   console.log(chalk.gray('Done.\n'))
@@ -116,6 +115,13 @@ function logRouter(route) {
   console.log( chalk.bold(chalk.cyan('\n\nADMIN'), `/admin/${route}`))
 }
 
+function setCors(res) {
+  res.setHeader('Access-Control-Allow-Origin', '*')
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,Content-Type,Accept')
+  res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS')
+  return res
+}
+
 router.get('/accounts', async function (req, res) {
   logRouter('accounts')
   const balances = await getBalances()
@@ -133,7 +139,6 @@ router.get('/set-env', async function (req, res) {
   }
 
   console.log('New env: ', config.getEnv())
-
   res.set('Content-Type', 'text/plain').send('Environment variable updated')
 })
 
@@ -141,7 +146,8 @@ router.get('/set-env', async function (req, res) {
 router.get('/accounts-json', function (req, res) {
   logRouter('accounts-json')
   res.header("Content-Type", 'application/json')
-  res.send(JSON.stringify(testingAccounts, null, 2))
+  res = setCors(res)
+  res.json(testingAccounts)
 })
 
 router.get('/accounts-generation', async function (req, res) {
@@ -164,6 +170,7 @@ router.get('/temporary-accounts-generation', async function (req, res) {
   await verifyAccountsBalance()
   const balances = await getBalances()
   await formatAccounts(balances)
+  res = setCors(res)
   res.set('Content-Type', 'text/plain').send(formattedTestingAccounts)
 })
 
