@@ -279,7 +279,7 @@ Sometimes, for example running tests with TronBox, we ask the node to performe a
 
 Unfortunately, you cannot use this image to create a node in the main Tron network because it uses a version of java-tron who is not the one required for a standard full node.
 
-### Latest version is `1.1.16`
+### Latest version is `1.2.0`
 
 To be updated, take a look at https://hub.docker.com/r/trontools/quickstart/tags/
 
@@ -291,4 +291,4 @@ docker exec -it tron node app/version
 ### Partial history
 
 __1.2.0__
-Introduce compatibility with java-tron 3.2. It requires TronBox >= 2.2.0, because java-tron 3.2 requires the new parameter `originalEnergyLimit` in `tronbox.js`
+Introduce compatibility with java-tron 3.2. It requires TronBox >= 2.1.9, because java-tron 3.2 requires the new parameter `originalEnergyLimit` in `tronbox.js`

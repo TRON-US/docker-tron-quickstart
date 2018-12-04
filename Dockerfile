@@ -51,6 +51,7 @@ WORKDIR /tron
 
 # Clone and build java-tron
 
+ADD conf/logback.xml /tron/conf/logback.xml
 ADD conf/mongodb.properties /tron/conf/mongodb.properties
 RUN apt-get install git -y && \
   git clone https://github.com/tronprotocol/java-tron.git && \
@@ -58,6 +59,7 @@ RUN apt-get install git -y && \
   git fetch && \
   git checkout shasta-dev && \
   cp ../conf/mongodb.properties src/main/resources/. && \
+  cp ../conf/logback.xml src/main/resources/. && \
   ./gradlew build -x test && \
   cd ..
 
