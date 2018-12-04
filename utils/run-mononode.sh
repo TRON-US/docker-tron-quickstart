@@ -10,4 +10,4 @@ docker run -it \
   -e "showBody=true" \
   -e "formatJson=true" \
   --name tron \
-  tron-quickstart
+  tronquickstart

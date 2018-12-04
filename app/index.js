@@ -135,7 +135,7 @@ app.use(bodyParser.json())
 app.use('/wallet', proxy({
   ...conf,
   onProxyRes: setHeaders('FULL-NODE'),
-  target: 'http://127.0.0.1:18190'
+  target: 'http://127.0.0.1:8090'
 }));
 
 app.use('/favicon.ico', function (req, res) {
@@ -147,13 +147,13 @@ app.use('/admin', admin)
 app.use('/walletsolidity', proxy({
   ...conf,
   onProxyRes: setHeaders('SOLIDITY-NODE'),
-  target: 'http://127.0.0.1:18191'
+  target: 'http://127.0.0.1:8091'
 }));
 
 app.use('/walletextension', proxy({
   ...conf,
   onProxyRes: setHeaders('SOLIDITY-NODE'),
-  target: 'http://127.0.0.1:18191'
+  target: 'http://127.0.0.1:8091'
 }));
 
 app.use('/', proxy({
@@ -167,8 +167,9 @@ app.listen(9090);
 
 const n = "\n"
 
-console.log(n, 'fullNode listening on', chalk.bold('http://127.0.0.1:8090'),
+console.log(n,
+    'fullNode listening on', chalk.bold('http://127.0.0.1:8090'),
     n, 'solidityNode listening on', chalk.bold('http://127.0.0.1:8091'),
     n, 'eventServer listening on', chalk.bold('http://127.0.0.1:8092'),
-    n, 'fullHost listening on', chalk.bold('http://127.0.0.1:9090'), n)
+    n, n, chalk.blue('Tron Quickstart listening on', chalk.bold('http://127.0.0.1:9090')), n)
 

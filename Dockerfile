@@ -45,25 +45,28 @@ RUN apt-get install -y wget && \
 
 # Prepare the work directory
 
-RUN mkdir tron
+RUN mkdir -p tron/conf
 WORKDIR /tron
 
-ADD conf /tron/conf
 
 # Clone and build java-tron
 
+ADD conf/logback.xml /tron/conf/logback.xml
+ADD conf/mongodb.properties /tron/conf/mongodb.properties
 RUN apt-get install git -y && \
   git clone https://github.com/tronprotocol/java-tron.git && \
   cd java-tron && \
   git fetch && \
-  git checkout ev2-improve && \
+  git checkout shasta-dev && \
   cp ../conf/mongodb.properties src/main/resources/. && \
+  cp ../conf/logback.xml src/main/resources/. && \
   ./gradlew build -x test && \
   cd ..
 
 
 # Clone and build trongrid
 
+ADD conf/application.properties /tron/conf/application.properties
 RUN git clone https://github.com/tronprotocol/tron-grid.git && \
   cd tron-grid && \
   cp ../conf/application.properties src/main/resources/. && \
@@ -75,10 +78,12 @@ RUN git clone https://github.com/tronprotocol/tron-grid.git && \
 
 # Configures full and solidity node
 
+ADD conf/full.conf /tron/conf/fullnode.conf
 RUN mkdir FullNode && \
   cp java-tron/build/libs/FullNode.jar FullNode/. && \
   mv conf/fullnode.conf FullNode/config.conf
 
+ADD conf/solidity.conf /tron/conf/soliditynode.conf
 RUN mkdir SolidityNode && \
   cp java-tron/build/libs/SolidityNode.jar SolidityNode/. && \
   mv conf/soliditynode.conf SolidityNode/config.conf
@@ -111,4 +116,5 @@ RUN chmod +x tronWeb
 
 ADD start.sh /tron/start.sh
 RUN chmod +x start.sh
+
 CMD ["./start.sh"]
