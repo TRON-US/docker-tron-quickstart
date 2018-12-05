@@ -1,8 +1,8 @@
-const sleep = require('sleep')
 const _ = require('lodash')
 const fs = require('fs-extra')
 const path = require('path')
 const chalk = require('chalk')
+const wait = require('./wait')
 const deriveAccountsFromSeedAndOrMnemonic = require('./deriveAccountsFromSeedAndOrMnemonic')
 const config = require('../config')
 
@@ -45,7 +45,7 @@ async function accountsGeneration(options) {
   }
 
   if (!await tronWeb.fullNode.isConnected()) {
-    sleep.sleep(1)
+    wait(1)
     return await accountsGeneration()
   }
 
