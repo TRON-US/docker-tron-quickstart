@@ -30,6 +30,19 @@ build.on('exit', function (code) {
   execSync(`docker tag tronquickstart trontools/quickstart:${ver}`)
 
   console.log(`Pushing to the Docker Hub\n`)
-  execSync(`docker push trontools/quickstart:${ver}`)
+  const push = spawn(`docker push trontools/quickstart:${ver}`, [])
+
+  push.stdout.on('data', function (data) {
+    process.stdout.write(data.toString())
+  })
+
+  push.stderr.on('data', function (data) {
+    console.log('stderr: ' + data.toString())
+  })
+
+  push.on('exit', function (code) {
+
+    console.log(`Image successfully pushed.\n`)
+  })
 })
 
