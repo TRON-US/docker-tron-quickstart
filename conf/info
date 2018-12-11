@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+const fs = require('fs')
+
+let file = fs.readFileSync('/tron/java-tron/src/main/java/org/tron/program/Version.java', 'utf-8')
+
+const javaTronVersion = file.match(/"([^"]+)"/)[1]
+
+const versions = {
+  versions: {
+    "tron quickstart": require('/tron/app/package').version,
+    "java-tron": javaTronVersion
+  }
+}
+
+console.log(
+    JSON.stringify(versions, null, 2)
+)

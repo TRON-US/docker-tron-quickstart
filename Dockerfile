@@ -49,21 +49,6 @@ RUN mkdir -p tron/conf
 WORKDIR /tron
 
 
-# Clone and build java-tron
-
-ADD conf/logback.xml /tron/conf/logback.xml
-ADD conf/mongodb.properties /tron/conf/mongodb.properties
-RUN apt-get install git -y && \
-  git clone https://github.com/tronprotocol/java-tron.git && \
-  cd java-tron && \
-  git fetch && \
-  git checkout shasta-dev && \
-  cp ../conf/mongodb.properties src/main/resources/. && \
-  cp ../conf/logback.xml src/main/resources/. && \
-  ./gradlew build -x test && \
-  cd ..
-
-
 # Clone and build trongrid
 
 ADD conf/application.properties /tron/conf/application.properties
@@ -73,6 +58,24 @@ RUN git clone https://github.com/tronprotocol/tron-grid.git && \
   apt-get install -y maven && \
   mvn package && \
   mv target/trongrid-1.0.1-SNAPSHOT.jar target/EventServer.jar && \
+  cd ..
+
+
+# Clone and build java-tron
+
+# forcing the reload
+RUN echo 12345
+
+ADD conf/logback.xml /tron/conf/logback.xml
+ADD conf/mongodb.properties /tron/conf/mongodb.properties
+RUN apt-get install git -y && \
+  git clone https://github.com/tronprotocol/java-tron.git && \
+  cd java-tron && \
+  git fetch && \
+  git checkout event_parser && \
+  cp ../conf/mongodb.properties src/main/resources/. && \
+  cp ../conf/logback.xml src/main/resources/. && \
+  ./gradlew build -x test && \
   cd ..
 
 
@@ -107,7 +110,6 @@ RUN apt-get remove maven git -y && \
 # if the node app is changed, but has the same dependences
 
 ADD app/index.js /tron/app/index.js
-ADD app/version.js /tron/app/version.js
 ADD app/src /tron/app/src
 ADD scripts /tron/scripts
 
@@ -115,7 +117,12 @@ ADD tronWeb /tron/tronWeb
 RUN chmod +x tronWeb
 
 ADD conf/set-mongo /tron/conf/set-mongo
-ADD start.sh /tron/start.sh
-RUN chmod +x start.sh
 
-CMD ["./start.sh"]
+ADD conf/info /tron/info
+RUN chmod +x info
+
+
+ADD quickstart /tron/quickstart
+RUN chmod +x quickstart
+
+CMD ["./quickstart", "v1.2.5"]

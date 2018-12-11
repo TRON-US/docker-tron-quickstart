@@ -7,12 +7,18 @@ const path = require('path')
 execSync('(cd app && npm version patch)')
 
 let ver = require('../app/package.json').version
-const readmePath = path.resolve(__dirname, '../README.md')
-
-let readme = fs.readFileSync(readmePath, 'utf-8')
+let fsPath = path.resolve(__dirname, '../README.md')
+let readme = fs.readFileSync(fsPath, 'utf-8')
 readme = readme.replace(/### Latest version is `[\d\.]+`/, "### Latest version is `" + ver + "`")
+fs.writeFileSync(fsPath, readme)
 
-fs.writeFileSync(readmePath, readme)
+fsPath = path.resolve(__dirname, '../Dockerfile')
+let dockerfile = fs.readFileSync(fsPath, 'utf-8')
+dockerfile = dockerfile.replace(/"v[0-9\.]+"/, '"v' + ver + '"')
+fs.writeFileSync(fsPath, dockerfile)
+
+fsPath = path.resolve(__dirname, '../version')
+fs.writeFileSync(fsPath, ver)
 
 const build = spawn('utils/build.sh', [])
 
@@ -27,22 +33,8 @@ build.stderr.on('data', function (data) {
 build.on('exit', function (code) {
 
   console.log(`Tagging new version ${ver}\n`)
-  execSync(`docker tag tronquickstart trontools/quickstart:${ver}`)
+  execSync(`utils/tag.sh ${ver}`)
 
-  console.log(`Pushing to the Docker Hub\n`)
-  const push = spawn(`docker push trontools/quickstart:${ver}`, [])
-
-  push.stdout.on('data', function (data) {
-    process.stdout.write(data.toString())
-  })
-
-  push.stderr.on('data', function (data) {
-    console.log('stderr: ' + data.toString())
-  })
-
-  push.on('exit', function (code) {
-
-    console.log(`Image successfully pushed.\n`)
-  })
+  console.log('To push run "utils/push.sh"')
 })
 
