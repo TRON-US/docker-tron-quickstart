@@ -5,7 +5,7 @@ __A docker image exposing a full node, a solidity node and an event server, i.e.
 
 ## Usage
 
-If you are using TronBox 2.1.9+ and are setting just a `fullHost` in `tronbox.js` run
+With TronBox >= 2.1.9, you can set just a `fullHost` in `tronbox.js`:
 
 ```
 docker run -it \
@@ -277,24 +277,37 @@ Sometimes, for example running tests with TronBox, we ask the node to performe a
 
 ### Not good for main network
 
-Unfortunately, you cannot use this image to create a node in the main Tron network because it uses a version of java-tron who is not the one required for a standard full node.
+Unfortunately, you cannot use this image to create a node in the main Tron network because it uses a version of JavaTron who is not the one required for a standard full node.
 
-### Latest version is `1.2.3`
+### Latest version is `1.2.6`
 
 To be updated, take a look at https://hub.docker.com/r/trontools/quickstart/tags/
 
-To see which version are you currently running, execute:
+You can see which version you currently running executing
 ```
-docker exec -it tron node app/version
+docker ps
 ```
-
+If you want also to know which version of JavaTron is used by Tron Quickstart, run
+```
+docker exec -it tron ./info
+```
 ### History
 
+__1.2.6__
+Uses JavaTron v3.2.1.2.
+Adds a script to have info about the current version of Tron Quickstart and JavaTron.
+
+__1.2.5__
+Uses JavaTron v3.2.1.1.
+
+__1.2.4__
+Allow to see the version of the current image from `docker ps`.
+
 __1.2.3__
-Adds CORS to any /admin routes that returns JSON objects.
+Add CORS to any /admin routes that returns JSON objects.
 
 __1.2.2__
-Introduce compatibility with java-tron 3.2. It requires TronBox >= 2.2.1, because java-tron 3.2 requires the new parameter
-`origin_energy_limit`. 
+Introduce compatibility with JavaTron 3.2. It requires TronBox >= 2.2.1, because JavaTron 3.2 requires the new parameter
+`origin_energy_limit`.
 
 

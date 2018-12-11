@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
+version=`cat version`
+
 docker run -it \
   --rm \
-  -p 8090:8090 \
-  -p 8091:8091 \
-  -p 8092:8092 \
-  -p 9090:9090 \
+  -p 88090:8090 \
+  -p 88091:8091 \
+  -p 88092:8092 \
+  -p 89090:9090 \
   -e "accounts=10" \
   --name tron0 \
-  trontools/quickstart:1.2.1
+  trontools/quickstart:$version
