@@ -107,9 +107,10 @@ RUN apt-get remove maven git -y && \
   apt-get autoremove -y
 
 # Separating install from src speeds up the rebuilding
-# if the node app is changed, but has the same dependences
+# if the node app is changed, but has the ADD app/version
 
 ADD app/index.js /tron/app/index.js
+ADD app/version.js /tron/app/version.js
 ADD app/src /tron/app/src
 ADD scripts /tron/scripts
 
@@ -121,8 +122,7 @@ ADD conf/set-mongo /tron/conf/set-mongo
 ADD conf/info /tron/info
 RUN chmod +x info
 
-
 ADD quickstart /tron/quickstart
 RUN chmod +x quickstart
 
-CMD ["./quickstart", "v1.2.5"]
+CMD ["./quickstart", "v1.2.6"]

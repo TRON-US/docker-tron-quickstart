@@ -4,7 +4,11 @@ const fs = require('fs')
 
 let file = fs.readFileSync('/tron/java-tron/src/main/java/org/tron/program/Version.java', 'utf-8')
 
-const javaTronVersion = file.match(/"([^"]+)"/)[1]
+let javaTronVersion = file.match(/"([^"]+)"/)[1]
+
+// the version was not updated correctly in the release
+if (javaTronVersion === '3.2.1.1')
+  javaTronVersion = '3.2.1.2'
 
 const versions = {
   versions: {
