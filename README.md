@@ -291,23 +291,23 @@ If you want also to know which version of JavaTron is used by Tron Quickstart, r
 ```
 docker exec -it tron ./info
 ```
-### History
+### Selected recent history
 
 __1.2.6__
-Uses JavaTron v3.2.1.2.
-Adds a script to have info about the current version of Tron Quickstart and JavaTron.
+* Uses JavaTron v3.2.1.2.
+* Adds a script to have info about the current version of Tron Quickstart and JavaTron.
 
 __1.2.5__
-Uses JavaTron v3.2.1.1.
+* Uses JavaTron v3.2.1.1.
 
 __1.2.4__
-Allow to see the version of the current image from `docker ps`.
+* Allow to see the version of the current image from `docker ps`.
 
 __1.2.3__
-Add CORS to any /admin routes that returns JSON objects.
+* Add CORS to any /admin routes that returns JSON objects.
 
 __1.2.2__
-Introduce compatibility with JavaTron 3.2. It requires TronBox >= 2.2.1, because JavaTron 3.2 requires the new parameter
+* Introduce compatibility with JavaTron 3.2. It requires TronBox >= 2.2.1, because JavaTron 3.2 requires the new parameter
 `origin_energy_limit`.
 
 
