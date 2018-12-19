@@ -64,7 +64,7 @@ RUN git clone https://github.com/tronprotocol/tron-grid.git && \
 # Clone and build java-tron
 
 # forcing the reload
-RUN echo 12345
+RUN echo '3.2.2'
 
 ADD conf/logback.xml /tron/conf/logback.xml
 ADD conf/mongodb.properties /tron/conf/mongodb.properties
@@ -125,4 +125,4 @@ RUN chmod +x info
 ADD quickstart /tron/quickstart
 RUN chmod +x quickstart
 
-CMD ["./quickstart", "v1.2.6"]
+CMD ["./quickstart", "v1.2.7"]

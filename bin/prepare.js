@@ -20,7 +20,7 @@ fs.writeFileSync(fsPath, dockerfile)
 fsPath = path.resolve(__dirname, '../version')
 fs.writeFileSync(fsPath, ver)
 
-const build = spawn('utils/build.sh', [])
+const build = spawn('bin/build.sh', [])
 
 build.stdout.on('data', function (data) {
   process.stdout.write(data.toString())
@@ -33,8 +33,8 @@ build.stderr.on('data', function (data) {
 build.on('exit', function (code) {
 
   console.log(`Tagging new version ${ver}\n`)
-  execSync(`utils/tag.sh ${ver}`)
+  execSync(`bin/tag.sh ${ver}`)
 
-  console.log('To push run "utils/push.sh"')
+  console.log('To push run "bin/push.sh"')
 })
 

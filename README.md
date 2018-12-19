@@ -279,7 +279,7 @@ Sometimes, for example running tests with TronBox, we ask the node to performe a
 
 Unfortunately, you cannot use this image to create a node in the main Tron network because it uses a version of JavaTron who is not the one required for a standard full node.
 
-### Latest version is `1.2.6`
+### Latest version is `1.2.7`
 
 To be updated, take a look at https://hub.docker.com/r/trontools/quickstart/tags/
 
@@ -292,6 +292,10 @@ If you want also to know which version of JavaTron is used by Tron Quickstart, r
 docker exec -it tron ./info
 ```
 ### Selected recent history
+
+__1.2.7__
+* Updates to JavaTron v3.2.2.
+* Supports events emitted by internal transactions.
 
 __1.2.6__
 * Uses JavaTron v3.2.1.2.

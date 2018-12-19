@@ -1,6 +1,6 @@
 {
   "name": "tron-quickstart",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "A minimalist proxy for a Tron private network",
   "main": "index.js",
   "repository": "https://github.com/tronprotocol/docker-tron-quickstart",
