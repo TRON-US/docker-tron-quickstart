@@ -32,7 +32,8 @@ const config = {
       'hdPath',
       'seed',
       'addAccounts',
-      'formatJson'
+      'formatJson',
+      'defaultBalance'
   ],
   getEnv: (env = process.env) => {
       env = _.pick(env, config.env)
