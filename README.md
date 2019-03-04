@@ -174,6 +174,11 @@ List of options
 * `hdPath=m/44'/60'/0'/0` sets a custom bit39 hdPath
 * `formatJson=true` formats the output
 
+Options activable only at run to pre-approve new proposals:
+* `allowSameTokenName=1`
+* `allowDelegateResource=1`
+* `allowTvmTransferTrc10=1`
+
 #### Available accounts
 
 At any moment, to see the generated accounts, run
@@ -279,7 +284,7 @@ Sometimes, for example running tests with TronBox, we ask the node to performe a
 
 Unfortunately, you cannot use this image to create a node in the main Tron network because it uses a version of JavaTron who is not the one required for a standard full node.
 
-### Latest version is `1.2.7`
+### Latest version is `1.2.8`
 
 To be updated, take a look at https://hub.docker.com/r/trontools/quickstart/tags/
 
@@ -292,6 +297,13 @@ If you want also to know which version of JavaTron is used by Tron Quickstart, r
 docker exec -it tron ./info
 ```
 ### Selected recent history
+
+__1.2.8__
+* Supports pre-approved proposals, to be set using env variables (see above)
+  * allowSameTokenName
+  * allowDelegateResource
+  * allowTvmTransferTrc10
+
 
 __1.2.7__
 * Updates to JavaTron v3.2.2.

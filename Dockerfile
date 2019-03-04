@@ -63,7 +63,6 @@ RUN git clone https://github.com/tronprotocol/tron-grid.git && \
 
 # Clone and build java-tron
 
-# forcing the reload
 RUN echo '3.2.2'
 
 ADD conf/logback.xml /tron/conf/logback.xml
@@ -79,19 +78,6 @@ RUN apt-get install git -y && \
   cd ..
 
 
-# Configures full and solidity node
-
-ADD conf/full.conf /tron/conf/fullnode.conf
-RUN mkdir FullNode && \
-  cp java-tron/build/libs/FullNode.jar FullNode/. && \
-  mv conf/fullnode.conf FullNode/config.conf
-
-ADD conf/solidity.conf /tron/conf/soliditynode.conf
-RUN mkdir SolidityNode && \
-  cp java-tron/build/libs/SolidityNode.jar SolidityNode/. && \
-  mv conf/soliditynode.conf SolidityNode/config.conf
-
-
 # Install proxy dependencies
 
 RUN apt-get update && apt-get install build-essential -y
@@ -105,6 +91,17 @@ RUN cd app && npm install
 RUN apt-get remove maven git -y && \
   apt-get clean all && \
   apt-get autoremove -y
+
+
+# Configures full and solidity node
+
+ADD conf/full.conf /tron/conf/fullnode.conf
+RUN mkdir FullNode && \
+  cp java-tron/build/libs/FullNode.jar FullNode/.
+
+ADD conf/solidity.conf /tron/conf/soliditynode.conf
+RUN mkdir SolidityNode && \
+  cp java-tron/build/libs/SolidityNode.jar SolidityNode/.
 
 # Separating install from src speeds up the rebuilding
 # if the node app is changed, but has the ADD app/version
@@ -122,7 +119,7 @@ ADD conf/set-mongo /tron/conf/set-mongo
 ADD conf/info /tron/info
 RUN chmod +x info
 
-ADD quickstart /tron/quickstart
+ADD quickstart.sh /tron/quickstart
 RUN chmod +x quickstart
 
-CMD ["./quickstart", "v1.2.7"]
+CMD ["./quickstart", "v1.2.8"]
