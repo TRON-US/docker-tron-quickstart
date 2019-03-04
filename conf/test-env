@@ -1,0 +1,10 @@
+export PGDATABASE=events
+export PGUSER=postgres
+export PGPASSWORD=pgpass
+export SECRET=TNSpckEZhGfZ4ryidHG2fYWMARLpZ6U139
+export SAVETORDBMS=1
+export REDISDBID=0
+export REDISPORT=6380
+export PGPORT=5433
+export OTHERZONES='frankfurt|singapore'
+export NODE_ENV=development 
