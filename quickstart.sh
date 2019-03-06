@@ -4,29 +4,31 @@ node app/version
 
 echo "Start nodes and event server..."
 
-if [[ $allowSameTokenName == '1' ]];then
-  echo "Pre-approving allowSameTokenName"
-  echo "  allowSameTokenName = 1" >> /tron/conf/fullnode.conf
+if [[ $getTotalEnergyTargetLimit == '1' ]];then
+  echo "Pre-approving getTotalEnergyTargetLimit"
+  echo "getTotalEnergyTargetLimit = 1" >> /tron/conf/fullnode.conf
 fi
 
+if [[ $getUpdateAccountPermissionFee == '1' ]];then
+  echo "Pre-approving getUpdateAccountPermissionFee"
+  echo "getUpdateAccountPermissionFee = 1" >> /tron/conf/fullnode.conf
+fi
 
-echo "}" >> /tron/conf/fullnode.conf
+if [[ $getMultiSignFee == '1' ]];then
+  echo "Pre-approving getMultiSignFee"
+  echo "getMultiSignFee = 1" >> /tron/conf/fullnode.conf
+fi
 
-mv conf/fullnode.conf FullNode/config.conf
-
-(cd FullNode && nohup java -jar FullNode.jar -c config.conf --witness >/dev/null 2>&1 &)
+nohup redis-server > /dev/null 2>&1 &
+(cd FullNode && nohup java -jar FullNode.jar -c fullnode.conf --witness >/dev/null 2>&1 &)
 
 # run eventron
+(cd eventron && nohup ./run_eventron.sh >/dev/null 2>&1 &)
 
-(cd eventron && source env && nohup node . >/dev/null 2>&1 &)
-
+# run blockparser
 (cd BlockParser && nohup ./run.sh >/dev/null 2>&1 &)
 
-
-echo "Wait 3 seconds..."
-sleep 3
-
 echo "Start the http proxy for dApps..."
-nohup scripts/accounts-generation.sh 2>&1 &
-node /tron/app
+nohup scripts/accounts-generation.sh > /dev/null 2>&1 &
 
+node /tron/app
