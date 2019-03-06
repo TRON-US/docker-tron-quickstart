@@ -4,9 +4,19 @@ node app/version
 
 echo "Start nodes and event server..."
 
-if [[ $allowSameTokenName == '1' ]];then
-  echo "Pre-approving allowSameTokenName"
-  echo "  allowSameTokenName = 1" >> /tron/conf/fullnode.conf
+if [[ $getTotalEnergyTargetLimit == '1' ]];then
+  echo "Pre-approving getTotalEnergyTargetLimit"
+  echo "getTotalEnergyTargetLimit = 1" >> /tron/conf/fullnode.conf
+fi
+
+if [[ $getUpdateAccountPermissionFee == '1' ]];then
+  echo "Pre-approving getUpdateAccountPermissionFee"
+  echo "getUpdateAccountPermissionFee = 1" >> /tron/conf/fullnode.conf
+fi
+
+if [[ $getMultiSignFee == '1' ]];then
+  echo "Pre-approving getMultiSignFee"
+  echo "getMultiSignFee = 1" >> /tron/conf/fullnode.conf
 fi
 
 nohup redis-server > /dev/null 2>&1 &

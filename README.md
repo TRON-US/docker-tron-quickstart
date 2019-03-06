@@ -158,7 +158,22 @@ __List of options:__
 * `allowDelegateResource=1`
 * `allowTvmTransferTrc10=1`
 
-For a complete list of option proposals check out https://tronscan.org/#/sr/committee
+Pre-approved options:
+* `getMultiSignFee=1`
+* `getUpdateAccountPermissionFee=1`
+* `getTotalEnergyTargetLimit=1`
+
+Example use of pre-approved:
+```
+docker run -it \
+  -p 9090:9090 \
+  --rm \
+  --name tron \
+  -e "getMultiSignFee=1" \
+  trontools/quickstart
+```
+
+For a complete list of option proposals check out https://tronscan.org/#/sr/committee.
 
 #### Available accounts
 
