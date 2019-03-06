@@ -2,3 +2,6 @@ node_modules
 scripts/deploy_tron.sh
 /tmp
 /tron-data
+output-directory/
+jdk1.8.0_201/
+logs/
