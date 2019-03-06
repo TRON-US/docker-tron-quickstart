@@ -5,3 +5,4 @@ scripts/deploy_tron.sh
 output-directory/
 jdk1.8.0_201/
 logs/
+/jre
