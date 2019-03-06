@@ -1,12 +1,20 @@
-# Tron Quickstart (Docker)
-https://github.com/tronprotocol/docker-tron-quickstart
+# Tron Quickstart (Docker image)
 
-__A docker image exposing a full node, a solidity node and an event server, i.e., a complete private network for Tron developers.__
+__The following is a Tron Quickstart (v2.0.0). The purpose of it is to set up a complete private network for Tron development.__
+
+The image exposes:
+* FullNode
+* SolidityNode
+* EventServer
 
 ## Usage
 
-With TronBox >= 2.1.9, you can set just a `fullHost` in `tronbox.js`:
+__Pull the image using docker:__
+```
+docker pull trontools/quickstart
+```
 
+__Run the container:__
 ```
 docker run -it \
   -p 9090:9090 \
@@ -14,158 +22,131 @@ docker run -it \
   --name tron \
   trontools/quickstart
 ```
-Notice the `--rm` option which will delete the container when you stop it.
+Notice the `--rm` option automatically removes the container after it exits.
 
-With TronBox < 2.1.9, run instead:
+__If the port 9090 causes conflicts, change the external port as follows (showing 9091 as alternative):__
+
 ```
 docker run -it \
-  -p 8091:8091 \
-  -p 8092:8092 \
-  -p 8090:8090 \
+  -p 9091:9090 \
   --rm \
   --name tron \
   trontools/quickstart
 ```
 
-If you need to expose different ports to avoid conflicts, for example the ports 9090, 9091 and 9092, you can set up them when you run the container, like in this example:
-```
-docker run -it \
-  -p 9090:8090 \
-  -p 9091:8091 \
-  -p 9092:8092 \
-  --rm \
-  --name tron \
-  trontools/quickstart
-```
-To verify that the image is running correctly, execute
+__Verify the image is running correctly:__
 ```
 docker exec -it tron ps aux
 ```
 You should see something like this:
+
 ```
 USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root         1  0.0  0.1  20044  3604 pts/0    Ss+  12:13   0:00 bash ./start.sh
-root        13  0.6  3.6 1103840 74600 pts/0   Sl+  12:13   0:03 mongod
-root        15  0.0  0.0  20044   276 pts/0    S+   12:13   0:00 bash ./start.sh
-root        16  6.7 18.7 4068380 384224 pts/0  Sl+  12:13   0:36 java -jar EventServer.jar
-root        18  0.0  0.0  20044   276 pts/0    S+   12:13   0:00 bash ./start.sh
-root        21  0.0  0.0  20044   276 pts/0    S+   12:13   0:00 bash ./start.sh
-root        22  5.5 14.8 4162892 303812 pts/0  Sl+  12:13   0:29 java -jar SolidityNode.jar -c config.conf
-root        23  0.1  2.1 891672 43412 pts/0    Sl+  12:13   0:01 node /tron/dev
-root        24  7.2 18.6 4173968 382408 pts/0  Sl+  12:13   0:38 java -jar FullNode.jar -c config.conf --witness
-root       100  0.0  0.1  20176  3796 pts/1    Ss   12:13   0:00 bash
-root       336  0.0  0.1  36068  3184 pts/1    R+   12:22   0:00 ps aux
+root         1  0.0  0.1  18372  3048 pts/0    Ss+  20:31   0:00 bash ./quickstart v2.0.0
+root        12  0.0  0.1  48504  3768 pts/0    Sl+  20:31   0:00 redis-server *:6379
+root        14  0.0  0.0  18372   276 pts/0    S+   20:31   0:00 bash ./quickstart v2.0.0
+root        15 22.6 19.5 4211400 400288 pts/0  Sl+  20:31   0:21 java -jar FullNode.jar -c fullnode.conf --witness
+root        17  0.0  0.0  18372   276 pts/0    S+   20:31   0:00 bash ./quickstart v2.0.0
+root        18  0.0  0.0   4624   812 pts/0    S+   20:31   0:00 /bin/sh ./run_eventron.sh
+root        23  1.4  3.2 940756 66860 pts/0    Sl+  20:31   0:01 node /tron/app
+root        33  0.6  3.1 1243216 65212 pts/0   Sl+  20:31   0:00 ./eventron
+root        34  115 14.4 4130488 294876 pts/0  Sl+  20:31   1:50 java -jar BlockParser.jar --Node-list 127.0.0.1 --intial-block 1 -end -1 --event-server http://127.0.0.1:8060 --secret-key TNSpckEZhGfZ4ryidHG2fYWMARLpZ6U139
+root       227  0.3  0.1  18504  3328 pts/1    Ss   20:33   0:00 bash
+root       240  0.0  0.1  34396  2784 pts/1    R+   20:33   0:00 ps aux
 ```
-If mongod, some of the nodes or the event server are not running, exit and run the container again.
 
-Be careful, since we used the `--rm` option, restarting the container you will reset the data, similarly to what happens when you stop and run `ganache-cli` again in Truffle.
+If redis-server, nodes, or the event server are not running, exit and run the container again.
 
 To see the logs of the full node you can execute
 ```
 docker exec -it tron tail -f /tron/FullNode/logs/tron.log
 ```
-and you can do the same for the solidity node
-```
-docker exec -it tron tail -f /tron/SolidityNode/logs/tron.log
-```
 
-### Usage in TronBox 2.1+
+### TronBox 2.1+ configuration
 
-Config your `tronbox.js` file as:
+Configure your `tronbox.js` file as:
+
 ```
 module.exports = {
   networks: {
     development: {
       privateKey: 'da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0',
-      consume_user_resource_percent: 30,
-      fee_limit: 100000000,
-      fullNode: "http://127.0.0.1:8090",
-      solidityNode: "http://127.0.0.1:8091",
-      eventServer: "http://127.0.0.1:8092",
+      fullNode: "http://127.0.0.1:9090",
+      solidityNode: "http://127.0.0.1:9090",
+      eventServer: "http://127.0.0.1:9090",
       network_id: "*"
     }
   }
 };
-
 ```
 
-In TronBox 2.1.9+ you can just set a `fullHost` like in:
-```
-module.exports = {
-  networks: {
-    development: {
-      privateKey: 'da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0',
-      consume_user_resource_percent: 30,
-      fee_limit: 100000000,
-      fullHost: "http://127.0.0.1:9090",
-      network_id: "*"
-    }
-  }
-};
-
-```
-
-### Usage in TronWeb
+### TronWeb configuration
 
 Instantiate tronWeb as in the following example:
 ```
 const TronWeb = require('tronweb')
 
 const tronWeb = new TronWeb(
-    "http://127.0.0.1:8090",
-    "http://127.0.0.1:8091",
-    "http://127.0.0.1:8092",
+    "http://127.0.0.1:9090",
+    "http://127.0.0.1:9090",
+    "http://127.0.0.1:9090",
     'da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0',
 )
 
 ```
 
-
 ### Testing
 
-From version 1.0.0, Tron Quickstart sets up a certain number of accounts to be used for tests with TronBox 2.1+.
-By default, it generates 10 accounts and waits until the transactions are mined. The final output is something like:
+Tron Quickstart sets up accounts to be used for tests with TronBox 2.1+ (10 accounts by default). Once the transactions are mined, the final output is printed out:
 ```
 Available Accounts
 ==================
 
-(0) THonCrSv2bkzXu4Azrc6L949YJHqRs4XYN (10000 TRX)
-(1) TAWCqmAvjs1GdB39AgVZDo7sjuSCTQAg4T (10000 TRX)
-(2) TMG1rifQBAABz4qKxZr4RqA8Zr4eCwgQvy (10000 TRX)
-(3) TA76Y4dnKzD8BmmBaLBxtV2YqJHo4Jc7zZ (10000 TRX)
-(4) TBhjRJc3btGMotw3vz7VpDcrfYs98DdQNA (10000 TRX)
-(5) TQP9CT7w8mr9mmjhNyuaZpo3BJizoC6sM5 (10000 TRX)
-(6) TBKaAgZfcbF9q1496uUjacEjBPLqb7djc4 (10000 TRX)
-(7) THo2uD5CamAbhHjP6QTyj7RxPwTkbk6vse (10000 TRX)
-(8) TWmBP7dTWQVcovrqZaaHerJWirdh7B6NJa (10000 TRX)
-(9) TRBrPNWAkKGoXjYHLWdrvaqF49G2MYukp6 (10000 TRX)
+(0) TJdDmJVYa9TcMJvCc9WsdaEXEYgeJrGVPq (100000 TRX)
+(1) TNmLX3rJZNdq7kxgxs1y39FP3hp8LWHLUX (100000 TRX)
+(2) TASrJ76QANNPRgdDHHikWWApQzxh3HPku4 (100000 TRX)
+(3) TNkzaPqNipxKbU5ecUZz7P7UdejiE82zc7 (100000 TRX)
+(4) TWCcS3cAVeNWhX1J6LHMEsEkWGq43t4EXc (100000 TRX)
+(5) TW1QH88er9UqUKhoHLdm8dQTG2NsYU6C2h (100000 TRX)
+(6) TKJu6vpKAknBwzovm5NiBZ1j69nWmeXGyw (100000 TRX)
+(7) TQUddX2gBhGV7d33a2kZchVsPuWLdZBeXY (100000 TRX)
+(8) TXjdePoR6ZRfBeiaZ9QoUyGwdHGhTPdy6x (100000 TRX)
+(9) TGJnVM3TcvsKaDL3zpNm92gw2YHrPx8s3Y (100000 TRX)
 
 Private Keys
 ==================
 
-(0) 84d9f2d42a52839ca2ed6992af7f2e9617263a3eb9a358f25ccddf704f7826a4
-(1) 086fe9467b9c2753eedf22abd88a6651de3d2fcdfbc0f1a8ce59829719a6031a
-(2) 57de89ab1502d8d6f08a63342e7bf2e9d361ed0a0d6fe57733aba6010873839b
-(3) 7605e63fc9c738268e86396d242389df2cdb2a3fbe17145b43fc238ef5cb4ac2
-(4) 1f8fe4c1d38814c1868c5d76dda2afd7b7715c8a8382a458004502a6a0dd39d7
-(5) a012ffd67845b0e189d627082d40d32c98cc4c5221a49f611f22f75a94ff1254
-(6) 92294e76ba71dbb6e43a701596253857d6481867f8101f99b72125359d3ae28d
-(7) 89e73d62ad9e74d6d725d020cd037ecbb590a7be52091e830f55717c98181590
-(8) f3f38eacb1e32cb08642097ec0763e43d99aa7c5385dd4e3a85902c50ba66998
-(9) 0e0ac6676ca312b88939584bebc0f279a3c13c9236846b95eaa9df8588538ad5
+(0) 86134c8a51446c21b501f3a05844e18fdb72d3a5420867737c8640ce0ec656ca
+(1) 57e04ac5484dd2c3d97b44c5e232b6203c2759642f38c5ea6787b0e4044de165
+(2) 138a22c03039e688daa2b7c785d1e8d6b9375d4413e6ea82471b1e7a61701a9d
+(3) e83a4958e81654efb162cef269e323ac501aa81d850ba9aed5a7d4f3c26d5a0a
+(4) 05cdb18a4638d21d3f1f18e6bdb601a60b4debc85ee9bf8b385a2613693da24f
+(5) b66225af9b24c9eb92ef65e3ff540c5c260de9fc8bb01a51fc44490bafe7ab3e
+(6) 0b75b702316f1dcb2c7ca5aee9e1cd9bbdcf747e27fc417c324971caaf59772c
+(7) 15e2547daf170c6f0e0dd0d64c35c1259206bc481a0c9d571bac0b1197f51d11
+(8) 858c97998d9bebddc9320157e538d248dfcc64cd4c5c8ea97dfcb5d8396b37a0
+(9) 32d2d45c05758f7de37a542798aac91315bd269565c99eafb33ebfb3a54ac046
 
 HD Wallet
 ==================
-Mnemonic:      wage symptom exchange mask elder above wool later engine slot place rocket
-Base HD Path:  m/44'/60'/0'/0//{account_index}
+Mnemonic:      treat nation math panel calm spy much obey moral hazard they sorry
+Base HD Path:  m/44'/60'/0'/0/{account_index}
 
 ```
 
-#### Available options:
+#### Quickstart options:
+Use `-e` flag to pass environmental variables to the docker.
+Example:
+```
+docker run -it \
+  -p 9090:9090 \
+  --rm \
+  --name tron \
+  -e "accounts=20" \
+  trontools/quickstart
+```
 
-To set an option set an env variable, like for example `-e "accounts=20"` to set 20 default accounts.
-
-List of options
+__List of options:__
 * `accounts=12` sets the number of generated accounts
 * `useDefaultPrivateKey=true` tells Quickstart to use the default account as `accounts[0]`
 * `mnemonic=wrong bit chicken kitchen rat` uses a specified mnemonic
@@ -173,34 +154,32 @@ List of options
 * `seed=ushwe63hgeWUS` sets the seed to be used to generate the mnemonic (if none is passed)
 * `hdPath=m/44'/60'/0'/0` sets a custom bit39 hdPath
 * `formatJson=true` formats the output
-
-Options activable only at run to pre-approve new proposals:
 * `allowSameTokenName=1`
 * `allowDelegateResource=1`
 * `allowTvmTransferTrc10=1`
+
+For a complete list of option proposals check out https://tronscan.org/#/sr/committee
 
 #### Available accounts
 
 At any moment, to see the generated accounts, run
 ```
-curl http://127.0.0.1:8090/admin/accounts
+curl http://127.0.0.1:9090/admin/accounts
 ```
 
 If you prefer to see the addresses in hex format you can run
 ```
-curl http://127.0.0.1:8090/admin/accounts?format=hex
+curl http://127.0.0.1:9090/admin/accounts?format=hex
 ```
 And if you like to see both formats, you can run
 ```
-curl http://127.0.0.1:8090/admin/accounts?format=all
+curl http://127.0.0.1:9090/admin/accounts?format=all
 ```
 
 
 #### More accounts?
 
-Sometimes you must have new accounts any times that you run a test. For example, if you are testing a native token, after that you have created it for a certain account, you can't delete it. So, next time you repeat the test, the test will fail.
-
-The obvious solution is to stop the container and run it again. Starting from Tron Quickstart 1.1.5 there is a better solution. You can use the following code to generate more addresses and retrieve them:
+If your test requires additional accounts, use the following code to generate new addresses and retrieve them:
 
 ```js
 async function newTestAccounts(amount) => {
@@ -227,42 +206,46 @@ async function getTestAccounts() => {
 
 #### Persistency
 
-If you like to use all the time the same accounts you can pass a mnemonic or let docker using a local `accounts.json` file, like in the following example:
+If you would like to use the same accounts each time, there are two ways to do that:
+1. By passing a mnemonic to the docker
+2. By using `accounts.json`
+
+Example use of `accounts.json`:
 ```sh
 if [[ ! -d "accounts-data" ]]; then mkdir accounts-data; fi
 
-docker run -it -p 8091:8091 -p 8092:8092 -p 8090:8090 \
+docker run -it -p 9090:9090 \
   --name tron \
   -v $PWD/accounts-data:/config \
   trontools/quickstart
 ```
-In the example above, after the first time, running again the container, Tron Quickstart will use the file `accounts-data/accounts.json` for the accounts. If you need specific addresses, you can edit `accounts.json`, put your own private keys in the `privateKeys` array, and run again the container.
+
+If `accounts-data/accounts.json` exists, Tron Quickstart will use it each time it runs. If you need specific addresses, you can edit `accounts.json`, put your own private keys in the `privateKeys` array, and run the container.
 
 #### Logging
 
-By default, the proxy server returns a verbose log, containing the response of any command. If you prefer just to know what has been called, you can add the option `-e "quiet=true"`. For consistency there is also the option `-e "verbose=true"` which is prioritary, i.e., `quiet` is ignored if `verbose` is specified.
+By default, the proxy server returns a verbose log, containing the response of any command. If you prefer just to know what has been called, you can add the option `-e "quiet=true"`. For consistency there is also the option `-e "verbose=true"`. In case both `"quiet=true"` and  `"verbose=true"` options are passed, the `"verbose=true"` takes precedence, with `quiet` being ignored.
 
-In verbose mode, you have options for more details:
+__verbose mode options:__
 
-To see the queryString of any command, use the options `-e "showQueryString=true"`.
-
-To see the parameter passed to a POST command, use the options `-e "showBody=true"`.
+* `-e "showQueryString=true"`: shows the queryString of any command
+* `-e "showBody=true"`: shows the parameter passed to a POST command
 
 
 ### Update environment variables
 
-At any moment you can update env variables running a command like:
+You can update environmental variables, at any time, with `curl` as follows:
 ```
-curl http://127.0.0.1:8090/admin/set-env?showBody=true
+curl http://127.0.0.1:9090/admin/set-env?showBody=true
 ```
 
 ### Interacting with the private network
 
-The easiest way to interact with the private network is using TronWeb from inside the container:
+The easiest way to interact with the private network is by using TronWeb from the container:
 ```
 docker exec -it tron ./tronWeb
 ```
-It will open a console with a `tronWeb` instance ready to use. Run any command — for example: `tronWeb.toHex("some")` — to verify that it works.
+It opens a console with a `tronWeb` instance ready to use. Run any command — for example: `tronWeb.toHex("some")` — to verify that it works.
 
 ### What about RPC?
 
@@ -278,11 +261,7 @@ docker run -it -p 50051:50051 -p 50052:50052 \
 
 __The "SERVER_BUSY" error__
 
-Sometimes, for example running tests with TronBox, we ask the node to performe a lot of operatios. This can cause that the full node is busy and returns that error. If so, just repeat your command.
-
-### Not good for main network
-
-Unfortunately, you cannot use this image to create a node in the main Tron network because it uses a version of JavaTron who is not the one required for a standard full node.
+Running TronBox can put a lot of stress on the local network. If the FullNode is busy, it returns the "SERVER_BUSY" error. If it does, just repeat your command.
 
 ### Latest version is `1.2.8`
 
@@ -297,6 +276,9 @@ If you want also to know which version of JavaTron is used by Tron Quickstart, r
 docker exec -it tron ./info
 ```
 ### Selected recent history
+
+__2.0.0__
+* Updated to JavaTron 3.5.0.1
 
 __1.2.8__
 * Supports pre-approved proposals, to be set using env variables (see above)
@@ -325,5 +307,3 @@ __1.2.3__
 __1.2.2__
 * Introduce compatibility with JavaTron 3.2. It requires TronBox >= 2.2.1, because JavaTron 3.2 requires the new parameter
 `origin_energy_limit`.
-
-
