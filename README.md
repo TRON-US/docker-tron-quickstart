@@ -42,17 +42,16 @@ You should see something like this:
 
 ```
 USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-root         1  0.0  0.1  18372  3048 pts/0    Ss+  20:31   0:00 bash ./quickstart v2.0.0
-root        12  0.0  0.1  48504  3768 pts/0    Sl+  20:31   0:00 redis-server *:6379
-root        14  0.0  0.0  18372   276 pts/0    S+   20:31   0:00 bash ./quickstart v2.0.0
-root        15 22.6 19.5 4211400 400288 pts/0  Sl+  20:31   0:21 java -jar FullNode.jar -c fullnode.conf --witness
-root        17  0.0  0.0  18372   276 pts/0    S+   20:31   0:00 bash ./quickstart v2.0.0
-root        18  0.0  0.0   4624   812 pts/0    S+   20:31   0:00 /bin/sh ./run_eventron.sh
-root        23  1.4  3.2 940756 66860 pts/0    Sl+  20:31   0:01 node /tron/app
-root        33  0.6  3.1 1243216 65212 pts/0   Sl+  20:31   0:00 ./eventron
-root        34  115 14.4 4130488 294876 pts/0  Sl+  20:31   1:50 java -jar BlockParser.jar --Node-list 127.0.0.1 --intial-block 1 -end -1 --event-server http://127.0.0.1:8060 --secret-key TNSpckEZhGfZ4ryidHG2fYWMARLpZ6U139
-root       227  0.3  0.1  18504  3328 pts/1    Ss   20:33   0:00 bash
-root       240  0.0  0.1  34396  2784 pts/1    R+   20:33   0:00 ps aux
+root         1  0.0  0.0  20044  1900 pts/0    Ss+  01:42   0:00 bash ./quickstart v2.0.0
+root        13  0.2  0.0  50148  1740 pts/0    Sl+  01:42   0:00 redis-server *:6379
+root        15  0.0  0.0  20044    40 pts/0    S+   01:42   0:00 bash ./quickstart v2.0.0
+root        16 11.5 19.2 5277964 393692 pts/0  Sl+  01:42   0:31 java -jar FullNode.jar -c fullnode.conf --witness
+root        43  0.1  1.8 930932 37456 ?        Ssl  01:42   0:00 PM2 v3.3.1: God Daemon (/root/.pm2)
+root        54  0.2  2.6 939316 54880 ?        Ssl  01:42   0:00 /tron/eventron/eventron
+root        67  0.5  3.1 941540 64212 pts/0    Sl+  01:42   0:01 node /tron/app
+root        72  412 32.0 5208448 655136 pts/0  Sl+  01:42  18:49 java -jar BlockParser.jar --Node-list 127.0.0.1 --intial-block 1 -end -1 --event-server http://127.0.0.1:8060 --secret-key TNSpckEZhGfZ4ryidHG2fYWMARLpZ6U139
+root       261  0.0  0.1  20176  3748 pts/1    Ss   01:46   0:00 bash
+root       289  0.0  0.1  36068  3168 pts/1    R+   01:47   0:00 ps aux
 ```
 
 If redis-server, nodes, or the event server are not running, exit and run the container again.
@@ -71,10 +70,8 @@ module.exports = {
   networks: {
     development: {
       privateKey: 'da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0',
-      fullNode: "http://127.0.0.1:9090",
-      solidityNode: "http://127.0.0.1:9090",
-      eventServer: "http://127.0.0.1:9090",
-      network_id: "*"
+      fullHost: "http://127.0.0.1:9090",
+      network_id: "9"
     }
   }
 };
@@ -288,8 +285,10 @@ docker ps
 ```
 If you want also to know which version of JavaTron is used by Tron Quickstart, run
 ```
-docker exec -it tron ./info
+curl localhost:9090/wallet/getnodeinfo
 ```
+and look for `codeVersion`. 
+
 ### Selected recent history
 
 __2.0.0__
