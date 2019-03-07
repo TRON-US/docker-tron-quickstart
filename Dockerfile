@@ -48,7 +48,7 @@ ADD conf/run.sh BlockParser/run.sh
 ADD conf/BlockParser.jar BlockParser/BlockParser.jar
 
 RUN mkdir eventron
-ADD conf/run_eventron.sh eventron/run_eventron.sh
+ADD conf/process.json eventron/process.json
 ADD conf/eventron eventron/eventron
 
 # Separating install from src speeds up the rebuilding
@@ -60,6 +60,8 @@ ADD app/src app/src
 ADD scripts scripts
 RUN cd app && npm install
 RUN chmod +x scripts/accounts-generation.sh
+
+RUN npm i -g pm2 && pm2 update
 
 COPY test ./test
 ADD tronWeb tronWeb

@@ -105,6 +105,13 @@ const app = express();
 app.use(morgan(only()))
 app.use(bodyParser.json())
 
+
+app.use('/walletsolidity', proxy({
+  ...conf,
+  onProxyRes: setHeaders('SOLIDITY-NODE'),
+  target: 'http://127.0.0.1:18191'
+}));
+
 app.use('/wallet', proxy({
   ...conf,
   onProxyRes: setHeaders('FULL-NODE'),
