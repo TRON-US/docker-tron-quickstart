@@ -294,6 +294,10 @@ docker exec -it tron ./info
 
 __2.0.0__
 * Updated to JavaTron 3.5.0.1
+* Supports pre-approved proposals, to be set using env variables (see above)
+  * getMultiSignFee
+  * getUpdateAccountPermissionFee
+  * getTotalEnergyTargetLimit
 
 __1.2.8__
 * Supports pre-approved proposals, to be set using env variables (see above)
