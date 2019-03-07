@@ -11,7 +11,7 @@ if [[ ! -d "tron-data" ]]; then
 fi
 
 # running the container using the local volumes
-docker run -it -p 8091:8091 -p 8092:8092 -p 8090:8090 \
+docker run -it -p 9090:9090 \
   --name tron \
   -v $PWD/tron-data:/config \
   tronquickstart

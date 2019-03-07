@@ -95,32 +95,6 @@ function onError(err, req, res) {
   res.end(err)
 }
 
-const setApp = (name, port0, port) => {
-  const app = express()
-  app.use(morgan(only()))
-  app.use(bodyParser.json())
-  app.use('/favicon.ico', function (req, res) {
-    res.send('')
-  })
-  if (name === 'FULL-NODE') {
-    app.use('/admin', admin)
-  }
-  app.use('/', proxy({
-    changeOrigin: true,
-    onProxyReq,
-    onProxyRes: setHeaders(name),
-    onError,
-    target: `http://127.0.0.1:${port0}`
-  }))
-  app.listen(port)
-
-}
-
-setApp('FULL-NODE', 18190, 8090)
-setApp('SOLIDITY-NODE', 18191, 8091)
-setApp('EVENT-SERVER', 18891, 8092)
-
-
 const conf = {
   changeOrigin: true,
   onProxyReq,
@@ -130,6 +104,13 @@ const conf = {
 const app = express();
 app.use(morgan(only()))
 app.use(bodyParser.json())
+
+
+app.use('/walletsolidity', proxy({
+  ...conf,
+  onProxyRes: setHeaders('SOLIDITY-NODE'),
+  target: 'http://127.0.0.1:18191'
+}));
 
 app.use('/wallet', proxy({
   ...conf,
@@ -143,22 +124,10 @@ app.use('/favicon.ico', function (req, res) {
 
 app.use('/admin', admin)
 
-app.use('/walletsolidity', proxy({
-  ...conf,
-  onProxyRes: setHeaders('SOLIDITY-NODE'),
-  target: 'http://127.0.0.1:18191'
-}));
-
-app.use('/walletextension', proxy({
-  ...conf,
-  onProxyRes: setHeaders('SOLIDITY-NODE'),
-  target: 'http://127.0.0.1:18191'
-}));
-
 app.use('/', proxy({
   ...conf,
   onProxyRes: setHeaders('EVENT-SERVER'),
-  target: 'http://127.0.0.1:18891'
+  target: 'http://127.0.0.1:8060'
 }));
 
 app.listen(9090);
@@ -167,8 +136,5 @@ app.listen(9090);
 const n = "\n"
 
 console.log(n,
-    'fullNode listening on', chalk.bold('http://127.0.0.1:8090'),
-    n, 'solidityNode listening on', chalk.bold('http://127.0.0.1:8091'),
-    n, 'eventServer listening on', chalk.bold('http://127.0.0.1:8092'),
-    n, n, chalk.blue('Tron Quickstart listening on', chalk.bold('http://127.0.0.1:9090')), n)
+    chalk.blue('Tron Quickstart listening on', chalk.bold('http://127.0.0.1:9090')), n)
 

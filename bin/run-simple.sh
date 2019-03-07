@@ -2,8 +2,6 @@
 
 docker run -it \
   --rm \
-  -p 8090:8090 \
-  -p 8091:8091 \
-  -p 8092:8092 \
+  -p 9090:9090 \
   --name tron \
   tronquickstart

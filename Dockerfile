@@ -3,7 +3,6 @@
 FROM ubuntu:18.04
 LABEL maintainer="Francesco Sullo <francesco@sullo.co>"
 
-
 # Install JDK8
 # thanks to mlaccetti/docker-oracle-java8-ubuntu-16.04
 
@@ -13,7 +12,7 @@ ENV LANG            en_US.UTF-8
 ENV LC_ALL          en_US.UTF-8
 
 RUN apt-get update && \
-  apt-get install -y --no-install-recommends locales && \
+  apt-get install -y --no-install-recommends locales build-essential wget -y && \
   locale-gen "en_US.UTF-8" && \
   apt-get dist-upgrade -y && \
   apt-get install gnupg apt-utils git -y && \
@@ -24,102 +23,52 @@ RUN apt-get update && \
   apt-get install -y --no-install-recommends oracle-java8-installer oracle-java8-set-default && \
   apt-get clean all
 
-
-# Install MongoDB
-
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4 && \
-  echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/4.0 multiverse" | tee /etc/apt/sources.list.d/mongodb-org-4.0.list && \
-  apt-get update && \
-  apt-get install -y libcurl4 && \
-  apt-get install -y mongodb-org && \
-  mkdir -p /data/db
-
-
-# Install Node
-
-RUN apt-get install -y wget && \
-  wget https://deb.nodesource.com/setup_8.x && \
+RUN wget https://deb.nodesource.com/setup_8.x && \
   bash setup_8.x && \
   apt-get install -y nodejs
 
+RUN apt install -y --no-install-recommends redis-server
 
 # Prepare the work directory
-
 RUN mkdir -p tron/conf
 WORKDIR /tron
 
-
-# Clone and build trongrid
-
-ADD conf/application.properties /tron/conf/application.properties
-RUN git clone https://github.com/tronprotocol/tron-grid.git && \
-  cd tron-grid && \
-  cp ../conf/application.properties src/main/resources/. && \
-  apt-get install -y maven && \
-  mvn package && \
-  mv target/trongrid-1.0.1-SNAPSHOT.jar target/EventServer.jar && \
-  cd ..
-
-
-# Clone and build java-tron
-
-RUN echo '3.2.2'
-
-ADD conf/logback.xml /tron/conf/logback.xml
-ADD conf/mongodb.properties /tron/conf/mongodb.properties
-RUN apt-get install git -y && \
-  git clone https://github.com/tronprotocol/java-tron.git && \
-  cd java-tron && \
-  git fetch && \
-  git checkout event_parser && \
-  cp ../conf/mongodb.properties src/main/resources/. && \
-  cp ../conf/logback.xml src/main/resources/. && \
-  ./gradlew build -x test && \
-  cd ..
-
-
 # Install proxy dependencies
-
-RUN apt-get update && apt-get install build-essential -y
-
 RUN mkdir /tron/app
 ADD app/package.json /tron/app/package.json
 ADD app/package-lock.json /tron/app/package-lock.json
 
-RUN cd app && npm install
+# Configures full node
+RUN mkdir FullNode
+ADD conf/full.conf FullNode/fullnode.conf
+ADD conf/FullNode.jar FullNode/FullNode.jar
 
-RUN apt-get remove maven git -y && \
-  apt-get clean all && \
-  apt-get autoremove -y
+RUN mkdir BlockParser
+ADD conf/run.sh BlockParser/run.sh
+ADD conf/BlockParser.jar BlockParser/BlockParser.jar
 
-
-# Configures full and solidity node
-
-ADD conf/full.conf /tron/conf/fullnode.conf
-RUN mkdir FullNode && \
-  cp java-tron/build/libs/FullNode.jar FullNode/.
-
-ADD conf/solidity.conf /tron/conf/soliditynode.conf
-RUN mkdir SolidityNode && \
-  cp java-tron/build/libs/SolidityNode.jar SolidityNode/.
+RUN mkdir eventron
+ADD conf/process.json eventron/process.json
+ADD conf/eventron eventron/eventron
 
 # Separating install from src speeds up the rebuilding
 # if the node app is changed, but has the ADD app/version
 
-ADD app/index.js /tron/app/index.js
-ADD app/version.js /tron/app/version.js
-ADD app/src /tron/app/src
-ADD scripts /tron/scripts
+ADD app/index.js app/index.js
+ADD app/version.js app/version.js
+ADD app/src app/src
+ADD scripts scripts
+RUN cd app && npm install
+RUN chmod +x scripts/accounts-generation.sh
 
-ADD tronWeb /tron/tronWeb
+RUN npm i -g pm2 && pm2 update
+
+COPY test ./test
+ADD tronWeb tronWeb
 RUN chmod +x tronWeb
 
-ADD conf/set-mongo /tron/conf/set-mongo
-
-ADD conf/info /tron/info
-RUN chmod +x info
-
-ADD quickstart.sh /tron/quickstart
+COPY kill_all.sh kill_all
+RUN chmod +x kill_all
+ADD quickstart.sh quickstart
 RUN chmod +x quickstart
-
-CMD ["./quickstart", "v1.2.8"]
+CMD ["./quickstart", "v2.0.0"]
