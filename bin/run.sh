@@ -10,8 +10,5 @@ docker run -it \
   -e "showQueryString=true" \
   -e "showBody=true" \
   -e "formatJson=true" \
-  -e allowSameTokenName=1 \
-  -e allowDelegateResource=1 \
-  -e allowTvmTransferTrc10=1 \
   --name tron \
-  trontools/quickstart
+  tronquickstart

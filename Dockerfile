@@ -3,14 +3,27 @@
 FROM ubuntu:18.04
 LABEL maintainer="Francesco Sullo <francesco@sullo.co>"
 
+# Install JDK8
+# thanks to mlaccetti/docker-oracle-java8-ubuntu-16.04
+
 ENV DEBIAN_FRONTEND noninteractive
-ENV JAVA_HOME /usr/lib/jre
-ENV PATH="/usr/lib/jre/bin:${PATH}"
+ENV JAVA_HOME       /usr/lib/jvm/java-8-oracle
+ENV LANG            en_US.UTF-8
+ENV LC_ALL          en_US.UTF-8
 
-RUN apt-get update && apt-get install build-essential -y
+RUN apt-get update && \
+  apt-get install -y --no-install-recommends locales build-essential wget -y && \
+  locale-gen "en_US.UTF-8" && \
+  apt-get dist-upgrade -y && \
+  apt-get install gnupg apt-utils git -y && \
+  echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | debconf-set-selections && \
+  echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main" > /etc/apt/sources.list.d/webupd8team-java-trusty.list && \
+  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886 && \
+  apt-get update && \
+  apt-get install -y --no-install-recommends oracle-java8-installer oracle-java8-set-default && \
+  apt-get clean all
 
-RUN apt-get install -y wget && \
-  wget https://deb.nodesource.com/setup_8.x && \
+RUN wget https://deb.nodesource.com/setup_8.x && \
   bash setup_8.x && \
   apt-get install -y nodejs
 
@@ -20,8 +33,6 @@ RUN apt install -y --no-install-recommends redis-server
 RUN mkdir -p tron/conf
 WORKDIR /tron
 
-# Add jre
-ADD jre /usr/lib/jre
 # Install proxy dependencies
 RUN mkdir /tron/app
 ADD app/package.json /tron/app/package.json
@@ -36,7 +47,7 @@ RUN mkdir BlockParser
 ADD conf/run.sh BlockParser/run.sh
 ADD conf/BlockParser.jar BlockParser/BlockParser.jar
 
-RUN mkdir eventron && cd eventron && npm install sleep
+RUN mkdir eventron
 ADD conf/run_eventron.sh eventron/run_eventron.sh
 ADD conf/eventron eventron/eventron
 
@@ -58,4 +69,4 @@ COPY kill_all.sh kill_all
 RUN chmod +x kill_all
 ADD quickstart.sh quickstart
 RUN chmod +x quickstart
-CMD ["./quickstart", "v1.2.8"]
+CMD ["./quickstart", "v2.0.0"]
