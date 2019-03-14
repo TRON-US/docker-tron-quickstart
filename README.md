@@ -151,9 +151,6 @@ __List of options:__
 * `seed=ushwe63hgeWUS` sets the seed to be used to generate the mnemonic (if none is passed)
 * `hdPath=m/44'/60'/0'/0` sets a custom bit39 hdPath
 * `formatJson=true` formats the output
-* `allowSameTokenName=1`
-* `allowDelegateResource=1`
-* `allowTvmTransferTrc10=1`
 
 Pre-approved options:
 * `getMultiSignFee=1`
@@ -275,7 +272,7 @@ __The "SERVER_BUSY" error__
 
 Running TronBox can put a lot of stress on the local network. If the FullNode is busy, it returns the "SERVER_BUSY" error. If it does, just repeat your command.
 
-### Latest version is `2.0.0`
+### Latest version is `2.0.2`
 
 To be updated, take a look at https://hub.docker.com/r/trontools/quickstart/tags/
 
@@ -291,8 +288,19 @@ and look for `codeVersion`.
 
 ### Selected recent history
 
+__2.0.2__
+* Updates to TronGrid v2.2.0
+* Updates to a new BlockParser using less resources
+
+__2.0.1__
+* Updates to TronGrid v2.1.1 (better support of sort by timestamps)
+
+__2.0.1__
+* Updates to TronGrid v2.1.1 (better support of sort by timestamps)
+
 __2.0.0__
-* Updated to JavaTron 3.5.0.1
+* Updates to JavaTron 3.5.0.1
+* Uses TronGrid v2
 * Supports pre-approved proposals, to be set using env variables (see above)
   * getMultiSignFee
   * getUpdateAccountPermissionFee
@@ -303,7 +311,6 @@ __1.2.8__
   * allowSameTokenName
   * allowDelegateResource
   * allowTvmTransferTrc10
-
 
 __1.2.7__
 * Updates to JavaTron v3.2.2.
