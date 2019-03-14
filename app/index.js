@@ -43,14 +43,15 @@ const setHeaders = (who) => {
       const chunks = []
 
       res.write = function (chunk) {
-        chunks.push(new Buffer(chunk))
+        chunks.push(chunk)
 
         oldWrite.apply(res, arguments)
       }
 
       res.end = function (chunk) {
+
         if (chunk)
-          chunks.push(new Buffer(chunk))
+          chunks.push(chunk)
 
         let body = Buffer.concat(chunks).toString('utf8').replace(/\n+$/g, '')
         console.log(chalk.bold(chalk.cyan(who), req.path), chalk.gray(`\n[Output]`), env.formatJson ? JSON.stringify(JSON.parse(body), null, 2) : body)
