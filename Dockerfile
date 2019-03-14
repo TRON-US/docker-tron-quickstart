@@ -1,19 +1,7 @@
 # Tron Quickstart
 
-FROM trontools/ubuntu-oracle-jre8
-LABEL maintainers="Francesco Sullo <francesco@sullo.co>, elluck91 <lukasz@tron.network>"
-
-ENV DEBIAN_FRONTEND noninteractive
-ENV LANG            en_US.UTF-8
-ENV LC_ALL          en_US.UTF-8
-
-RUN apt-get update && \
-  apt-get install -y --no-install-recommends locales build-essential wget -y && \
-  locale-gen "en_US.UTF-8" && \
-  wget https://deb.nodesource.com/setup_10.x && \
-  bash setup_10.x && \
-  apt-get install -y nodejs --no-install-recommends redis-server && npm i -g pm2 && pm2 update && \
-  apt-get clean all
+FROM sullof/ubu18jdk8node10redis
+LABEL maintainer="Francesco Sullo <francesco@sullo.co>"
 
 # Prepare the work directory
 RUN mkdir -p tron/conf
@@ -22,8 +10,7 @@ WORKDIR /tron
 # Install proxy dependencies
 RUN mkdir /tron/app
 ADD app/package.json /tron/app/package.json
-RUN cd app && npm install && \
-  apt-get uninstall build-essential
+RUN cd app && npm install
 
 # Configures full node
 RUN mkdir FullNode
@@ -53,4 +40,4 @@ RUN chmod +x tronWeb
 
 ADD quickstart.sh quickstart
 RUN chmod +x quickstart
-CMD ["./quickstart", "v2.0.1"]
+CMD ["./quickstart", "v2.0.2"]
