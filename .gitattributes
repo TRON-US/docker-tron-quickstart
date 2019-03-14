@@ -1,0 +1,2 @@
+conf/BlockParser.jar filter=lfs diff=lfs merge=lfs -text
+conf/eventron filter=lfs diff=lfs merge=lfs -text
