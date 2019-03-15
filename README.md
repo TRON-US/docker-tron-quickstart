@@ -288,6 +288,9 @@ and look for `codeVersion`.
 
 ### Selected recent history
 
+__2.0.3__
+* Fix bug with pre-approved proposals.
+
 __2.0.2__
 * Updates to TronGrid v2.2.0
 * Updates to a new BlockParser using less resources
