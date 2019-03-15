@@ -39,4 +39,4 @@ RUN chmod +x tronWeb
 
 ADD quickstart.sh quickstart
 RUN chmod +x quickstart
-CMD ["./quickstart", "v2.0.2"]
+CMD ["./quickstart", "v2.0.3"]
