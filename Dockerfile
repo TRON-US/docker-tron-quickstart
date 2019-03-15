@@ -34,7 +34,6 @@ ADD app/src app/src
 ADD scripts scripts
 RUN chmod +x scripts/accounts-generation.sh
 
-COPY test ./test
 ADD tronWeb tronWeb
 RUN chmod +x tronWeb
 
