@@ -6,20 +6,23 @@ echo "Start nodes and event server..."
 
 if [[ $getTotalEnergyTargetLimit == '1' ]];then
   echo "Pre-approving getTotalEnergyTargetLimit"
-  echo "getTotalEnergyTargetLimit = 1" >> /tron/conf/fullnode.conf
+  echo "getTotalEnergyTargetLimit = 1" >> /tron/FullNode/fullnode.conf
 fi
 
 if [[ $getUpdateAccountPermissionFee == '1' ]];then
   echo "Pre-approving getUpdateAccountPermissionFee"
-  echo "getUpdateAccountPermissionFee = 1" >> /tron/conf/fullnode.conf
+  echo "getUpdateAccountPermissionFee = 1" >> /tron/FullNode/fullnode.conf
 fi
 
 if [[ $getMultiSignFee == '1' ]];then
   echo "Pre-approving getMultiSignFee"
-  echo "getMultiSignFee = 1" >> /tron/conf/fullnode.conf
+  echo "getMultiSignFee = 1" >> /tron/FullNode/fullnode.conf
 fi
 
+echo "}" >> /tron/FullNode/fullnode.conf
+
 nohup redis-server > /dev/null 2>&1 &
+
 (cd FullNode && nohup java -jar FullNode.jar -c fullnode.conf --witness >/dev/null 2>&1 &)
 
 # run eventron
