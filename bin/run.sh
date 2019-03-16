@@ -10,5 +10,6 @@ docker run -it --rm \
   -e "showQueryString=true" \
   -e "showBody=true" \
   -e "formatJson=true" \
+  -e "getMultiSignFee=1" \
   --name tron \
   tronquickstart

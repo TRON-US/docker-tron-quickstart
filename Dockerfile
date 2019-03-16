@@ -37,6 +37,8 @@ RUN chmod +x scripts/accounts-generation.sh
 ADD tronWeb tronWeb
 RUN chmod +x tronWeb
 
+ADD pre-approve.sh pre-approve.sh
 ADD quickstart.sh quickstart
 RUN chmod +x quickstart
+
 CMD ["./quickstart", "v2.0.3"]

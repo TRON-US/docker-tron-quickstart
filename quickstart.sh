@@ -2,24 +2,7 @@
 
 node app/version
 
-echo "Start nodes and event server..."
-
-if [[ $getTotalEnergyTargetLimit == '1' ]];then
-  echo "Pre-approving getTotalEnergyTargetLimit"
-  echo "getTotalEnergyTargetLimit = 1" >> /tron/FullNode/fullnode.conf
-fi
-
-if [[ $getUpdateAccountPermissionFee == '1' ]];then
-  echo "Pre-approving getUpdateAccountPermissionFee"
-  echo "getUpdateAccountPermissionFee = 1" >> /tron/FullNode/fullnode.conf
-fi
-
-if [[ $getMultiSignFee == '1' ]];then
-  echo "Pre-approving getMultiSignFee"
-  echo "getMultiSignFee = 1" >> /tron/FullNode/fullnode.conf
-fi
-
-echo "}" >> /tron/FullNode/fullnode.conf
+bash pre-approve.sh
 
 nohup redis-server > /dev/null 2>&1 &
 
