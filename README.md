@@ -1,6 +1,7 @@
 # Tron Quickstart (Docker image)
+https://github.com/tronprotocol/docker-tron-quickstart
 
-__The following is a Tron Quickstart (v2.0.0). The purpose of it is to set up a complete private network for Tron development.__
+__The purpose of it is to set up a complete private network for Tron development.__
 
 The image exposes:
 * FullNode
