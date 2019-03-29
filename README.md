@@ -23,17 +23,7 @@ docker run -it \
   --name tron \
   trontools/quickstart
 ```
-Notice the `--rm` option automatically removes the container after it exits.
-
-__If the port 9090 causes conflicts, change the external port as follows (showing 9091 as alternative):__
-
-```
-docker run -it \
-  -p 9091:9090 \
-  --rm \
-  --name tron \
-  trontools/quickstart
-```
+Notice the `--rm` option automatically removes the container after it exits. This is very important because the container cannot be restarted, it MUST be run from scratch to correctly configure the environment.
 
 __Verify the image is running correctly:__
 ```
