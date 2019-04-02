@@ -146,7 +146,8 @@ __List of options:__
 
 
 __Pre-approved proposals__
-For example, to pre approve `getMultiSignFee` and `allowMultiSign`, you can run the images as:
+
+To pre-approve, for example, `getMultiSignFee` and `allowMultiSign`, you can run the images as:
 ```
 docker run -it \
   -p 9090:9090 \
