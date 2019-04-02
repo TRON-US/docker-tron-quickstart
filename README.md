@@ -142,21 +142,20 @@ __List of options:__
 * `seed=ushwe63hgeWUS` sets the seed to be used to generate the mnemonic (if none is passed)
 * `hdPath=m/44'/60'/0'/0` sets a custom bit39 hdPath
 * `formatJson=true` formats the output
+* `preapprove=...` pre approved proposals (see below for more help)
 
-Pre-approved options:
-* `getMultiSignFee=1`
-* `getUpdateAccountPermissionFee=1`
-* `getTotalEnergyTargetLimit=1`
 
-Example use of pre-approved:
+__Pre-approved proposals__
+For example, to pre approve `getMultiSignFee` and `allowMultiSign`, you can run the images as:
 ```
 docker run -it \
   -p 9090:9090 \
   --rm \
   --name tron \
-  -e "getMultiSignFee=1" \
+  -e "preapprove=getMultiSignFee:1,allowMultiSign:1" \
   trontools/quickstart
 ```
+
 
 For a complete list of option proposals check out https://tronscan.org/#/sr/committee.
 
@@ -263,7 +262,7 @@ __The "SERVER_BUSY" error__
 
 Running TronBox can put a lot of stress on the local network. If the FullNode is busy, it returns the "SERVER_BUSY" error. If it does, just repeat your command.
 
-### Latest version is `2.0.6`
+### Latest version is `2.0.7`
 
 To be updated, take a look at https://hub.docker.com/r/trontools/quickstart/tags/
 
@@ -278,6 +277,9 @@ curl localhost:9090/wallet/getnodeinfo
 and look for `codeVersion`. 
 
 ### Selected recent history
+
+__2.0.7__
+* Support generic pre-approved options.
 
 __2.0.6__
 * Disable caching in Eventron.
