@@ -153,7 +153,7 @@ docker run -it \
   -p 9090:9090 \
   --rm \
   --name tron \
-  -e "preapprove=getMultiSignFee:1,allowMultiSign:1" \
+  -e "preapprove=multiSignFee:1,allowMultiSign:1" \
   trontools/quickstart
 ```
 
