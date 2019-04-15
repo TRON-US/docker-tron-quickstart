@@ -10,8 +10,6 @@ docker run -it --rm \
   -e "showQueryString=true" \
   -e "showBody=true" \
   -e "formatJson=true" \
-  -e "getMultiSignFee=1" \
-  -e "getUpdateAccountPermissionFee=1" \
-  -e "getTotalEnergyTargetLimit=1" \
+  -e "preapprove=multiSignFee:1,allowMultiSign:1,updateAccountPermissionFee:1,totalEnergyTargetLimit:1" \
   --name tron \
   tronquickstart

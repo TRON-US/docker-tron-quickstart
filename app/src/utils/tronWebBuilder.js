@@ -5,12 +5,7 @@ let instance
 
 module.exports = function () {
   if (!instance) {
-    instance = new TronWeb(
-        network.fullNode,
-        network.solidityNode,
-        network.eventServer,
-        network.privateKey
-    )
+    instance = new TronWeb(network)
   }
   return instance
 }
