@@ -158,7 +158,7 @@ docker run -it \
 ```
 
 
-For a complete list of option proposals check out https://api.shasta.trongrid.io/wallet/getchainparameters
+For a complete list of option proposals check out https://api.trongrid.io/wallet/getchainparameters
 
 #### Available accounts
 
