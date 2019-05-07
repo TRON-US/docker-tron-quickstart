@@ -15,7 +15,8 @@ REDISHOSTM=127.0.0.1 \
 REDISHOST=127.0.0.1 \
 REDISPORT=6379 \
 NODE_ENV=development \
-ONLY_REDIS=yes pm2 start process.json)
+ONLY_REDIS=yes \
+PRIVATE_NETWORK=yes pm2 start process.json)
 
 # run blockparser
 (cd BlockParser && nohup ./run.sh >/dev/null 2>&1 &)

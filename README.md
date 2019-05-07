@@ -263,7 +263,7 @@ __The "SERVER_BUSY" error__
 
 Running TronBox can put a lot of stress on the local network. If the FullNode is busy, it returns the "SERVER_BUSY" error. If it does, just repeat your command.
 
-### Latest version is `2.0.9`
+### Latest version is `2.0.11`
 
 To be updated, take a look at https://hub.docker.com/r/trontools/quickstart/tags/
 
@@ -278,6 +278,15 @@ curl localhost:9090/wallet/getnodeinfo
 and look for `codeVersion`. 
 
 ### Selected recent history
+
+_Notice that deprecated version will stay here in the history but will be removed from the Docker hub._
+
+__2.0.11__
+* Fix minor bug with unsupported APIs.
+
+__2.0.10__
+* Update eventron to version 2.2.8.
+* Fix issue with APIs not supported in private networks.
 
 __2.0.9__
 * Update eventron to version 2.2.6.
