@@ -361,5 +361,7 @@ __1.2.2__
 * Introduce compatibility with JavaTron 3.2. It requires TronBox >= 2.2.1, because JavaTron 3.2 requires the new parameter
 `origin_energy_limit`.
 
+-----
+
 For more historic data, check the original repo at
 [https://github.com/tronprotocol/docker-tron-quickstart](https://github.com/tronprotocol/docker-tron-quickstart)
