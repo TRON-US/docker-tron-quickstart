@@ -76,7 +76,7 @@ async function verifyAccountsBalance(options) {
       }
     }
     if (ready < privateKeys.length)
-      wait(3)
+      await wait(3)
     else break
   }
   console.log(chalk.gray('Done.\n'))

@@ -1,6 +1,6 @@
 {
   "name": "tron-quickstart",
-  "version": "2.0.11",
+  "version": "2.0.13",
   "description": "A minimalist proxy for a Tron private network",
   "main": "index.js",
   "repository": "https://github.com/tronprotocol/docker-tron-quickstart",
@@ -22,7 +22,6 @@
     "morgan": "^1.9.1",
     "scrypt": "^6.0.3",
     "seedrandom": "^2.4.4",
-    "sleep": "^5.2.4",
     "tronweb": "^2.3.6"
   }
 }

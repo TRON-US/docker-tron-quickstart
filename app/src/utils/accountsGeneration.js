@@ -45,7 +45,7 @@ async function accountsGeneration(options) {
   }
 
   if (!await tronWeb.fullNode.isConnected()) {
-    wait(1)
+    await wait(1)
     return await accountsGeneration()
   }
 
