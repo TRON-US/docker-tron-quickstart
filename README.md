@@ -157,7 +157,7 @@ docker run -it \
 ```
 
 
-For a complete list of option proposals check out https://api.trongrid.io/wallet/getchainparameters
+For a complete list of option proposals check out https://api.trongrid.io/wallet/getchainparameters. Note that you remove the "get" part of this chain parameter and lowercase the first character. This allows you to directly edit these parameters.
 
 #### Available accounts
 
