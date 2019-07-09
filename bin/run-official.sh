@@ -11,4 +11,4 @@ docker run -it --rm \
   -e "showBody=true" \
   -e "formatJson=true" \
   --name tron \
-  trontools/quickstart
+  trontools/quickstart:2.0.15
