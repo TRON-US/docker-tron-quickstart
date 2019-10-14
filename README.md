@@ -262,7 +262,7 @@ __The "SERVER_BUSY" error__
 
 Running TronBox can put a lot of stress on the local network. If the FullNode is busy, it returns the "SERVER_BUSY" error. If it does, just repeat your command.
 
-### Latest version is `2.0.17`
+### Latest version is `2.0.18`
 
 To be updated, take a look at https://hub.docker.com/r/trontools/quickstart/tags/
 
@@ -274,11 +274,18 @@ If you want also to know which version of JavaTron is used by Tron Quickstart, r
 ```
 curl localhost:9090/wallet/getnodeinfo
 ```
-and look for `codeVersion`. 
+and look for `codeVersion`.
 
 ### Selected recent history
 
 _Notice that deprecated version will stay here in the history but will be removed from the Docker hub._
+
+__2.0.18__
+* Update JavaTron to version 3.6.5.
+* Update TronWeb to version 2.7.3.
+
+__2.0.17__
+* Update TronWeb to version 2.6.8.
 
 __2.0.17__
 * Update TronWeb to version 2.6.4.
