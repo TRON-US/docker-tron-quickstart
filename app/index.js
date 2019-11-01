@@ -106,7 +106,7 @@ const app = express();
 app.use(morgan(only()))
 app.use(bodyParser.json())
 
-app.use(bodyParser.json({limit: '50mb'}))
+app.use(bodyParser.json({limit: '300mb'}))
 
 app.use('/walletsolidity', proxy({
   ...conf,
