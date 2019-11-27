@@ -80,7 +80,7 @@ async function deriveAccountsFromSeedAndOrMnemonic(options) {
 
   const total_accounts = options.accounts
 
-  const hdPath = options.hdPath || "m/44'/60'/0'/0/"
+  const hdPath = options.hdPath || "m/44'/195'/0'/0/"
 
   let seed = options.seed
   let mnemonic = options.mnemonic
