@@ -280,7 +280,7 @@ and look for `codeVersion`.
 
 _Notice that deprecated version will stay here in the history but will be removed from the Docker hub._
 
-__2.0.22__
+__2.0.21__
 * Fix hdPath.
 
 __2.0.21__
