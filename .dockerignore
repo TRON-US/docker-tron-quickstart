@@ -1,0 +1,4 @@
+.git
+.cache
+app/node_modules
+/tmp

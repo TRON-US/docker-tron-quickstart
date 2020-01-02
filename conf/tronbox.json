@@ -3,7 +3,7 @@ module.exports = {
     development: {
       privateKey: 'D7D3633C06F8FFA567AAE849B82AB1CA0968228328AC10A7B5D8E5843563EF52',
       fullHost: "http://127.0.0.1:9090",
-      network_id: "9"
+      network_id: "0"
     }
   }
 };

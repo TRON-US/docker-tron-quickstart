@@ -1,0 +1,8 @@
+{
+  "apps" : [{
+    "name"       : "eventron",
+    "script"     : "./eventron",
+    "exec_interpreter": "none",
+    "exec_mode"  : "fork_mode"
+  }]
+}
