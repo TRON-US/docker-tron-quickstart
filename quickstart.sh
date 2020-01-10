@@ -6,10 +6,10 @@ bash pre-approve.sh
 
 nohup redis-server > /dev/null 2>&1 &
 
-(cd FullNode && nohup java -jar FullNode.jar -c fullnode.conf -c tronbox.js --witness >/dev/null 2>&1 &)
+(cd FullNode && nohup java -jar FullNode.jar -c fullnode.conf --witness >/dev/null 2>&1 &)
 
 # run eventron
-(cd eventron && SECRET=TEYG3FvbT2ACUA9cidRR7YxWm4hgU5DN3r \
+(cd eventron && SECRET=TNSpckEZhGfZ4ryidHG2fYWMARLpZ6U139 \
 REDISDBID=0 \
 REDISHOSTM=127.0.0.1 \
 REDISHOST=127.0.0.1 \
