@@ -16,6 +16,7 @@ REDISHOST=127.0.0.1 \
 REDISPORT=6379 \
 NODE_ENV=development \
 ONLY_REDIS=yes \
+SHASTAURL=http://127.0.0.1:18190 \
 PRIVATE_NETWORK=yes pm2 start process.json)
 
 # run blockparser

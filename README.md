@@ -280,6 +280,9 @@ and look for `codeVersion`.
 
 _Notice that deprecated version will stay here in the history but will be removed from the Docker hub._
 
+__2.1.1__
+* Upgrade Eventron to ed9c7a7, BlockParser to 75b4fec.
+
 __2.1.0__
 * Upgrade FullNode to 3.6.6.
 
