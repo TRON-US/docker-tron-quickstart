@@ -15,7 +15,7 @@
     "chalk": "^2.4.2",
     "ethereumjs-util": "^6.1.0",
     "ethereumjs-wallet": "^0.6.3",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "fs-extra": "^7.0.1",
     "http-proxy-middleware": "^0.19.1",
     "lodash": "^4.17.11",
